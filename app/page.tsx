@@ -14,24 +14,26 @@ export default function Home() {
               Mike West · Pittsburgh, PA
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.05] font-medium">
-              Twenty-plus shipped applications under one founder.
+              Four products. One founder. A shared substrate underneath.
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              AI-native people analytics, an adaptive figurative-art platform,
-              fantasy football intelligence, intentional baby naming, and the
-              research infrastructure that ties them together. Solo build,
-              hub-and-spoke architecture, written for production.
+              An adaptive figurative-art platform, an AI-native people analytics
+              ecosystem, a fantasy football intelligence platform, and an
+              intentional-baby-naming tool. Each product sits on top of shared
+              infrastructure I built once and reused — which is what makes
+              this scale possible from a team of one.
             </p>
           </div>
 
           <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm font-mono">
-            <Stat label="active projects" value="20+" />
+            <Stat label="products" value="4" />
+            <Stat label="spokes underneath" value="20+" />
             <Stat label="commits, 12mo" value="5,974" />
-            <Stat label="repos" value="22" />
             <Stat label="team size" value="1" />
             <p className="pt-3 text-xs text-ink-muted leading-relaxed font-sans">
-              I build the way most teams of four would. Single-author cadence,
-              multi-product ecosystem, decision-science discipline.
+              The four products are the surface. The hub-and-spoke architecture
+              underneath — anonymization, metric calculation, adaptive
+              measurement, codegen — is how solo cadence stays sustainable.
             </p>
           </aside>
         </section>

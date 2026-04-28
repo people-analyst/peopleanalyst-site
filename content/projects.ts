@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     built:
       "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player that learns desire and pool composition. A magazine with original fiction and editorial criticism. Stripe membership. A Chrome extension for attribution capture. A derivative pipeline that produces new transformative works under license.",
     novel: [
-      "Reincarnation engine: per-user desire scoring with pool management and visual-rhyme sequencing",
+      "Reincarnation engine: per-user desire scoring with RID/SID adaptive measurement and visual-rhyme sequencing",
       "Pill paradigm: 80 admin pages collapsed into ~7 named flows, each a typed pill expression",
       "Adaptive authorship platform underneath — Vela is property #1; siblings reuse the substrate",
       "Museum-grade attribution and license discipline as a first-class feature, not a footnote",
@@ -54,6 +54,76 @@ export const PROJECTS: Project[] = [
       "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
     href: "https://vela.study",
     status: "live",
+  },
+
+  {
+    slug: "pa-platform",
+    headline: "People Analytics Platform",
+    tagline:
+      "A hub-and-spoke ecosystem for AI-native HR analytics — measurement, decision science, survey delivery, and a compensation OS, on shared substrate.",
+    audience:
+      "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
+    problem:
+      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery — get re-implemented per product. The result is brittle, fragmented, and expensive.",
+    built:
+      "A central hub (people-analytics-toolbox) plus a set of spoke applications consumed across verticals. Calculus precomputes 210+ HR metrics. Conductor generates SQL and Python from metadata, not example queries. Reincarnation runs adaptive measurement with RID/SID accumulation across studies. AnyComp turns merit, equity, market-pricing, and total-rewards into a single decision surface. Cross-cutting services — anonymization, segmentation, survey delivery, preference modeling, decision support — live on the hub once.",
+    novel: [
+      "Reincarnation: cross-study item-response accumulation without confounding — adaptive selection over the full evidence pool, not just the current study",
+      "Conductor: metadata-grounded SQL/Python generation (not example-grounded) — the model sees schema, field semantics, and canonical metric definitions",
+      "Calculus: precomputed metric materialization so manager-level segmentations are instant rather than dashboard-render-blocked",
+      "VOI Calculator: formal Expected Value of Perfect/Sample Information as production software — essentially absent in commercial HR tooling",
+      "AnyComp: compensation as one coherent decision surface, not four disconnected screens",
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "BigQuery",
+      "Postgres",
+      "pgvector",
+      "Vercel",
+      "Anthropic API",
+    ],
+    outcome:
+      "Hub plus 14+ spoke applications. Solo build since 2022. Several spokes deployed at enterprise clients.",
+    role: "Solo founder; all roles.",
+    story:
+      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. The architecture is what makes a single founder productive at this scale.",
+    status: "private",
+  },
+
+  {
+    slug: "fourth-and-two",
+    headline: "Fourth & Two",
+    tagline:
+      "A fantasy football platform with a magazine front and a strategy engine back — SI-style covers, Monte Carlo decisions, weekly LLM-generated newsroom stories.",
+    audience:
+      "Serious fantasy football players who want analytics-grade decision support, not just projections.",
+    problem:
+      "Fantasy products are either marketplaces with shallow projections or hardcore stat tools that do not make a case. The middle — readable intelligence with a point of view — is empty.",
+    built:
+      "A multi-app monorepo: a public newsroom (apps/web), a GM workflow console (gm-console), a strategy portal with cover-art game modes (apps/strategy), and a Python analytics API. Live MFL adapter, projections provider, Monte Carlo strategy engine, weekly LLM-generated stories under editorial discipline.",
+    novel: [
+      "Newsroom-as-product: weekly LLM-generated stories with editorial structure, briefs, and StoryNumbers",
+      "Monte Carlo strategy engine running per-decision (fourth-down, lineup, waivers)",
+      "Multi-app monorepo with formal adapter contract for swapping fantasy providers",
+      "Magazine-grade cover art system for each game mode (the-pick, the-matchup, survivor, drive-duel, fourth-down-gambit)",
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Postgres",
+      "Alembic",
+      "Vercel",
+    ],
+    outcome:
+      "Private. Multi-app monorepo with engine, adapters, magazine, and analytics API in active development.",
+    role: "Solo founder, designer, engineer; agent-assisted execution.",
+    story:
+      "Fourth & Two is the bet that intelligence is more readable when it has a sensibility — a magazine voice on the front, a Monte Carlo engine on the back, and editorial discipline binding them. The platform exists because the middle — analytics with a point of view — was empty.",
+    status: "private",
   },
 
   {
@@ -86,158 +156,6 @@ export const PROJECTS: Project[] = [
     role: "Solo founder, designer, engineer.",
     story:
       "Naming a child is high-stakes and irreversible. Most tools treat it as entertainment. Namesake treats it as a decision — with live signal, acoustic structure, and literary depth — because that is what the decision actually warrants.",
-    status: "private",
-  },
-
-  {
-    slug: "fourth-and-two",
-    headline: "Fourth & Two",
-    tagline:
-      "A fantasy football platform with a magazine front and a strategy engine back — SI-style covers, Monte Carlo decisions, weekly LLM-generated newsroom stories.",
-    audience:
-      "Serious fantasy football players who want analytics-grade decision support, not just projections.",
-    problem:
-      "Fantasy products are either marketplaces with shallow projections or hardcore stat tools that do not make a case. The middle — readable intelligence with a point of view — is empty.",
-    built:
-      "A multi-app monorepo: a public newsroom (apps/web), a GM workflow console (gm-console), a strategy portal with cover-art game modes (apps/strategy), and a Python analytics API. Live MFL adapter, projections provider, Monte Carlo strategy engine, weekly LLM-generated stories under editorial discipline.",
-    novel: [
-      "Newsroom-as-product: weekly LLM-generated stories with editorial structure, briefs, and StoryNumbers",
-      "Monte Carlo strategy engine running per-decision (fourth-down, lineup, waivers)",
-      "Multi-app monorepo with formal adapter contract for swapping fantasy providers",
-      "Magazine-grade cover art system for each game mode (the-pick, the-matchup, survivor, drive-duel, fourth-down-gambit)",
-    ],
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Python",
-      "FastAPI",
-      "Postgres",
-      "Alembic",
-      "Vercel",
-      "Replit",
-    ],
-    outcome:
-      "Private. Multi-app monorepo with engine, adapters, magazine, and analytics API in active development.",
-    role: "Solo founder, designer, engineer; agent-assisted execution.",
-    story:
-      "Fourth & Two is the bet that intelligence is more readable when it has a sensibility — a magazine voice on the front, a Monte Carlo engine on the back, and editorial discipline binding them. The platform exists because the middle — analytics with a point of view — was empty.",
-    status: "private",
-  },
-
-  {
-    slug: "nyt-aip",
-    headline: "NYT — Audience Intelligence Platform",
-    tagline:
-      "Built the segmentation and simulation infrastructure behind a multi-million-dollar subscription-revenue model at the New York Times.",
-    audience:
-      "Internal — NYT subscription strategy and revenue teams.",
-    problem:
-      "Subscription companies make pricing and segmentation decisions on aggregated dashboards that hide the heterogeneity. The real lift sits inside which segments respond to which interventions, and that signal does not survive aggregation.",
-    built:
-      "Monte Carlo plus regression-surrogate simulation infrastructure for counterfactual analysis. A multi-segment audience decomposition replacing single-aggregate forecasts. Active Subscription LTV machinery and a hand-off pack of methodology documentation.",
-    novel: [
-      "Surrogate-model approach for fast counterfactual simulation against a large model",
-      "Multi-segment decomposition replacing single-aggregate forecasts",
-      "Active Subscription LTV computed at segment granularity",
-      "Methodology documentation that survived hand-off and stayed in use",
-    ],
-    stack: [
-      "Python",
-      "BigQuery",
-      "scikit-learn",
-      "statsmodels",
-      "Anthropic API",
-    ],
-    outcome:
-      "Revenue model attributed in the year of attribution. Methodology pack delivered and adopted.",
-    role: "Embedded analytics consultant via PeopleAnalyst.",
-    story:
-      "Most subscription analytics rolls up to a single aggregate forecast and stops there. The interesting decisions live one level down — which segment, which intervention, which timing — and they are usually invisible at aggregate. The work was about making that level visible without losing rigor.",
-    status: "client",
-  },
-
-  {
-    slug: "reincarnation",
-    headline: "Reincarnation",
-    tagline:
-      "Adaptive diagnostic survey infrastructure with RID/SID architecture — questions accumulate item-response statistics across studies without confounding.",
-    audience:
-      "Researchers, organizational psychologists, and product teams that need adaptive measurement at scale.",
-    problem:
-      "Commercial survey platforms either run studies in silos (no cross-study learning) or pool naively (lose study-level integrity). Neither lets a question's evidence accumulate across studies in a way that adaptive selection can use.",
-    built:
-      "A multi-study item bank with RID (respondent-ID) and SID (study-ID) separation. Adaptive selection that draws on the full accumulated evidence to choose the next question. Pool management with desire scoring. Vela serves as the live testbed.",
-    novel: [
-      "Cross-study item-response accumulation without confounding study-level inference",
-      "Adaptive selection over the full evidence pool, not just the current study",
-      "Lab-instrument framing — the engine is treated as scientific instrumentation, not just product code",
-      "12 active research questions running through the same substrate",
-    ],
-    stack: ["TypeScript", "Postgres", "pgvector", "Anthropic API", "Vercel"],
-    outcome:
-      "Live inside Vela. Designed as the spine for forthcoming peer-reviewed and dissertation-track research.",
-    role: "Solo founder, designer, engineer.",
-    story:
-      "Adaptive measurement is well understood in psychometrics and almost absent in commercial survey tools. Reincarnation closes that gap, then goes one step further — letting evidence accumulate across studies — so the longer the system runs, the sharper its instrument becomes.",
-    status: "private",
-  },
-
-  {
-    slug: "conductor",
-    headline: "Conductor",
-    tagline:
-      "Natural-language SQL and Python generation grounded in metadata and documented business logic — not example-based prompting.",
-    audience:
-      "People analytics teams orchestrating BigQuery, One Model imports, and tiered metric recipes.",
-    problem:
-      "Most AI-for-SQL products see only sample queries. They do not see the schema, the field documentation, or the canonical metric definitions. They generate answers that look right and are not.",
-    built:
-      "An orchestrator that pipes BigQuery metadata, One Model imports, and documented metric recipes into the model, generates SQL or Python from a natural-language ask, and routes through field mediation for cross-system reconciliation.",
-    novel: [
-      "Metadata-grounded code generation, not example-grounded",
-      "Tiered metric recipes — canonical definitions are first-class inputs",
-      "Field mediation for reconciling differently-named fields across systems",
-      "Designed as the central data-orchestration spoke for the People Analytics Toolbox",
-    ],
-    stack: ["Next.js", "TypeScript", "Python", "BigQuery", "Anthropic API"],
-    outcome:
-      "Private. Deployed as the data-orchestration spoke for the People Analytics Toolbox ecosystem.",
-    role: "Solo founder, designer, engineer.",
-    story:
-      "AI for analytics has mostly been pattern-matching against example queries. The interesting move is the other direction: feed the model the same metadata a careful human would read first — schemas, field semantics, canonical metric definitions — and let it reason from there.",
-    status: "private",
-  },
-
-  {
-    slug: "pa-platform",
-    headline: "People Analytics Platform",
-    tagline:
-      "A hub-and-spoke ecosystem of 14+ TypeScript apps for AI-native HR analytics — measurement, decision science, survey delivery, and a compensation OS.",
-    audience:
-      "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
-    problem:
-      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery — get re-implemented per product. The result is brittle, fragmented, and expensive.",
-    built:
-      "Hub (`people-analytics-toolbox`) and spokes: calculus / metric-engine, conductor, segmentation-studio, survey-respondent, reincarnation, anycomp, voi-calculator, decision-wizard, preference-modeler, data-anonymizer, metric-market, peopleanalyst app. Cross-cutting services consumed by multiple verticals.",
-    novel: [
-      "Formal VOI (Expected Value of Perfect/Sample Information) is essentially absent in commercial HR tooling — VOI Calculator implements the academic framework as production software",
-      "Calculus precomputes and materializes 210+ HR metrics, so manager-level segmentations are instant rather than dashboard-render-blocked",
-      "AnyComp treats merit, equity, market-pricing, and total-rewards as one coherent decision surface",
-      "Segmentation Studio handles the reality that every enterprise has inconsistent job codes, titles, and leveling",
-    ],
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Python",
-      "BigQuery",
-      "Postgres",
-      "Vercel",
-    ],
-    outcome:
-      "14+ apps live; hub-and-spoke architecture; solo build since 2022. Several spokes deployed at enterprise clients.",
-    role: "Solo founder; all roles.",
-    story:
-      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet.",
     status: "private",
   },
 ];
