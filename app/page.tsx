@@ -14,14 +14,15 @@ export default function Home() {
               Mike West · Pittsburgh, PA
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.05] font-medium">
-              Four products. One founder. A shared substrate underneath.
+              Four products. One engineer. One conviction underneath.
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              An adaptive figurative-art platform, an AI-native people analytics
-              ecosystem, a fantasy football intelligence platform, and an
-              intentional-baby-naming tool. Each product sits on top of shared
-              infrastructure I built once and reused — which is what makes
-              this scale possible from a team of one.
+              An adaptive figurative-art platform. An AI-native people
+              analytics ecosystem. A fantasy football intelligence platform. An
+              intentional-baby-naming tool. They look unrelated. They are all
+              expressions of one bet: that AI should equip the human, not
+              replace them — and that bet shows up the same way in every
+              domain you take seriously.
             </p>
           </div>
 

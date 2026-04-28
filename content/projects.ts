@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start.",
-    role: "Solo founder, designer, engineer.",
+    role: "Designer, engineer.",
     commits: "1,300+",
     story:
       "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Hub plus 14+ spoke applications. Solo build since 2022. Several spokes deployed at enterprise clients.",
-    role: "Solo founder; all roles.",
+    role: "All roles.",
     story:
       "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. The architecture is what makes a single founder productive at this scale.",
     status: "private",
@@ -120,7 +120,7 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Private. Multi-app monorepo with engine, adapters, magazine, and analytics API in active development.",
-    role: "Solo founder, designer, engineer; agent-assisted execution.",
+    role: "Designer, engineer; agent-assisted execution.",
     story:
       "Fourth & Two is the bet that intelligence is more readable when it has a sensibility — a magazine voice on the front, a Monte Carlo engine on the back, and editorial discipline binding them. The platform exists because the middle — analytics with a point of view — was empty.",
     status: "private",
@@ -153,7 +153,7 @@ export const PROJECTS: Project[] = [
     ],
     outcome:
       "Private beta. Decision tool for one of the highest-stakes irreversible decisions parents make.",
-    role: "Solo founder, designer, engineer.",
+    role: "Designer, engineer.",
     story:
       "Naming a child is high-stakes and irreversible. Most tools treat it as entertainment. Namesake treats it as a decision — with live signal, acoustic structure, and literary depth — because that is what the decision actually warrants.",
     status: "private",
