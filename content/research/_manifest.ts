@@ -76,8 +76,9 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "research-program",
     title: "The Vela research program",
     summary:
-      "Twelve research questions across desire, composition, temporal dynamics, and individual differences — and how they ladder up to the adaptive engine as a scientific instrument.",
-    status: "forthcoming",
+      "What Vela's research program is, what threads it runs, where its methods generalize, and how to read further. The outside-reader one-pager — distinct from the internal twelve-RQ program plan.",
+    source: { repo: VELA_REPO, path: "docs/research/OVERVIEW.md" },
+    status: "live",
   },
   {
     product: "vela",
@@ -323,14 +324,28 @@ export const MANIFEST: ManifestEntry[] = [
     source: { repo: VELA_REPO, path: "docs/research/emotion-corpus-expansion-2026-04.md" },
     status: "live",
   },
-  // Museum diversity-of-beauty thread — questions exist, write-up forthcoming
+  // Museum diversity-of-beauty thread
+  {
+    product: "vela",
+    category: "reports",
+    slug: "museum-diversity-of-beauty-research-questions",
+    title: "Museum diversity of beauty — research questions",
+    summary:
+      "Bootstrap of the thread. Three sub-questions: (a) museum-vs-museum corpus differences, (b) museum vs. its primary serving location, (c) temporal change using artwork creation dates. Analysis of (a) is queued at ASN-981.",
+    initiative: "museum-diversity",
+    source: {
+      repo: VELA_REPO,
+      path: "docs/research/papers/museum-diversity-of-beauty-research-questions.md",
+    },
+    status: "live",
+  },
   {
     product: "vela",
     category: "reports",
     slug: "museum-diversity-of-beauty",
     title: "Diversity of beauty across museum collections",
     summary:
-      "Cross-museum comparison of how cultural and physical diversity of beauty is represented. Three sub-questions: (a) museum-vs-museum corpus differences, (b) museum vs. its primary audience location, (c) how representation has shifted over time using artwork dates. Forthcoming.",
+      "Cross-museum comparison of how cultural and physical diversity of beauty is represented. Three sub-questions: (a) museum-vs-museum corpus differences, (b) museum vs. its primary audience location, (c) how representation has shifted over time using artwork dates. Forthcoming write-up; questions doc is the live entry above.",
     initiative: "museum-diversity",
     status: "forthcoming",
   },
