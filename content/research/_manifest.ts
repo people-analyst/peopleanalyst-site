@@ -1,6 +1,6 @@
 import type { CategoryId, AudienceTier } from "./_taxonomy";
 
-export type ProductId = "vela" | "namesake" | "fourth-and-two" | "pa-platform";
+export type ProductId = "vela" | "namesake" | "fourth-and-two" | "pa-platform" | "devplane";
 
 export type ManifestEntry = {
   product: ProductId;
@@ -63,10 +63,20 @@ export const PRODUCT_META: Record<ProductId, ProductMeta> = {
     whyItMatters:
       "The principal-issues thesis is the spine. It says every domain has a load-bearing measurement set, and most domains are stuck because they have not named it. People analytics is the demonstration; the same logic applies to any field where rigorous measurement is unevenly distributed across organizations. The platform is built to make load-bearing-set delivery executable at solo cadence — which is the operating-system claim underneath every other portfolio item.",
   },
+  devplane: {
+    id: "devplane",
+    label: "DevPlane",
+    blurb:
+      "A cockpit for multi-tool software development. Research is an empirical program on coordination cost in heterogeneous AI tool ecosystems — using DevPlane's continuous production telemetry as the apparatus, not the subject. Lead study: a pre-registered field test of risk compensation in human-AI coordination.",
+    whyItMatters:
+      "The productivity claims being made for AI coding tools are largely grounded in agent-side measurements — lines produced, tasks completed, time-to-PR. If the Ironies of Automation (Bainbridge 1983) are operative — operator vigilance falling as agent reliability rises — those measurements systematically overstate net effect. The DevPlane research program tests that prediction with continuous production telemetry on a real operator running real agents on a real, multi-month codebase. The methodology generalizes: any team running heterogeneous tools through a coordination layer (multi-tool ops dashboards, hospital handoff systems, distributed scientific instruments) shares the same shape of problem.",
+    featuredEntrySlug: "overview",
+  },
 };
 
 const VELA_REPO = "people-analyst/vela";
 const NAMESAKE_REPO = "people-analyst/baby-namer";
+const DEVPLANE_REPO = "people-analyst/devplane";
 
 export const MANIFEST: ManifestEntry[] = [
   // ===== VELA =====
@@ -964,6 +974,98 @@ export const MANIFEST: ManifestEntry[] = [
     category: "pipeline",
     slug: "pipeline-status",
     title: "Pipeline status",
+    status: "forthcoming",
+  },
+
+  // ===== DEVPLANE =====
+  {
+    product: "devplane",
+    category: "overview",
+    slug: "overview",
+    title: "DevPlane research — overview",
+    summary:
+      "Coordination cost in heterogeneous AI tool ecosystems. Outside-reader brief on what the program studies, why now, and what it contributes.",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/OVERVIEW.md" },
+    status: "live",
+  },
+  {
+    product: "devplane",
+    category: "methodology",
+    slug: "methodology",
+    title: "Methodology",
+    summary:
+      "Operational discipline (assignment registry, handoff protocol, coordination-event log) plus research discipline (pre-registered predictions, falsifiable constructs, acknowledged researcher position). Forthcoming.",
+    status: "forthcoming",
+  },
+  {
+    product: "devplane",
+    category: "reports",
+    slug: "program",
+    title: "Coordination cost in heterogeneous AI tool ecosystems — program",
+    summary:
+      "The full three-arm research program: Agent↔Agent, Human↔AI, and Interface (the lead arm). C1 — risk compensation in human-AI coordination — is the lead study. Theoretical lineage across cockpit HCI, CSCW, empirical SE, behavioral decision-making, and stigmergic-coordination literatures.",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/PROGRAM.md" },
+    status: "live",
+  },
+  {
+    product: "devplane",
+    category: "audience-tiers",
+    slug: "general-audience",
+    title: "General-audience explainer",
+    audienceTier: "general-audience",
+    status: "forthcoming",
+  },
+  {
+    product: "devplane",
+    category: "audience-tiers",
+    slug: "peer-review",
+    title: "Peer-review framing",
+    audienceTier: "peer-review",
+    status: "forthcoming",
+  },
+  {
+    product: "devplane",
+    category: "audience-tiers",
+    slug: "engineering",
+    title: "Engineering critique",
+    audienceTier: "engineering",
+    status: "forthcoming",
+  },
+  {
+    product: "devplane",
+    category: "audience-tiers",
+    slug: "product",
+    title: "Product implications",
+    audienceTier: "product",
+    status: "forthcoming",
+  },
+  {
+    product: "devplane",
+    category: "bibliography",
+    slug: "literature-review",
+    title: "Five-literature review",
+    summary:
+      "Cockpit/process-control HCI · CSCW · empirical software engineering · behavioral decision-making · multi-agent systems and stigmergic coordination. With explicit confidence flags ([C] canonical, [F] field-level, [DR] open for deep-research expansion).",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/LITERATURE-REVIEW.md" },
+    status: "live",
+  },
+  {
+    product: "devplane",
+    category: "preregistrations",
+    slug: "c1-risk-compensation-proposal",
+    title: "C1 — Risk compensation in human-AI coordination (proposal)",
+    summary:
+      "Formal proposal for the C1 lead study. Pre-registered hypotheses with yes-world / no-world consequences; pre-committed coding rules for failure attribution; Bayesian structural time-series analysis plan; threats-to-validity register. The proposal serves as pre-registration in spirit; formal OSF filing follows once the analysis pipeline is built and a run-in period of data is collected.",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/PROPOSAL.md" },
+    status: "live",
+  },
+  {
+    product: "devplane",
+    category: "pipeline",
+    slug: "pipeline-status",
+    title: "Pipeline status",
+    summary:
+      "Running / queued / blocked / recently completed / coming soon. Forthcoming.",
     status: "forthcoming",
   },
 ];
