@@ -129,7 +129,12 @@ export const PROJECTS: Project[] = [
     status: "private",
     screenshots: [
       { src: "/portfolio/fourth-and-two/magazine-landing-desktop.png", caption: "Magazine landing — newsroom front and editorial entry point" },
-      { src: "/portfolio/fourth-and-two/analytics-desktop.png", caption: "4th & 2 Analytics — Monte Carlo strategy engine and scenario sandbox" },
+      { src: "/portfolio/fourth-and-two/league-desktop.png", caption: "League — roster, standings, and GM Console workflow entry" },
+      { src: "/portfolio/fourth-and-two/strategy-desktop.png", caption: "Strategy — Monte Carlo decision support across lineup and roster moves" },
+      { src: "/portfolio/fourth-and-two/draft-sandbox-desktop.png", caption: "Draft Day — fantasy draft application (snake sandbox), cover art and live picks" },
+      { src: "/portfolio/fourth-and-two/waivers-desktop.png", caption: "Waivers — claim queue with strategy-engine-backed recommendations" },
+      { src: "/portfolio/fourth-and-two/rankings-desktop.png", caption: "Rankings — internal projection and ranking system underneath the engine" },
+      { src: "/portfolio/fourth-and-two/analytics-desktop.png", caption: "4th & 2 Analytics — Monte Carlo strategy sandbox" },
       { src: "/portfolio/fourth-and-two/game-center-desktop.png", caption: "Game Center — The Pick, Survivor, and the cover-art game roster" },
     ],
   },
