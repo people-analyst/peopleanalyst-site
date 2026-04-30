@@ -60,6 +60,39 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    slug: "devplane",
+    headline: "DevPlane",
+    tagline:
+      "A cockpit for multi-tool software development — assignment registry, two-phase actor handoff, coordination-event log. The operator-side measurement layer that AI coding tools' agent-side metrics miss.",
+    audience:
+      "Solo founders and small teams running heterogeneous AI tool ecosystems.",
+    problem:
+      "AI coding tools' productivity claims rest on agent-side measurements — lines produced, tasks completed, time-to-PR. If the Ironies of Automation are operative — operator vigilance falling as agent reliability rises — those measurements systematically overstate net effect. There is no operator-side cockpit catching the loss.",
+    built:
+      "A multi-agent kanban with a completion-block protocol that tracks per-card execution across heterogeneous AI tools. Continuous coordination-event log. Two-phase actor handoff (builder → reviewer) where the second transition requires an artifact only the reviewer can produce. Cross-tool sync via a hub SDK so an operator coordinates Cursor, Claude Code, Replit, and other agents through one board. The continuous production telemetry that runs the C1 risk-compensation field study — a pre-registered test of Bainbridge 1983 in real coding work.",
+    novel: [
+      "Two-phase actor handoff (builder → reviewer) where the second transition requires an artifact only the reviewer can produce — enforces review without trusting it",
+      "Coordination-event log as a research instrument, not just an audit trail — the apparatus for the C1 risk-compensation field study",
+      "Completion blocks as a protocol — every assignment ends with structured machine-readable completion, not free-text close-out",
+      "Hub-and-spoke sync between heterogeneous AI tools so an operator coordinates Cursor + Claude Code + Replit + custom agents through one board",
+    ],
+    stack: [
+      "Node.js",
+      "TypeScript",
+      "Hono",
+      "SQLite",
+      "MCP",
+      "Server-Sent Events",
+    ],
+    outcome:
+      "Private. The operator-side coordination spine for the multi-app portfolio. Live, measuring, instrumented for the C1 field study.",
+    role: "Designer, engineer.",
+    story:
+      "DevPlane exists because the productivity claims being made for AI coding tools are largely grounded in agent-side measurements — and those measurements systematically miss what an operator running multiple agents actually has to do. The bet: build the operator's cockpit, instrument it, and run a pre-registered field study against the agents-on-tap-make-everyone-faster claim. Either the data validates the claim or it qualifies it; either way it is more honest than what the field has today.",
+    status: "private",
+  },
+
+  {
     slug: "fourth-and-two",
     headline: "Fourth & Two",
     tagline:

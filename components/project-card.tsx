@@ -24,28 +24,10 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
         </header>
 
-        <p className="lg:col-span-8 text-lg sm:text-xl leading-relaxed text-ink-body">
-          {project.tagline}
-        </p>
-
-        <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm">
-          <Field label="for">{project.audience}</Field>
-          <Field label="role">{project.role}</Field>
-          <Field label="status">
-            <span className="font-mono text-xs uppercase tracking-wider">
-              {project.status ?? "private"}
-            </span>
-          </Field>
-          <Field label="stack">
-            <div className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-xs text-ink-secondary">
-              {project.stack.map((s) => (
-                <span key={s}>{s}</span>
-              ))}
-            </div>
-          </Field>
-        </aside>
-
         <div className="lg:col-span-8 space-y-6">
+          <p className="text-lg sm:text-xl leading-relaxed text-ink-body">
+            {project.tagline}
+          </p>
           <Section label="The problem">{project.problem}</Section>
           <Section label="What I built">{project.built}</Section>
 
@@ -65,6 +47,23 @@ export function ProjectCard({ project }: { project: Project }) {
 
           <Section label="Outcome">{project.outcome}</Section>
         </div>
+
+        <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm">
+          <Field label="for">{project.audience}</Field>
+          <Field label="role">{project.role}</Field>
+          <Field label="status">
+            <span className="font-mono text-xs uppercase tracking-wider">
+              {project.status ?? "private"}
+            </span>
+          </Field>
+          <Field label="stack">
+            <div className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-xs text-ink-secondary">
+              {project.stack.map((s) => (
+                <span key={s}>{s}</span>
+              ))}
+            </div>
+          </Field>
+        </aside>
 
         <div className="lg:col-span-12 lg:col-start-1 mt-2 border-t border-paper-divider pt-6">
           <p className="max-w-[65ch] text-ink-body leading-relaxed italic">

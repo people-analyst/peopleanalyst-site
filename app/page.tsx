@@ -14,25 +14,26 @@ export default function Home() {
               Mike West · Pittsburgh, PA
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.05] font-medium">
-              Four products. One engineer. One conviction underneath.
+              Five products. One conviction.{" "}
+              <span className="text-ink-body">Data feedback makes people — and applications — better.</span>
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              An AI-native people analytics ecosystem. A fantasy football
-              intelligence platform. An intentional-baby-naming tool. An
-              adaptive figurative-art platform. They look unrelated. They
-              are all expressions of one bet: that AI should equip the
-              human, not replace them — and that bet shows up the same way
-              in every domain you take seriously.
+              An AI-native people analytics ecosystem. A multi-agent
+              development cockpit. A fantasy football intelligence
+              platform. An intentional-baby-naming tool. An adaptive
+              figurative-art platform. They look unrelated. They are all
+              instances of the same loop — measurement on the way in,
+              calibration on the way through, better behavior on the way
+              out — applied to whatever domain you take seriously.
             </p>
           </div>
 
           <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm font-mono">
-            <Stat label="products" value="4" />
-            <Stat label="spokes underneath" value="20+" />
+            <Stat label="products" value="5" />
+            <Stat label="spokes underneath" value="20" />
             <Stat label="commits, 12mo" value="5,974" />
-            <Stat label="team size" value="1" />
             <p className="pt-3 text-xs text-ink-muted leading-relaxed font-sans">
-              The four products are the surface. The hub-and-spoke architecture
+              The five products are the surface. The hub-and-spoke architecture
               underneath — anonymization, metric calculation, adaptive
               measurement, codegen — is how solo cadence stays sustainable.
             </p>
