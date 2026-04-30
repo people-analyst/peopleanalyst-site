@@ -1,4 +1,5 @@
-import type { Project } from "@/content/projects";
+import Image from "next/image";
+import type { Project, Screenshot } from "@/content/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
@@ -70,8 +71,44 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.story}
           </p>
         </div>
+
+        {project.screenshots && project.screenshots.length > 0 && (
+          <div className="lg:col-span-12 lg:col-start-1 mt-2 border-t border-paper-divider pt-8">
+            <Label>Selected surfaces</Label>
+            <ScreenshotStrip screenshots={project.screenshots} />
+          </div>
+        )}
       </div>
     </article>
+  );
+}
+
+function ScreenshotStrip({ screenshots }: { screenshots: Screenshot[] }) {
+  return (
+    <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      {screenshots.map((s) => (
+        <a
+          key={s.src}
+          href={s.src}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block"
+        >
+          <div className="relative aspect-[16/10] overflow-hidden border border-paper-divider bg-paper-card">
+            <Image
+              src={s.src}
+              alt={s.caption}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 220px"
+              className="object-cover object-top transition-opacity group-hover:opacity-90"
+            />
+          </div>
+          <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-muted leading-snug">
+            {s.caption}
+          </p>
+        </a>
+      ))}
+    </div>
   );
 }
 

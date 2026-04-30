@@ -1,3 +1,8 @@
+export type Screenshot = {
+  src: string;
+  caption: string;
+};
+
 export type Project = {
   slug: string;
   headline: string;
@@ -13,6 +18,7 @@ export type Project = {
   story: string;
   href?: string;
   status?: "live" | "private" | "client" | "archived";
+  screenshots?: Screenshot[];
 };
 
 export const PROJECTS: Project[] = [
@@ -54,6 +60,12 @@ export const PROJECTS: Project[] = [
       "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
     href: "https://vela.study",
     status: "live",
+    screenshots: [
+      { src: "/portfolio/vela/landing-desktop-blurred.png", caption: "Landing — magazine + sequences (artwork tiles blurred for portfolio display)" },
+      { src: "/portfolio/vela/about-desktop.png", caption: "About — what Vela is for" },
+      { src: "/portfolio/vela/writers-desktop.png", caption: "Writers — staff voice infrastructure" },
+      { src: "/portfolio/vela/membership-desktop-blurred.png", caption: "Membership — Stripe-backed Member tier (artwork tiles blurred)" },
+    ],
   },
 
   {
@@ -156,6 +168,14 @@ export const PROJECTS: Project[] = [
     role: "Designer, engineer.",
     story:
       "Naming a child is high-stakes and irreversible. Most tools treat it as entertainment. Namesake treats it as a decision — with live signal, acoustic structure, and literary depth — because that is what the decision actually warrants.",
-    status: "private",
+    status: "live",
+    href: "https://namesake.baby",
+    screenshots: [
+      { src: "/portfolio/namesake/landing-desktop.png", caption: "Landing" },
+      { src: "/portfolio/namesake/name-wizard-desktop.png", caption: "Name Wizard — guided 20-min selection" },
+      { src: "/portfolio/namesake/names-index-desktop.png", caption: "Names index — 47K names with SSA history" },
+      { src: "/portfolio/namesake/name-profile-desktop.png", caption: "Name profile — AI intelligence with citation chains" },
+      { src: "/portfolio/namesake/collections-desktop.png", caption: "Collections" },
+    ],
   },
 ];
