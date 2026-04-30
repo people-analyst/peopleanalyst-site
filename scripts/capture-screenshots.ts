@@ -163,25 +163,54 @@ const SURFACES: Surface[] = [
     breakpoints: ["desktop"],
     settleMs: 2500,
   },
-  // Authed surfaces — require .auth/fourth-and-two.json (run scripts/auth-capture.ts first):
-  // {
-  //   product: "fourth-and-two",
-  //   slug: "gm-console",
-  //   url: "https://mfl-gm-consol.replit.app/<league-or-lineup-route>", // pending Mike's URL
-  //   caption: "GM Console — roster management, lineup decisions, decision-quality outcomes.",
-  //   breakpoints: ["desktop"],
-  //   settleMs: 2500,
-  //   storageState: "fourth-and-two",
-  // },
-  // {
-  //   product: "fourth-and-two",
-  //   slug: "draft-day",
-  //   url: "https://mfl-gm-consol.replit.app/<fantasy-draft-route>", // pending Mike's URL
-  //   caption: "Draft Day — fantasy draft application with cover art, queue, and live picks.",
-  //   breakpoints: ["desktop"],
-  //   settleMs: 2500,
-  //   storageState: "fourth-and-two",
-  // },
+  // Authed surfaces — require .auth/fourth-and-two.json (run scripts/auth-capture.ts first).
+  // These get captured automatically on the next `npm run portfolio:capture` once the
+  // storage state exists; before that, the script reports them as skipped.
+  {
+    product: "fourth-and-two",
+    slug: "league",
+    url: "https://mfl-gm-consol.replit.app/league",
+    caption: "League — roster, standings, and the GM-Console workflow entry.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+    storageState: "fourth-and-two",
+  },
+  {
+    product: "fourth-and-two",
+    slug: "waivers",
+    url: "https://mfl-gm-consol.replit.app/waivers",
+    caption: "Waivers — claim queue with strategy-engine-backed recommendations.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+    storageState: "fourth-and-two",
+  },
+  {
+    product: "fourth-and-two",
+    slug: "strategy",
+    url: "https://mfl-gm-consol.replit.app/strategy",
+    caption: "Strategy — Monte Carlo decision support across lineup and roster moves.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+    storageState: "fourth-and-two",
+  },
+  {
+    product: "fourth-and-two",
+    slug: "draft-sandbox",
+    url: "https://mfl-gm-consol.replit.app/draft/sandbox-snake",
+    caption: "Draft Day — fantasy draft application (snake sandbox), cover art and live picks.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+    storageState: "fourth-and-two",
+  },
+  {
+    product: "fourth-and-two",
+    slug: "rankings",
+    url: "https://mfl-gm-consol.replit.app/rankings",
+    caption: "Rankings — internal projection and ranking system underneath the strategy engine.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+    storageState: "fourth-and-two",
+  },
 ];
 
 const PUBLIC_ROOT = join(__dirname, "..", "public", "portfolio");
