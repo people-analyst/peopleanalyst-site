@@ -56,10 +56,18 @@ This is the Lieberson null-drift result. ~84% of observed name turnover can be e
 Spatial clustering of name adoption (Moran's I) has dropped from 0.51 in the 1960s to 0.27 today. The internet flattens naming geography, just like it flattens everything else.
 *Confidence: medium. Coastal-first diffusion is documented for 11 cultural events — real but a small sample.*
 
-### 🔴 Red flag (de-fanged but still flagged): The "99.9% predictable" headline is a base-rate artifact.
+### ✅ Resolved: A-239 honest forecasting respec — predicting breakthroughs, not autoregression.
 
-Phase 10b reports AUC = 0.999 at predicting which names enter the SSA top 100. **It is almost entirely autoregression.** The AR(1) baseline ("predict next year's rank ≈ this year's rank") alone reaches AUC = 0.997 in the rerun; the full feature model adds 0.002. The honest reading: *prior rank predicts next rank; cultural and phonetic features add a small, measurable edge.* The Phase 10b report carries an A-202 banner spelling this out, and **A-239** queues a respec to a sub-rank-500 → top-200 (3y) target where the AR(1) baseline doesn't dominate. We do not surface "99.9% predictability" anywhere in consumer copy.
-*Confidence: high. The respec replaces the flawed metric with one that's actually informative.*
+The "AUC = 0.999" finding is gone, replaced with an honest respec'd task: *for names with rank in [201, 5000] in year t, predict whether the name enters the SSA top 200 within the next 3 years*. Train 2004–2018, test 2019–2021 (test set: 26,717 (name, year) rows with 126 positives).
+
+| Model | AUC | PR-AUC | P@25 | P@100 |
+|---|---|---|---|---|
+| AR(1) prior rank | 0.978 | 0.158 | 0.12 | 0.21 |
+| Full Logistic | 0.990 | 0.324 | 0.32 | 0.41 |
+| **Full LightGBM** | **0.991** | **0.595** | **0.96** | **0.66** |
+
+The headline is the **+0.44 PR-AUC delta over AR(1)** — AUC is saturated by construction in any rank-based prediction problem. The operational read: of the GBT's top-25 predicted breakthroughs, 24 are real (P@25 = 0.96) vs 3 (P@25 = 0.12) for AR(1). That's an 8× lift at the top, and it surfaces precisely the names where culture/sound features matter at the margin. Top GBT importance: `rank_3yr_trend`, `phonetic_density`, `search_3yr_mean`, `births_count`, `sex_pct_male`.
+*Confidence: high. PR-AUC delta is the right metric under this much imbalance, and the calibration table is honest about where the model still over-predicts.*
 
 ### 🟡 Recharacterized: synthetic-control divergence ≠ causal ATE (A-208).
 
@@ -87,7 +95,7 @@ The wave-1+2 fixes from this session resolved most of the wart list below. What'
 
 4. ✅ **Data-coverage NaN-vs-zero fixed (A-200).** The annual panel now writes NaN for missing Trends data and 0.0 only for real Google-zero readings. 1.32M pre-2004 rows correctly NaN; 256K post-2004 NaN, 263K real zeros, 121K positive — three distinct cases preserved, methodology §4a documents.
 
-5. 🟡 **Spelling-variant collapse substrate shipped (A-237 PARTIAL).** `spelling_groups.parquet` now exists (43,334 names → 12,356 ARPAbet groups). Phase 8a / Phase 9 still need a `--use-variant-rollup` flag and a sensitivity-table comparing collapsed vs uncollapsed lifts; that's the partial part.
+5. ✅ **Spelling-variant collapse end-to-end (A-237).** `spelling_groups.parquet` (43,334 names → 36,265 groups under the consonant-guarded rule), Phase 8a `--use-variant-rollup` flag, and the rendered `spelling_variant_sensitivity.md` are all shipped. Strict-gate causal-candidate churn at the rollup boundary: 5/11 ≈ 45% across the 53 events present in both runs (small enough to read as "spelling-variant fragmentation does affect the strict-gate set, but it's confined to events with real variant siblings"). Top shifts are now Emanuel→Emmanuel, Lindsay→Lindsey, Cory→Corey, Cain→Kane — phonetically credible spelling pairs, not the garbage `Adaline→Kamari` collisions that surfaced the A-240 g2p quality bug in the first place.
 
 6. ✅ **Silent engineering failures plugged.** A-196 (Modal: every phase's reports persisted to volume), A-203 (PYTHONHASHSEED + errband_mc seed pinned), A-198 (Phase 4a vectorized: 30 min → 2 sec), A-199 (Phase 3b dry-run short-circuits), A-204 (parquet schema gate at every boundary), A-205 (tiny-corpus regression test), A-206 (status reader against Modal volume) all landed.
 
@@ -97,11 +105,9 @@ The wave-1+2 fixes from this session resolved most of the wart list below. What'
 
 **Still wobbly:**
 
-9. **A-239 — Phase 10b respec.** The "AUC = 0.999" finding is now banner-flagged as a base-rate artifact (A-202), but the underlying metric is still in place. The replacement (sub-rank-500 → top-200 in 3y) is queued as A-239 for a separate session.
+9. **A-240 — Phase 3a g2p quality fix.** Building the A-237 sensitivity table surfaced a serious upstream issue: 25,773 of 33,921 g2p-decomposed names (76%) come back with NO consonant phonemes (`Adaline → AA0 AA1 IY0`). A-237's downstream rollup now guards against this (vowel-only decompositions are routed to singletons) but the underlying decomposition is still wrong, and Phase 6 phonetic-spillover + Phase 3b neighborhood graph + Phase 9's `phonetic_density` feature all rely on it. Queued as A-240.
 
-10. **A-237 sensitivity table.** Spelling-variant rollup needs a Phase 8a re-run with `--use-variant-rollup` to produce the lift-shift comparison table.
-
-11. **A-236 verdicts.** The attribution-audit harness is shipped; the 50 manual verdicts are the next human-in-the-loop step.
+10. **A-236 verdicts.** The attribution-audit harness is shipped; the 50 manual verdicts are the next human-in-the-loop step.
 
 ---
 
@@ -126,9 +132,10 @@ A-196 → A-209 are all **COMPLETE** as of this session. A-236 (LLM-attribution 
 | ✅ | A-208 | Phase 8a outputs reframed as "synthetic-control-adjusted divergence" + post/pre MSPE + is_causal_candidate gate (24/200 strict) |
 | ✅ | A-209 | Phase 9 cycle features PCA-orthogonalized; name block split into matching/independent |
 | ✅ | A-236 | LLM-attribution audit harness (sample + calibration scripts shipped; verdicts pending) |
-| 🟡 | A-237 | Spelling-variant collapse substrate shipped; sensitivity table pending |
+| ✅ | A-237 | Spelling-variant collapse: substrate + rollup flag + sensitivity table |
+| ⏳ | A-240 | Phase 3a g2p quality fix (76% vowel-only OOV decompositions; surfaced by A-237) |
 | ✅ | A-238 | Effect-size unit translation: market-share → births per 10K + in-cohort |
-| ⏳ | A-239 | Phase 10b respec (sub-rank-500 → top-200 in 3y) — separate session |
+| ✅ | A-239 | Phase 10b respec (rank [201, 5000] → top-200 in 3y); GBT P@25 = 0.96 |
 
 Of the warts that A-196 → A-209 set out to fix, the ones that meaningfully shifted reported numbers in the 2026-04-30 run:
 

@@ -994,8 +994,9 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "methodology",
     title: "Methodology",
     summary:
-      "Operational discipline (assignment registry, handoff protocol, coordination-event log) plus research discipline (pre-registered predictions, falsifiable constructs, acknowledged researcher position). Forthcoming.",
-    status: "forthcoming",
+      "Operational discipline (assignment registry, handoff protocol, two-phase actor handoff, shared-index commit, coordination-event log) plus research discipline (pre-registered predictions, falsifiable constructs, acknowledged researcher position, threats-to-validity register).",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/methodology.md" },
+    status: "live",
   },
   {
     product: "devplane",
@@ -1065,7 +1066,8 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "pipeline-status",
     title: "Pipeline status",
     summary:
-      "Running / queued / blocked / recently completed / coming soon. Forthcoming.",
-    status: "forthcoming",
+      "Running / queued / blocked / recently completed / coming soon. Honest pre-data-collection snapshot of the C1 risk-compensation field study.",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/PIPELINE_STATUS.md" },
+    status: "live",
   },
 ];

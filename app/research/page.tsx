@@ -35,9 +35,19 @@ export default function ResearchIndex() {
               preregistrations, and a pipeline. Where a slot is empty, it is
               shown openly as forthcoming — visible gaps, not papered-over ones.
             </p>
-            <p className="text-base text-ink-secondary leading-relaxed max-w-[60ch] italic">
-              The synthesis paragraph that ties all four programs together is in
-              draft. It will replace this paragraph when ready.
+            <p className="text-base text-ink-body leading-relaxed max-w-[60ch]">
+              The five programs share a posture. Each treats a domain that
+              looks like a product — figurative art, baby naming, fantasy
+              decisions, HR analytics, multi-agent coordination — and turns
+              it into an instrument the discipline did not have. Vela separates
+              desire from preference. Namesake studies cultural diffusion
+              through one of its denser corpora. Fourth & Two formalizes
+              decisions under uncertainty. The People Analytics Platform names
+              the load-bearing measurements most organizations cannot do.
+              DevPlane catches the coordination cost that agent-side
+              productivity metrics miss. The methods travel because the
+              questions underneath are general — measurement under conditions
+              where the cleanest evidence is unevenly distributed.
             </p>
           </div>
 
