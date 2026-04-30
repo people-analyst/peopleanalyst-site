@@ -17,12 +17,12 @@ export default function Home() {
               Four products. One engineer. One conviction underneath.
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              An adaptive figurative-art platform. An AI-native people
-              analytics ecosystem. A fantasy football intelligence platform. An
-              intentional-baby-naming tool. They look unrelated. They are all
-              expressions of one bet: that AI should equip the human, not
-              replace them — and that bet shows up the same way in every
-              domain you take seriously.
+              An AI-native people analytics ecosystem. A fantasy football
+              intelligence platform. An intentional-baby-naming tool. An
+              adaptive figurative-art platform. They look unrelated. They
+              are all expressions of one bet: that AI should equip the
+              human, not replace them — and that bet shows up the same way
+              in every domain you take seriously.
             </p>
           </div>
 

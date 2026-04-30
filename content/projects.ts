@@ -23,63 +23,18 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "vela",
-    headline: "Vela",
-    tagline:
-      "A contemplative platform for fine-art figurative work — adaptive sequencing, museum sourcing, editorial magazine.",
-    audience:
-      "Adults who want disciplined, taste-driven encounters with figurative art — and the research participants who help calibrate it.",
-    problem:
-      "Image platforms either flatten taste into engagement metrics or hide behind gatekeepers. Neither produces a reading rhythm. Neither learns from you.",
-    built:
-      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player that learns desire and pool composition. A magazine with original fiction and editorial criticism. Stripe membership. A Chrome extension for attribution capture. A derivative pipeline that produces new transformative works under license.",
-    novel: [
-      "Reincarnation engine: per-user desire scoring with RID/SID adaptive measurement and visual-rhyme sequencing",
-      "Pill paradigm: 80 admin pages collapsed into ~7 named flows, each a typed pill expression",
-      "Adaptive authorship platform underneath — Vela is property #1; siblings reuse the substrate",
-      "Museum-grade attribution and license discipline as a first-class feature, not a footnote",
-    ],
-    stack: [
-      "Next.js 16",
-      "React 19",
-      "Tailwind 4",
-      "TypeScript",
-      "Supabase",
-      "pgvector",
-      "Vercel",
-      "Modal",
-      "Anthropic API",
-      "Stripe",
-      "Playwright",
-    ],
-    outcome:
-      "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start.",
-    role: "Designer, engineer.",
-    commits: "1,300+",
-    story:
-      "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
-    href: "https://vela.study",
-    status: "live",
-    screenshots: [
-      { src: "/portfolio/vela/landing-desktop-blurred.png", caption: "Landing — magazine + sequences (artwork tiles blurred for portfolio display)" },
-      { src: "/portfolio/vela/about-desktop.png", caption: "About — what Vela is for" },
-      { src: "/portfolio/vela/writers-desktop.png", caption: "Writers — staff voice infrastructure" },
-      { src: "/portfolio/vela/membership-desktop-blurred.png", caption: "Membership — Stripe-backed Member tier (artwork tiles blurred)" },
-    ],
-  },
-
-  {
     slug: "pa-platform",
     headline: "People Analytics Platform",
     tagline:
-      "A hub-and-spoke ecosystem for AI-native HR analytics — measurement, decision science, survey delivery, and a compensation OS, on shared substrate.",
+      "A hub-and-spoke ecosystem for AI-native HR analytics — twenty production spokes on shared schemas and APIs, composable into packages for both standardized reporting and custom analytical work.",
     audience:
       "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
     problem:
-      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery — get re-implemented per product. The result is brittle, fragmented, and expensive.",
+      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery, decision support — get re-implemented per product. The result is brittle, fragmented, expensive, and hostile to combination: each tool is good at its one thing, and useless next to its neighbor.",
     built:
-      "A central hub (people-analytics-toolbox) plus a set of spoke applications consumed across verticals. Calculus precomputes 210+ HR metrics. Conductor generates SQL and Python from metadata, not example queries. Reincarnation runs adaptive measurement with RID/SID accumulation across studies. AnyComp turns merit, equity, market-pricing, and total-rewards into a single decision surface. Cross-cutting services — anonymization, segmentation, survey delivery, preference modeling, decision support — live on the hub once.",
+      "A central hub (people-analytics-toolbox) plus a roster of production spokes that work standalone and compose. Each spoke produces a discrete artifact; spokes share data schemas and APIs so they pull into packages addressing real analytical needs without integration tax. Production spokes include Calculus (210+ precomputed HR metrics), Conductor (metadata-grounded SQL/Python codegen), Reincarnation (RID/SID adaptive measurement), AnyComp (compensation OS), VOI Calculator (formal decision-theoretic value-of-information), Pay Factory, Total Rewarder, Job Matching Factory, Persona Factory, Survey Factory, Competency Factory, Business Ideas Factory, Application Designs Factory, Requirements Factory, Publishing Factory, Client Onboarding. Hub layer carries the cross-cutting services — Data Anonymizer (deterministic PII), Survey Respondent, Preference Modeler, Segmentation Studio, Decision Support — that every spoke depends on. Standardized reporting and bespoke analytical work both run through the same substrate; a custom engagement is a new package composed from existing spokes, not a new build.",
     novel: [
+      "Compartmentalable packages on shared data schemas and APIs — every spoke speaks the same anonymization, metric, segmentation, and survey vocabulary, so spokes compose without integration tax (the architectural conviction underneath the rest)",
       "Reincarnation: cross-study item-response accumulation without confounding — adaptive selection over the full evidence pool, not just the current study",
       "Conductor: metadata-grounded SQL/Python generation (not example-grounded) — the model sees schema, field semantics, and canonical metric definitions",
       "Calculus: precomputed metric materialization so manager-level segmentations are instant rather than dashboard-render-blocked",
@@ -97,10 +52,10 @@ export const PROJECTS: Project[] = [
       "Anthropic API",
     ],
     outcome:
-      "Hub plus 14+ spoke applications. Solo build since 2022. Several spokes deployed at enterprise clients.",
+      "Hub plus 20 production spokes plus the cross-cutting hub services. Solo build since 2022. Several spokes deployed at enterprise clients; the platform composition powers both off-the-shelf reporting and bespoke analytical packages.",
     role: "All roles.",
     story:
-      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. The architecture is what makes a single founder productive at this scale.",
+      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. Standardization where it earns its keep; custom analytical assembly where it earns its keep; the same substrate underneath both. The architecture is what makes a single founder productive at this scale.",
     status: "private",
   },
 
@@ -176,6 +131,52 @@ export const PROJECTS: Project[] = [
       { src: "/portfolio/namesake/names-index-desktop.png", caption: "Names index — 47K names with SSA history" },
       { src: "/portfolio/namesake/name-profile-desktop.png", caption: "Name profile — AI intelligence with citation chains" },
       { src: "/portfolio/namesake/collections-desktop.png", caption: "Collections" },
+    ],
+  },
+
+  {
+    slug: "vela",
+    headline: "Vela",
+    tagline:
+      "A contemplative platform for fine-art figurative work — adaptive sequencing, museum sourcing, editorial magazine.",
+    audience:
+      "Adults who want disciplined, taste-driven encounters with figurative art — and the research participants who help calibrate it.",
+    problem:
+      "Image platforms either flatten taste into engagement metrics or hide behind gatekeepers. Neither produces a reading rhythm. Neither learns from you.",
+    built:
+      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player that learns desire and pool composition. A magazine with original fiction and editorial criticism. Stripe membership. A Chrome extension for attribution capture. A derivative pipeline that produces new transformative works under license.",
+    novel: [
+      "Reincarnation engine: per-user desire scoring with RID/SID adaptive measurement and visual-rhyme sequencing",
+      "Pill paradigm: 80 admin pages collapsed into ~7 named flows, each a typed pill expression",
+      "Adaptive authorship platform underneath — Vela is property #1; siblings reuse the substrate",
+      "Museum-grade attribution and license discipline as a first-class feature, not a footnote",
+    ],
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "Tailwind 4",
+      "TypeScript",
+      "Supabase",
+      "pgvector",
+      "Vercel",
+      "Modal",
+      "Anthropic API",
+      "Stripe",
+      "Playwright",
+    ],
+    outcome:
+      "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start.",
+    role: "Designer, engineer.",
+    commits: "1,300+",
+    story:
+      "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
+    href: "https://vela.study",
+    status: "live",
+    screenshots: [
+      { src: "/portfolio/vela/landing-desktop-blurred.png", caption: "Landing — magazine + sequences (artwork tiles blurred for portfolio display)" },
+      { src: "/portfolio/vela/about-desktop.png", caption: "About — what Vela is for" },
+      { src: "/portfolio/vela/writers-desktop.png", caption: "Writers — staff voice infrastructure" },
+      { src: "/portfolio/vela/membership-desktop-blurred.png", caption: "Membership — Stripe-backed Member tier (artwork tiles blurred)" },
     ],
   },
 ];
