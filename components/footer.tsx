@@ -4,7 +4,7 @@ const ELSEWHERE_LINKS: { label: string; href: string; external: boolean; note?: 
   { label: "Vela", href: "https://vela.study", external: true, note: "live" },
   { label: "Namesake", href: "https://namesake.baby", external: true, note: "live" },
   { label: "GitHub — people-analyst", href: "https://github.com/people-analyst", external: true },
-  // TODO: add LinkedIn URL once provided
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/michaelcwest/", external: true },
 ];
 
 export function Footer() {
