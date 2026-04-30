@@ -1,6 +1,6 @@
 import type { CategoryId, AudienceTier } from "./_taxonomy";
 
-export type ProductId = "vela" | "namesake" | "fourth-and-two" | "pa-platform" | "devplane";
+export type ProductId = "vela" | "namesake" | "fourth-and-two" | "pa-platform" | "devplane" | "principia";
 
 export type ManifestEntry = {
   product: ProductId;
@@ -72,11 +72,21 @@ export const PRODUCT_META: Record<ProductId, ProductMeta> = {
       "The productivity claims being made for AI coding tools are largely grounded in agent-side measurements — lines produced, tasks completed, time-to-PR. If the Ironies of Automation (Bainbridge 1983) are operative — operator vigilance falling as agent reliability rises — those measurements systematically overstate net effect. The DevPlane research program tests that prediction with continuous production telemetry on a real operator running real agents on a real, multi-month codebase. The methodology generalizes: any team running heterogeneous tools through a coordination layer (multi-tool ops dashboards, hospital handoff systems, distributed scientific instruments) shares the same shape of problem.",
     featuredEntrySlug: "overview",
   },
+  principia: {
+    id: "principia",
+    label: "Principia",
+    blurb:
+      "A source-graded survey of organizational measurement — predominantly the people side. Codifies constructs, instruments, items, measures, and meta-analytic effect-size tables into a queryable registry shared across the People Analytics Platform.",
+    whyItMatters:
+      "Load-bearing organizational measurement is unevenly distributed across organizations and disciplines. The same construct gets measured five different ways across five different studies; effect-size tables live scattered through chapters of textbooks; high-quality instruments get reinvented in low-quality form because the original is paywalled or buried. Principia exists to give builders, researchers, and operators a single graded, sourced, queryable place to look — and to give the People Analytics Platform a canonical measurement vocabulary it can subscribe to. The methodology generalizes: source grading, statistical-metadata extraction into a shared schema, novelty verification before publication, queryable indexing — the same shape works for clinical psychology, educational measurement, marketing research, or any field where rigorous measurement is unevenly distributed.",
+    featuredEntrySlug: "overview",
+  },
 };
 
 const VELA_REPO = "people-analyst/vela";
 const NAMESAKE_REPO = "people-analyst/baby-namer";
 const DEVPLANE_REPO = "people-analyst/devplane";
+const PRINCIPIA_REPO = "people-analyst/principia";
 
 export const MANIFEST: ManifestEntry[] = [
   // ===== VELA =====
@@ -1068,6 +1078,144 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Running / queued / blocked / recently completed / coming soon. Honest pre-data-collection snapshot of the C1 risk-compensation field study.",
     source: { repo: DEVPLANE_REPO, path: "docs/research/PIPELINE_STATUS.md" },
+    status: "live",
+  },
+
+  // ===== PRINCIPIA =====
+  {
+    product: "principia",
+    category: "overview",
+    slug: "overview",
+    title: "Principia — overview",
+    summary:
+      "A source-graded survey of organizational measurement, output as a book + queryable database, rendered from one underlying registry. Outside-reader brief on what it codifies, why now, and how it relates to the rest of the portfolio via @measurement/core.",
+    source: { repo: PRINCIPIA_REPO, path: "docs/research/OVERVIEW.md" },
+    status: "live",
+  },
+  {
+    product: "principia",
+    category: "methodology",
+    slug: "methodology",
+    title: "Methodology",
+    summary:
+      "Source selection, source-quality grading rubric (A–D), statistical-metadata extraction protocol, schema discipline against @measurement/core, versioning + snapshots, novelty verification, threats to validity, author position.",
+    source: { repo: PRINCIPIA_REPO, path: "docs/research/methodology.md" },
+    status: "live",
+  },
+  {
+    product: "principia",
+    category: "reports",
+    slug: "construct-family-roadmap",
+    title: "Construct-family roadmap",
+    summary:
+      "17 construct families across 4 tiers (foundational · derivative · composite · outcomes), 8 queued for sequencing, 3 parallel threads (surveys · infrastructure · book draft).",
+    source: { repo: PRINCIPIA_REPO, path: "docs/research/PROGRAM.md" },
+    status: "live",
+  },
+  {
+    product: "principia",
+    category: "reports",
+    slug: "engagement-survey",
+    title: "Engagement — construct-family survey",
+    summary:
+      "First tier-1 family. Densest accumulated literature; serves as the methodology proof-of-method. UWES, Gallup Q12, MEI, JES, plus the Kahn-tradition qualitative work. Blocked on @measurement/core extraction (vela ASN-1013).",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "reports",
+    slug: "job-satisfaction-survey",
+    title: "Job satisfaction — construct-family survey",
+    summary:
+      "Tier-1, second in the queue. Long history; classic measurement-model debates (global vs facet; affective vs cognitive). JDI, MSQ, JSS, Brief Index of Affective Job Satisfaction.",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "reports",
+    slug: "organizational-commitment-survey",
+    title: "Organizational commitment — construct-family survey",
+    summary:
+      "Tier-1, third. Tripartite measurement model (Allen & Meyer affective / continuance / normative) is canonical and well-tested.",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "audience-tiers",
+    slug: "general-audience",
+    title: "General-audience explainer",
+    summary:
+      "Public framing of the survey-as-instrument argument — what builders, practitioners, and researchers can do with a queryable, source-graded measurement registry that they could not do before.",
+    audienceTier: "general-audience",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "audience-tiers",
+    slug: "peer-review",
+    title: "Peer-review framing",
+    summary:
+      "Positioning against the existing measurement-handbook tradition (Schmitt & Highhouse 2013; Borman et al. 2003) and the meta-analytic synthesis tradition (Hunter & Schmidt 2004; Cooper 2017). What Principia adds, what it does not claim to add.",
+    audienceTier: "peer-review",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "audience-tiers",
+    slug: "engineering",
+    title: "Engineering critique",
+    summary:
+      "Engineering reviewer's lens — schema discipline, the ETL pipeline, the verification-log infrastructure, the hub-and-spoke @measurement/core story. How the registry is built and where it can fail.",
+    audienceTier: "engineering",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "audience-tiers",
+    slug: "product",
+    title: "Product implications",
+    summary:
+      "What the registry tells us to build next — on the People Analytics Platform, on Vela, in the toolbox/hub. Which constructs unlock which platform features once their rows exist.",
+    audienceTier: "product",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "bibliography",
+    slug: "literature-map",
+    title: "Literature map",
+    summary:
+      "Three-layer field orientation — measurement theory, construct-specific instrumentation, meta-analytic accumulations. Where Principia sits between layers 2 and 3 as the indexing layer.",
+    source: { repo: PRINCIPIA_REPO, path: "docs/research/literature-map.md" },
+    status: "live",
+  },
+  {
+    product: "principia",
+    category: "bibliography",
+    slug: "bibliography-bibtex",
+    title: "Bibliography — BibTeX",
+    summary:
+      "28 foundational references — measurement theory, scale construction, meta-analytic methodology, tier-1 construct instrument-development papers, tier-2 derivative-construct anchors. Construct-specific bibliographies live inside each survey document; this file holds the cross-cutting methodology references.",
+    source: { repo: PRINCIPIA_REPO, path: "docs/research/bibliography.bib" },
+    status: "live",
+  },
+  {
+    product: "principia",
+    category: "preregistrations",
+    slug: "preregistration",
+    title: "Preregistration(s)",
+    summary:
+      "Synthesis-analytic preregistrations land here as construct-family surveys surface meta-analytic gaps. None filed yet — first will land alongside the engagement survey if a meta-analytic gap appears.",
+    status: "forthcoming",
+  },
+  {
+    product: "principia",
+    category: "pipeline",
+    slug: "pipeline-status",
+    title: "Pipeline status",
+    summary:
+      "Honest pre-data snapshot. Schema extraction (ASN-1013) blocks first construct-family survey from completing in canonical-typed form; tier-1 families queued; database build follows extraction.",
+    source: { repo: PRINCIPIA_REPO, path: "docs/research/PIPELINE_STATUS.md" },
     status: "live",
   },
 ];

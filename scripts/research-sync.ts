@@ -17,6 +17,7 @@ const REPO_ROOTS: Record<string, string> = {
   "people-analyst/vela": "/Users/mikewest/vela",
   "people-analyst/baby-namer": "/Users/mikewest/Vibe Coding Projects/baby-namer",
   "people-analyst/devplane": "/Users/mikewest/devplane",
+  "people-analyst/principia": "/Users/mikewest/principia",
 };
 
 const CONTENT_ROOT = join(__dirname, "..", "content", "research");
