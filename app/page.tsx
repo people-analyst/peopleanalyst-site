@@ -24,7 +24,7 @@ export default function Home() {
               platform. An intentional-baby-naming tool. An adaptive
               figurative-art platform. They look unrelated. They are all
               instances of the same loop — measurement on the way in,
-              calibration on the way through, better behavior on the way
+              calibration on the way through, better decisions on the way
               out — applied to whatever domain you take seriously.
             </p>
           </div>
