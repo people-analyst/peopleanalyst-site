@@ -129,8 +129,6 @@ export const PROJECTS: Project[] = [
     status: "private",
     screenshots: [
       { src: "/portfolio/fourth-and-two/magazine-landing-desktop.png", caption: "Magazine landing — newsroom front and editorial entry point" },
-      { src: "/portfolio/fourth-and-two/gm-console-desktop.png", caption: "GM Console — guided workflow paths into roster, draft, and decision tooling" },
-      { src: "/portfolio/fourth-and-two/draft-day-desktop.png", caption: "Draft Day — 2026 NFL prospect rankings with combine archetypes and scouting reports" },
       { src: "/portfolio/fourth-and-two/analytics-desktop.png", caption: "4th & 2 Analytics — Monte Carlo strategy engine and scenario sandbox" },
       { src: "/portfolio/fourth-and-two/game-center-desktop.png", caption: "Game Center — The Pick, Survivor, and the cover-art game roster" },
     ],

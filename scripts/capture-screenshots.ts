@@ -27,6 +27,8 @@ type Surface = {
   settleMs?: number;
   /** Optional pre-screenshot action sequence */
   prepare?: (page: Page) => Promise<void>;
+  /** Slug of an auth storage-state file in .auth/<slug>.json (created by scripts/auth-capture.ts). */
+  storageState?: string;
 };
 
 const VIEWPORTS: Record<Breakpoint, { width: number; height: number }> = {
@@ -131,27 +133,12 @@ const SURFACES: Surface[] = [
   },
 
   // ===== FOURTH & TWO — Replit-hosted =====
+  // Public surfaces (no auth):
   {
     product: "fourth-and-two",
     slug: "magazine-landing",
     url: "https://mfl-gm-consol.replit.app/",
     caption: "Magazine landing — newsroom front and editorial entry point.",
-    breakpoints: ["desktop"],
-    settleMs: 2500,
-  },
-  {
-    product: "fourth-and-two",
-    slug: "gm-console",
-    url: "https://mfl-gm-consol.replit.app/demo",
-    caption: "GM Console — guided workflow paths into roster, draft, and decision tooling.",
-    breakpoints: ["desktop"],
-    settleMs: 2500,
-  },
-  {
-    product: "fourth-and-two",
-    slug: "draft-day",
-    url: "https://mfl-gm-consol.replit.app/draft/2026",
-    caption: "Draft Day — 2026 NFL prospect rankings, combine archetypes, and scouting reports.",
     breakpoints: ["desktop"],
     settleMs: 2500,
   },
@@ -171,6 +158,25 @@ const SURFACES: Surface[] = [
     breakpoints: ["desktop"],
     settleMs: 2500,
   },
+  // Authed surfaces — require .auth/fourth-and-two.json (run scripts/auth-capture.ts first):
+  // {
+  //   product: "fourth-and-two",
+  //   slug: "gm-console",
+  //   url: "https://mfl-gm-consol.replit.app/<league-or-lineup-route>", // pending Mike's URL
+  //   caption: "GM Console — roster management, lineup decisions, decision-quality outcomes.",
+  //   breakpoints: ["desktop"],
+  //   settleMs: 2500,
+  //   storageState: "fourth-and-two",
+  // },
+  // {
+  //   product: "fourth-and-two",
+  //   slug: "draft-day",
+  //   url: "https://mfl-gm-consol.replit.app/<fantasy-draft-route>", // pending Mike's URL
+  //   caption: "Draft Day — fantasy draft application with cover art, queue, and live picks.",
+  //   breakpoints: ["desktop"],
+  //   settleMs: 2500,
+  //   storageState: "fourth-and-two",
+  // },
 ];
 
 const PUBLIC_ROOT = join(__dirname, "..", "public", "portfolio");
@@ -198,6 +204,8 @@ async function captureSurface(page: Page, surface: Surface, breakpoint: Breakpoi
   return { ok: true };
 }
 
+const AUTH_ROOT = join(__dirname, "..", ".auth");
+
 async function main() {
   if (existsSync(PUBLIC_ROOT)) {
     rmSync(PUBLIC_ROOT, { recursive: true, force: true });
@@ -205,22 +213,54 @@ async function main() {
   mkdirSync(PUBLIC_ROOT, { recursive: true });
 
   const browser = await chromium.launch();
-  const context = await browser.newContext({
-    deviceScaleFactor: 1,
-    userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36 PortfolioCapture/1.0",
-  });
-  const page = await context.newPage();
+
+  // Group surfaces by storage-state slug so each unique session gets one context.
+  const byAuth = new Map<string | "anon", Surface[]>();
+  for (const s of SURFACES) {
+    const key = s.storageState ?? "anon";
+    if (!byAuth.has(key)) byAuth.set(key, []);
+    byAuth.get(key)!.push(s);
+  }
 
   let ok = 0;
   let failed = 0;
 
-  for (const surface of SURFACES) {
-    for (const bp of surface.breakpoints) {
-      const result = await captureSurface(page, surface, bp);
-      if (result.ok) ok++;
-      else failed++;
+  for (const [authKey, surfaces] of byAuth) {
+    const baseOptions = {
+      deviceScaleFactor: 1,
+      userAgent:
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36 PortfolioCapture/1.0",
+    };
+
+    let context;
+    if (authKey === "anon") {
+      context = await browser.newContext(baseOptions);
+    } else {
+      const statePath = join(AUTH_ROOT, `${authKey}.json`);
+      if (!existsSync(statePath)) {
+        console.warn(
+          `[skip-auth-group] ${authKey} — no storage state at ${statePath}.`,
+        );
+        console.warn(
+          `   Run: npm run portfolio:auth -- ${authKey} <login-url>`,
+        );
+        failed += surfaces.reduce((n, s) => n + s.breakpoints.length, 0);
+        continue;
+      }
+      context = await browser.newContext({ ...baseOptions, storageState: statePath });
     }
+
+    const page = await context.newPage();
+
+    for (const surface of surfaces) {
+      for (const bp of surface.breakpoints) {
+        const result = await captureSurface(page, surface, bp);
+        if (result.ok) ok++;
+        else failed++;
+      }
+    }
+
+    await context.close();
   }
 
   await browser.close();
