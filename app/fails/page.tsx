@@ -1,4 +1,5 @@
 import { Masthead } from "@/components/masthead";
+import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -106,15 +107,7 @@ export default function FailsPage() {
           </p>
         </section>
 
-        <footer className="border-t border-paper-divider mt-16 py-10 text-sm font-mono text-ink-muted flex flex-wrap items-baseline justify-between gap-3">
-          <span>peopleanalyst.com · Mike West · Pittsburgh, PA</span>
-          <a
-            href="mailto:mike@peopleanalyst.com"
-            className="hover:text-accent transition-colors"
-          >
-            mike@peopleanalyst.com
-          </a>
-        </footer>
+        <Footer />
       </main>
     </>
   );

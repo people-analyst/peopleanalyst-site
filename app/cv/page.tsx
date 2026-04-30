@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Masthead } from "@/components/masthead";
+import { Footer } from "@/components/footer";
 import { MarkdownProse } from "@/components/markdown-prose";
 import { PrintButton } from "@/components/print-button";
 
@@ -40,15 +41,7 @@ export default function CVPage() {
           <MarkdownProse>{body}</MarkdownProse>
         </article>
 
-        <footer className="cv-screen-only border-t border-paper-divider mt-12 py-10 text-sm font-mono text-ink-muted flex flex-wrap items-baseline justify-between gap-3">
-          <span>peopleanalyst.com · Mike West · Pittsburgh, PA</span>
-          <a
-            href="mailto:mike@peopleanalyst.com"
-            className="hover:text-accent transition-colors"
-          >
-            mike@peopleanalyst.com
-          </a>
-        </footer>
+        <div className="cv-screen-only"><Footer /></div>
       </main>
     </>
   );

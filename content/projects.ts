@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
     slug: "pa-platform",
     headline: "People Analytics Platform",
     tagline:
-      "A hub-and-spoke ecosystem for AI-native HR analytics — twenty production spokes on shared schemas and APIs, composable into packages for both standardized reporting and custom analytical work.",
+      "A hub-and-spoke ecosystem for AI-native people analytics — twenty production spokes on shared schemas and APIs, composable into packages for both standard data warehouse reporting and custom data science.",
     audience:
       "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
     problem:
@@ -90,6 +90,9 @@ export const PROJECTS: Project[] = [
     story:
       "DevPlane exists because the productivity claims being made for AI coding tools are largely grounded in agent-side measurements — and those measurements systematically miss what an operator running multiple agents actually has to do. The bet: build the operator's cockpit, instrument it, and run a pre-registered field study against the agents-on-tap-make-everyone-faster claim. Either the data validates the claim or it qualifies it; either way it is more honest than what the field has today.",
     status: "private",
+    screenshots: [
+      { src: "/portfolio/devplane/board-desktop.png", caption: "Board — multi-tool kanban with two-phase actor handoff and per-card execution telemetry" },
+    ],
   },
 
   {

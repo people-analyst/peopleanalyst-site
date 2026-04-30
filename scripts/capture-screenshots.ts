@@ -18,7 +18,7 @@ import { join } from "node:path";
 type Breakpoint = "desktop" | "mobile";
 
 type Surface = {
-  product: "vela" | "namesake";
+  product: "vela" | "namesake" | "devplane" | "fourth-and-two";
   slug: string;
   url: string;
   caption: string;
@@ -119,6 +119,18 @@ const SURFACES: Surface[] = [
     breakpoints: ["desktop"],
     settleMs: 800,
   },
+
+  // ===== DEVPLANE — local server, single-page kanban =====
+  {
+    product: "devplane",
+    slug: "board",
+    url: "http://localhost:4000/",
+    caption: "DevPlane board — multi-tool kanban with two-phase actor handoff and per-card execution telemetry.",
+    breakpoints: ["desktop"],
+    settleMs: 1500,
+  },
+
+  // ===== FOURTH & TWO — pending URL from Mike =====
 ];
 
 const PUBLIC_ROOT = join(__dirname, "..", "public", "portfolio");
