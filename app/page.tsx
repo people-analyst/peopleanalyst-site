@@ -15,7 +15,7 @@ export default function Home() {
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.05] font-medium">
               Five products. One conviction.{" "}
-              <span className="text-ink-body">Data feedback makes people — and applications — better.</span>
+              <span className="text-ink-body">Feedback makes people — and A.I. — better. Data workflow is the spine.</span>
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
               An AI-native people analytics ecosystem. A multi-agent
