@@ -128,7 +128,7 @@ Scholarly corpus infrastructure. Ingests public-domain primary-source archives �
 - Instrumental in PetSmart's "Mart to Smart" transformation.
 
 **Merck** — Sr. HR Decision Support Analyst, Workforce Planning & Analytics · *Jul 2001 – Mar 2005* · Whitehouse Station, NJ
-- Led HR analytics for 65K-employee global workforce and $4B HR investment during Merck's pioneering-early era of data-driven HR.
+- Contributed to the development of one of the first corporate HR Analytics functions in the world, for a 65K-employee global workforce and $4B HR investment during Merck's pioneering-early era of data-driven HR.
 - First project analyzed e-learning vs. "fly-them-in" training; consensus to standardize on eLearning saved millions — the original instance of what later formalized as Rapid Collaborative Insight (RCI).
 - Analytical work across Organization Learning, Talent Management, Workforce Strategy, HR Digitization, Leadership, Engagement, Diversity.
 
