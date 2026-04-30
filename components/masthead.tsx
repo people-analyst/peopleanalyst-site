@@ -12,11 +12,17 @@ export function Masthead() {
         </Link>
 
         <nav className="flex items-baseline gap-5 text-xs sm:text-sm font-mono text-ink-secondary">
-          <Link href="#projects" className="hover:text-accent transition-colors">
+          <Link href="/#projects" className="hover:text-accent transition-colors">
             projects
+          </Link>
+          <Link href="/research" className="hover:text-accent transition-colors">
+            research
           </Link>
           <Link href="/stack" className="hover:text-accent transition-colors">
             stack
+          </Link>
+          <Link href="/cv" className="hover:text-accent transition-colors">
+            cv
           </Link>
           <Link href="/fails" className="hover:text-accent transition-colors">
             fails

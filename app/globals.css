@@ -48,3 +48,247 @@ body {
   background: var(--accent);
   color: var(--paper-card);
 }
+
+.research-prose {
+  color: var(--ink-body);
+  line-height: 1.7;
+  font-size: 1.0625rem;
+  max-width: 65ch;
+}
+.research-prose > * + * {
+  margin-top: 1.1em;
+}
+.research-prose h1 {
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink-headline);
+  margin-top: 0;
+  margin-bottom: 0.4em;
+  line-height: 1.15;
+}
+.research-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--ink-headline);
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+  border-top: 1px solid var(--paper-divider);
+  padding-top: 1.6em;
+  letter-spacing: -0.01em;
+}
+.research-prose h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ink-headline);
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
+}
+.research-prose h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-headline);
+  margin-top: 1.4em;
+  margin-bottom: 0.3em;
+}
+.research-prose p {
+  margin: 0;
+}
+.research-prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.research-prose strong {
+  color: var(--ink-headline);
+  font-weight: 600;
+}
+.research-prose em {
+  font-style: italic;
+}
+.research-prose ul,
+.research-prose ol {
+  padding-left: 1.5em;
+  margin: 0;
+}
+.research-prose li {
+  margin: 0.4em 0;
+}
+.research-prose ul > li {
+  list-style: disc;
+}
+.research-prose ol > li {
+  list-style: decimal;
+}
+.research-prose blockquote {
+  border-left: 2px solid var(--paper-divider);
+  padding: 0.2em 0 0.2em 1.2em;
+  color: var(--ink-secondary);
+  font-style: italic;
+  margin: 1.4em 0;
+}
+.research-prose hr {
+  border: none;
+  border-top: 1px solid var(--paper-divider);
+  margin: 2.4em 0;
+}
+.research-prose code {
+  font-family: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: var(--paper-card);
+  border: 1px solid var(--paper-divider);
+  padding: 0.05em 0.4em;
+}
+.research-prose pre {
+  background: var(--paper-card);
+  border: 1px solid var(--paper-divider);
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.research-prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+.research-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin: 1.2em 0;
+}
+.research-prose th,
+.research-prose td {
+  border-bottom: 1px solid var(--paper-divider);
+  padding: 0.55em 0.8em;
+  text-align: left;
+  vertical-align: top;
+}
+.research-prose th {
+  font-weight: 600;
+  color: var(--ink-headline);
+  border-bottom-color: var(--ink-headline);
+}
+.research-prose img {
+  max-width: 100%;
+  height: auto;
+}
+
+.research-raw {
+  font-family: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  background: var(--paper-card);
+  border: 1px solid var(--paper-divider);
+  padding: 1.2em 1.4em;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--ink-body);
+  max-width: 75ch;
+}
+.research-raw code {
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* CV-specific overrides — denser typography, h1 is the name, top-section is heavy */
+.cv-document .research-prose {
+  max-width: none;
+}
+.cv-document .research-prose h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.1em;
+}
+.cv-document .research-prose h1 + p strong {
+  font-size: 1.1rem;
+}
+.cv-document .research-prose h2 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-top: 1px solid var(--ink-headline);
+  padding-top: 1.2em;
+  margin-top: 2.2em;
+  font-weight: 600;
+  color: var(--ink-headline);
+}
+.cv-document .research-prose h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink-headline);
+  margin-top: 1.4em;
+  margin-bottom: 0.2em;
+}
+.cv-document .research-prose hr {
+  display: none;
+}
+.cv-document .research-prose ul {
+  padding-left: 1.2em;
+}
+.cv-document .research-prose li {
+  margin: 0.3em 0;
+}
+.cv-document .research-prose blockquote {
+  border-left-color: var(--accent-warn);
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+  margin: 1em 0;
+}
+
+/* Print styles — clean PDF output */
+@media print {
+  .cv-screen-only {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: #111;
+    font-size: 10.5pt;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .cv-document {
+    padding: 0 !important;
+  }
+  .cv-document .research-prose {
+    max-width: none;
+    line-height: 1.45;
+    font-size: 10pt;
+  }
+  .cv-document .research-prose > * + * {
+    margin-top: 0.7em;
+  }
+  .cv-document .research-prose h1 {
+    font-size: 22pt;
+    margin-bottom: 0.05em;
+  }
+  .cv-document .research-prose h2 {
+    font-size: 11pt;
+    margin-top: 1.6em;
+    padding-top: 0.7em;
+    border-top: 1px solid #111;
+  }
+  .cv-document .research-prose h3 {
+    font-size: 10.5pt;
+    margin-top: 1em;
+  }
+  .cv-document .research-prose a {
+    color: #111;
+    text-decoration: none;
+  }
+  .cv-document .research-prose strong {
+    color: #111;
+  }
+  @page {
+    margin: 0.5in 0.6in;
+  }
+}
