@@ -29,6 +29,8 @@ type Surface = {
   prepare?: (page: Page) => Promise<void>;
   /** Slug of an auth storage-state file in .auth/<slug>.json (created by scripts/auth-capture.ts). */
   storageState?: string;
+  /** Override the default networkidle wait — for SPAs with SSE/long-poll that never settle. */
+  waitUntil?: "load" | "domcontentloaded" | "networkidle" | "commit";
 };
 
 const VIEWPORTS: Record<Breakpoint, { width: number; height: number }> = {
@@ -122,14 +124,17 @@ const SURFACES: Surface[] = [
     settleMs: 800,
   },
 
-  // ===== DEVPLANE — local server, single-page kanban =====
+  // ===== DEVPLANE — local server =====
+  // Dashboard uses SSE/long-poll for live card updates; networkidle never
+  // settles. Wait on `load` instead and rely on settleMs for first paint.
   {
     product: "devplane",
-    slug: "board",
-    url: "http://localhost:4000/",
-    caption: "DevPlane board — multi-tool kanban with two-phase actor handoff and per-card execution telemetry.",
+    slug: "dashboard",
+    url: "http://localhost:4000/dashboard",
+    caption: "DevPlane dashboard — multi-tool kanban with two-phase actor handoff and per-card execution telemetry.",
     breakpoints: ["desktop"],
-    settleMs: 1500,
+    settleMs: 2500,
+    waitUntil: "load",
   },
 
   // ===== FOURTH & TWO — Replit-hosted =====
@@ -190,7 +195,10 @@ async function captureSurface(page: Page, surface: Surface, breakpoint: Breakpoi
   const outPath = join(targetDir, `${surface.slug}-${breakpoint}.png`);
 
   try {
-    await page.goto(surface.url, { waitUntil: "networkidle", timeout: 30000 });
+    await page.goto(surface.url, {
+      waitUntil: surface.waitUntil ?? "networkidle",
+      timeout: 30000,
+    });
   } catch (e) {
     console.warn(`[skip] ${surface.product}/${surface.slug} (${breakpoint}) — ${(e as Error).message.split("\n")[0]}`);
     return { ok: false };
