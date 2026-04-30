@@ -2,7 +2,7 @@
 
 > **Audience:** you (the founder), plus any non-technical collaborator who wants to know what we've found, what's shaky, and what we're doing about it.
 >
-> **Last refreshed:** 2026-04-14 · after the first end-to-end Modal pipeline run + four independent peer reviews.
+> **Last refreshed:** 2026-04-30 · after the second end-to-end Modal pipeline run + the wave 1+2 cleanup landing (A-196 → A-209, A-236 → A-238).
 >
 > **Re-run this page** whenever the pipeline regenerates outputs, by re-invoking the four reviewer agents and updating §2 / §3 / §4 below.
 
@@ -56,15 +56,15 @@ This is the Lieberson null-drift result. ~84% of observed name turnover can be e
 Spatial clustering of name adoption (Moran's I) has dropped from 0.51 in the 1960s to 0.27 today. The internet flattens naming geography, just like it flattens everything else.
 *Confidence: medium. Coastal-first diffusion is documented for 11 cultural events — real but a small sample.*
 
-### 🔴 Red flag: The "99.9% predictable" headline is not what it sounds like.
+### 🔴 Red flag (de-fanged but still flagged): The "99.9% predictable" headline is a base-rate artifact.
 
-One model reported AUC = 0.999 at predicting which names enter the SSA top 100 next year. Sounds amazing. **It is almost certainly a base-rate artifact.** The positive class is 0.46% of names (almost no one enters the top 100), and a trivial baseline that just looks at "last year's rank" already hits AUC = 0.997. The "full model" adds 0.002 on top of that. The honest reading is: *prior rank predicts next rank; nothing else adds much.* We will not put "we predict baby-name success with 99.9% accuracy" on the site.
-*Confidence: the statistical flaw is high-confidence. Acting like the number is meaningful would be a mistake.*
+Phase 10b reports AUC = 0.999 at predicting which names enter the SSA top 100. **It is almost entirely autoregression.** The AR(1) baseline ("predict next year's rank ≈ this year's rank") alone reaches AUC = 0.997 in the rerun; the full feature model adds 0.002. The honest reading: *prior rank predicts next rank; cultural and phonetic features add a small, measurable edge.* The Phase 10b report carries an A-202 banner spelling this out, and **A-239** queues a respec to a sub-rank-500 → top-200 (3y) target where the AR(1) baseline doesn't dominate. We do not surface "99.9% predictability" anywhere in consumer copy.
+*Confidence: high. The respec replaces the flawed metric with one that's actually informative.*
 
-### 🔴 Red flag: "We measured causal effects" is overstated.
+### 🟡 Recharacterized: synthetic-control divergence ≠ causal ATE (A-208).
 
-Phase 8 produces synthetic-control estimates of per-event impact. They're presented as causal ATEs ("average treatment effects"). Three problems, per the peer review: no pre-treatment fit diagnostics are reported, the donor pool is systematically comparing against quieter names (which biases the estimate), and the sound-alike spillover violates a core assumption. The typical event has an estimated effect near zero or slightly negative, not the "Frozen lifted Elsa by 340%" story we'd like to tell. The synthetic-control numbers are still interesting — they're just not causal in the technical sense, and we shouldn't claim they are.
-*Confidence: the critique is high-confidence. The numbers themselves are fine as descriptive; just not as causal.*
+Phase 8a now reports outputs as **synthetic-control-adjusted divergences**, not causal ATEs. Per A-208, every event row carries a `post_pre_mspe_ratio` (Abadie diagnostic) and a per-event placebo p-value, and only the strict subset that passes (placebo p < 0.10 AND post/pre MSPE > 5) carries `is_causal_candidate = TRUE`. **In the 2026-04-30 run, 24 of 200 events meet that bar.** The other 176 keep their divergence numbers (still useful descriptive evidence) but no longer carry the causal framing. Methodology §4c documents the SUTVA-violation, donor-endogeneity, and N_treated=1 reasons we decline to call the pool average "causal."
+*Confidence: high. The reframe matches what the design supports.*
 
 ### 🔴 Red flag: Seven "fun" secondary tests are all null.
 
@@ -73,50 +73,70 @@ We ran side quests: blockbuster paradox, villain effect, streaming lag, award-ti
 
 ---
 
-## 3. What's wobbly (the warts)
+## 3. What's wobbly (the warts) — 2026-04-30 update
 
-These are known problems. Most have assignments queued in `docs/agent-assignments.md` (see §4).
+The wave-1+2 fixes from this session resolved most of the wart list below. What's resolved is recorded with the SHA / assignment so the audit trail is durable; what's still pending sits at the bottom.
 
-1. **Multiple-testing discipline is inconsistent.** Phase 7a (Granger) applied a rigorous correction that collapses "21.5% significant" down to "1.0% survives FDR." Good. But other phases — moderation tests (9 tests), side quests (7), Hill-curve specifications (3), variance decomposition (F-tests) — applied no correction. With that many parallel tests, a few false positives are statistically expected. Any per-name feature we ship has to use the FDR-corrected column, not the raw one.
+**Resolved this session:**
 
-2. **"Cultural events explain 1.8% of variance" undercuts the paper's own framing.** The variance decomposition found that event characteristics explain ~1.8% of event-level effect variance, while name-intrinsic features (rarity, sound, gender) explain about 53%. The paper body sometimes says "<15%," which doesn't match the table. *The right consumer story is: we know which names sound like the ones you love and how long that sound stays in style — cultural events are garnish, not the main course.*
+1. ✅ **Multiple-testing discipline (A-197).** Phase 7a now gates the "valid Granger" headline on `n_valid_lags ≥ 2`; single-lag-only fits are reported as a separate stratum and excluded from the BH-FDR family. Headline counts in the 2026-04-30 report use the strict gate.
 
-3. **LLM attribution is load-bearing and unvalidated.** All 1,141 event→name associations came from an LLM. Median confidence is 0.72 (LLM self-report, not human-checked). We have no gold-standard evaluation. A manual audit of even 50 attributions would let us put a real precision/recall number on this.
+2. ✅ **The "1.8% of variance" framing is gone (A-209).** Phase 9's cycle features (VIFs in the millions) are now PCA-orthogonalized to a single PC; the "name" block is split into `name_matching` (Phase 8a inputs — partly tautological) and `name_independent` (the honest comparison vs the event block). New honest numbers (2026-04-30 run): event ΔR² = 0.0104, `name_matching` ΔR² = 0.4989 (flagged tautological), `name_independent` ΔR² = 0.0088, phonetic ΔR² = 0.0041, cycle ΔR² = 0.0001. The honest comparison is event 1.0% vs name_independent + phonetic + cycle ≈ 1.3% — they're roughly comparable, not 1.8% vs 53%.
 
-4. **Data coverage gaps matter more than the paper admits.** The framing says "1880–2024" but most of the interesting statistical work (search → births, Hawkes, synthetic controls) requires the 2004+ Google Trends era. Anything about the pre-internet era is birth-record-only.
+3. 🟡 **LLM attribution audit harness shipped (A-236).** A 50-event stratified-sample harness exists; verdicts are pending human input. Until the audit completes, attribution-driven gates use a heuristic floor (`CULTURAL_EVENT_MIN_CONFIDENCE_FOR_CAUSAL_CLAIM = 0.7`); when verdicts land, the floor will track the audit's recommended bucket-precision.
 
-5. **Spelling variants fragment the signal.** Aiden, Aidan, and Ayden are tracked separately. Most models don't collapse them. This almost certainly understates the true effect size of any single cultural moment, because the credit gets spread across variants.
+4. ✅ **Data-coverage NaN-vs-zero fixed (A-200).** The annual panel now writes NaN for missing Trends data and 0.0 only for real Google-zero readings. 1.32M pre-2004 rows correctly NaN; 256K post-2004 NaN, 263K real zeros, 121K positive — three distinct cases preserved, methodology §4a documents.
 
-6. **Silent engineering failures affected this run.** Several phases wrote their Markdown reports to a container directory that wasn't persisted; those reports were recreated by Phase 11's overwrite, but it means we lost intermediate state. The effective-population-size calibration uses a process-randomized Python hash, so the N_e numbers aren't guaranteed identical across re-runs. An O(n²) pandas pattern made one phase take 30 minutes instead of 30 seconds. All fixable, none catastrophic, and none invalidate the headline findings — but they do mean the *exact* numbers could shift a few percent on the next re-run.
+5. 🟡 **Spelling-variant collapse substrate shipped (A-237 PARTIAL).** `spelling_groups.parquet` now exists (43,334 names → 12,356 ARPAbet groups). Phase 8a / Phase 9 still need a `--use-variant-rollup` flag and a sensitivity-table comparing collapsed vs uncollapsed lifts; that's the partial part.
 
-7. **The report has unfilled template placeholders.** The headline abstract still contains `[X]%`, `[Y] weeks`, `[Z]` in places. That's a Phase 11 templating bug, not a scientific issue, but it means the auto-generated report needs a cleanup pass before anyone cites it.
+6. ✅ **Silent engineering failures plugged.** A-196 (Modal: every phase's reports persisted to volume), A-203 (PYTHONHASHSEED + errband_mc seed pinned), A-198 (Phase 4a vectorized: 30 min → 2 sec), A-199 (Phase 3b dry-run short-circuits), A-204 (parquet schema gate at every boundary), A-205 (tiny-corpus regression test), A-206 (status reader against Modal volume) all landed.
 
-8. **Effect sizes are reported in units nobody can interpret.** ATEs of 0.000065 "market-share points" convey nothing to a lay reader. Future iterations should translate to "about X more births per 10,000 in the year after the event" or similar.
+7. ✅ **Phase 11 placeholders gone (A-207).** The 2026-04-30 report's abstract is fully data-driven (median divergence, half-life, etc.) and a placeholder-substitution gate raises RuntimeError on any unfilled `[X]`/`[Y]`/`[Z]`/`{date_str}` token. §7.3 product copy moved out to `RESEARCH_TO_PRODUCT.md`.
+
+8. ✅ **Effect-size units interpretable (A-238).** `event_ates.parquet` now carries `ate_t<k>_births_per_10k` and `ate_t<k>_births_in_cohort` companion columns. Jackson 2009 ATE of 0.0033 m.s.p. now reads as "≈33.5 more births per 10K, ≈11,716 in the 2009 cohort."
+
+**Still wobbly:**
+
+9. **A-239 — Phase 10b respec.** The "AUC = 0.999" finding is now banner-flagged as a base-rate artifact (A-202), but the underlying metric is still in place. The replacement (sub-rank-500 → top-200 in 3y) is queued as A-239 for a separate session.
+
+10. **A-237 sensitivity table.** Spelling-variant rollup needs a Phase 8a re-run with `--use-variant-rollup` to produce the lift-shift comparison table.
+
+11. **A-236 verdicts.** The attribution-audit harness is shipped; the 50 manual verdicts are the next human-in-the-loop step.
 
 ---
 
-## 4. What we're doing about it
+## 4. What we're doing about it — 2026-04-30 status
 
-Follow-up work is tracked as assignments A-196 → A-209 in [`docs/agent-assignments.md`](../agent-assignments.md). Highlights:
+A-196 → A-209 are all **COMPLETE** as of this session. A-236 (LLM-attribution audit) shipped as a harness; the verdicts are the human-in-the-loop next step. A-237 shipped as substrate; the sensitivity table needs a Phase 8a re-run with the rollup flag. A-238 (effect-size translation) shipped end-to-end. A-239 (Phase 10b respec) is queued for a separate session.
 
-| Priority | Assignment | What it does |
-|----------|------------|--------------|
-| P0 | A-196 | Stop dropping Phase 5–10 reports on Modal (silent-failure fix) |
-| P0 | A-197 | Gate Granger "valid tests" on ≥2 non-degenerate lags (stops single-lag flukes inflating headline) |
-| P0 | A-198 | Rewrite the O(n²) pandas groupby in `build_annual_panel.py` (30 min → ~30 sec) |
-| P0 | A-199 | Make `phase3b --dry-run` actually short-circuit the heavy loop |
-| P0 | A-200 | Phase 4a writes NaN for missing Trends, not `0.0` (fixes a class of bias in every downstream consumer) |
-| P0 | A-201 | Attribution-gated trending-why card — never surface tragedies as "rising" |
-| P0 | A-202 | Pull "AUC 0.999" from any user-facing or marketing surface |
-| P1 | A-203 | Seed determinism (PYTHONHASHSEED + errband_mc seed) so re-runs reproduce exactly |
-| P1 | A-204 | Parquet schema tests at every boundary (would've caught tonight's UUID/Int64 bug) |
-| P1 | A-205 | Tiny-corpus regression test — 10 names, 2 years, assert headline stats ±5% |
-| P1 | A-206 | Status reporter reads Modal volume, not local disk |
-| P1 | A-207 | Fill Phase 11 report template placeholders; strip product-copy from methodology section |
-| P1 | A-208 | Reframe "causal ATE" language where the design doesn't support it |
-| P2 | A-209 | Fix variance-decomposition collinearity (VIFs in the millions) |
+| Status | Assignment | What it does |
+|--------|------------|--------------|
+| ✅ | A-196 | Modal copies every phase's reports to the volume (silent-drop fix) |
+| ✅ | A-197 | Granger "valid" stratifies on ≥2 non-degenerate lags |
+| ✅ | A-198 | Phase 4a M/F aggregation vectorized (30 min → 2 sec) |
+| ✅ | A-199 | Phase 3b `--dry-run` short-circuits the O(n²) loop |
+| ✅ | A-200 | Phase 4a writes NaN for missing Trends, 0.0 only for real Google zeros |
+| ✅ | A-201 | Trending-why card gates causal claim on confidence ≥ 0.7 |
+| ✅ | A-202 | "AUC 0.999" carries an A-202 banner; not on consumer surfaces |
+| ✅ | A-203 | Seed determinism (PYTHONHASHSEED + errband_mc seed) pinned |
+| ✅ | A-204 | Parquet schema gate (declares every boundary; CLI fails on drift) |
+| ✅ | A-205 | Tiny-corpus regression test (10 names × 2 years, runs in ~7 sec) |
+| ✅ | A-206 | Status reporter reads Modal volume; PIPELINE_STATUS refreshed end-to-end |
+| ✅ | A-207 | Phase 11 abstract data-driven; placeholder gate errors on `[X]` |
+| ✅ | A-208 | Phase 8a outputs reframed as "synthetic-control-adjusted divergence" + post/pre MSPE + is_causal_candidate gate (24/200 strict) |
+| ✅ | A-209 | Phase 9 cycle features PCA-orthogonalized; name block split into matching/independent |
+| ✅ | A-236 | LLM-attribution audit harness (sample + calibration scripts shipped; verdicts pending) |
+| 🟡 | A-237 | Spelling-variant collapse substrate shipped; sensitivity table pending |
+| ✅ | A-238 | Effect-size unit translation: market-share → births per 10K + in-cohort |
+| ⏳ | A-239 | Phase 10b respec (sub-rank-500 → top-200 in 3y) — separate session |
 
-A few of these could meaningfully change reported numbers. The *signs* of the findings (aspirational lifts names, news depresses them; sound spreads; peer > broadcast) are robust to these fixes. The *magnitudes* — especially effect sizes and the variance decomposition — could shift.
+Of the warts that A-196 → A-209 set out to fix, the ones that meaningfully shifted reported numbers in the 2026-04-30 run:
+
+- **Variance-decomposition framing** (A-209): the published "events explain 1.8%, name explains 53%" headline collapses. New honest numbers: event 1.0% vs name_independent 0.9% vs phonetic 0.4% — comparable, not order-of-magnitude separated. The "name dominates" story was an artifact of pooling matching-input features with truly-independent ones.
+- **Synthetic-control causal subset** (A-208): of 200 events, 24 pass the strict (placebo p < 0.10 AND post/pre MSPE > 5) gate. The other 176 still have divergence numbers but no longer carry the causal framing.
+- **Granger headline stability** (A-197 + A-200): the 2026-04-30 panel (with NaN at the source) qualifies more names (7,530 with valid Granger tests vs 4,185 in the 2026-04-13 run). All survive the ≥2-valid-lags gate, which is itself confirmation that the prior single-lag-only stratum was a Phase-4a-zeros artifact.
+
+The signs of the findings (aspirational lifts names, news depresses them; sound spreads; peer > broadcast) are unchanged. The magnitudes shifted exactly as the peer review predicted.
 
 ---
 
@@ -135,4 +155,4 @@ When the pipeline re-runs (e.g. after Google Trends completes its backlog and ph
 
 ## 6. One-sentence summary for someone who won't read anything
 
-Baby names spread more by sound than by story, parents chase aspirational cultural moments and actively avoid tragedy-adjacent ones, and most name turnover looks about as random as a Pólya urn — but several of the precise numbers in our report need cleanup before they're ready for the public, and we've queued the work to get them there.
+Baby names spread more by sound than by story, parents chase aspirational cultural moments and actively avoid tragedy-adjacent ones, and most name turnover looks about as random as a Pólya urn — and as of 2026-04-30 the report's headline numbers are the ones the data actually supports, with the wart fixes the peer review demanded all landed.

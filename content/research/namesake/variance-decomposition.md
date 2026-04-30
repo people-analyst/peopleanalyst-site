@@ -1,39 +1,29 @@
----
-title: "Variance Decomposition: What Fraction of Naming Is Cultural?"
-description: "Nested OLS attributing naming variance to event, name, phonetic, and generational-cycle features."
-publishedAt: "2026-04-13"
-status: published
-authors: ["Namesake Research"]
-category: report
----
-
 ## 5.9 Variance Decomposition: What Fraction of Naming Is Cultural?
 
 Nested OLS with incremental R^2 reporting. Each model adds one group of covariates to the previous, so delta-R^2 represents the marginal explanatory contribution of that group.
 
 | Step | Group | Features Added | Cumulative R^2 | Delta R^2 | Adj R^2 | n |
 |------|-------|---------------|----------------|-----------|---------|---|
-| A | event | 4 | 0.0098 | 0.0098 | -0.0105 | 200 |
-| B | name | 11 | 0.5388 | 0.5290 | 0.5012 | 200 |
-| C | phonetic | 3 | 0.5408 | 0.0020 | 0.4951 | 200 |
-| D | cycle | 4 | 0.5558 | 0.0150 | 0.5006 | 200 |
+| A | event | 4 | 0.0104 | 0.0104 | -0.0098 | 200 |
+| B | name_matching | 4 | 0.5093 | 0.4989 | 0.4887 | 200 |
+| C | name_independent | 7 | 0.5181 | 0.0088 | 0.4788 | 200 |
+| D | phonetic | 3 | 0.5222 | 0.0041 | 0.4747 | 200 |
+| E | cycle | 1 | 0.5223 | 0.0001 | 0.4718 | 200 |
 
 ### Interpretation
 
-Event characteristics alone explain 1.8% of the variance in causal ATEs — **less than 15%**. This quietly demolishes the field's intuition that cultural events are the primary driver of naming patterns. Name-intrinsic characteristics (phonetics, syllable count, gender balance) and phonetic neighborhood dynamics explain a substantially larger share.
+Event characteristics alone explain R² = 0.0104 of variation in the per-event synthetic-control divergence (the `ate_t2` column). The full model with all four groups reaches R² = 0.5223.
 
-The full model (all four groups) achieves R^2 = 0.5558, leaving 44.4% of variance unexplained — attributable to idiosyncratic factors, measurement error, and fundamentally unpredictable cultural dynamics.
+**A-209 caveat on the `name_matching` block.** The `name_matching` block's ΔR² of 0.4989 is *partly tautological*: those features (syllable count, log_pre_rank, pre_spike_trajectory_3yr, phonetic_neighborhood_size) are inputs to the Phase 8a synthetic-control donor matching. A well-fit donor pool mechanically reduces the divergence variance left over for those variables to explain. The honest comparison is event ΔR² vs `name_independent` + `phonetic` + `cycle` ΔR², where the name features are independent of the matching procedure.
+
+Residual variance: 47.8% — attributable to idiosyncratic factors, measurement error, SUTVA-violation noise from phonetic spillover (see A-208), and fundamentally unpredictable cultural dynamics.
 
 ### Multicollinearity Warning
 
 The following features have VIF > 10:
 
-  - cycle_cos_100: VIF = 1882168.0
-  - cycle_sin_100: VIF = 1683638.0
-  - cycle_cos_80: VIF = 1099202.0
-  - cycle_sin_80: VIF = 980505.3
-  - log_budget: VIF = 42.4
-  - log_revenue: VIF = 38.9
+  - log_budget: VIF = 40.9
+  - log_revenue: VIF = 38.1
 
 Standard errors on these coefficients may be unreliable.
 

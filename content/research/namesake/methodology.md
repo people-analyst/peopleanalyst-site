@@ -93,6 +93,33 @@ The annual panel covers **1880–2024** but Google Trends data only exists from 
 
 Granger and Bass downstream paths treat `NaN` as "drop this row" but treat `0.0` as a valid observation. Earlier pipeline runs filled missing weeks with `0.0`, which biased annual aggregates toward zero across the entire pre-2004 era; that bias is removed at the source as of A-200 (commit history will show the cutoff date).
 
+## 4d. Spelling-variant collapse (A-237)
+
+The SSA file tracks every spelling as a separate name (Aiden vs Aidan vs Ayden vs Aydin). Most analytical phases never collapse them, which fragments cultural-mass signals — the published lift on a hit film for "Frozen → Elsa" is computed without the parallel lift on Elise/Eliza/Elara, even though those names are part of the same acoustic neighborhood.
+
+`docs/research/derived/spelling_groups.parquet` (Phase 3c) maps each SSA name to a canonical spelling within its **ARPAbet identity group**:
+
+- **Group key**: stress-stripped ARPAbet sequence. `EY1 D AH0 N` and `EY2 D AH0 N` collapse together, but `K EY1 T L AH0 N` (Caitlin) and `K EY1 T L IH0 N` (Catelyn) stay separate. The conservative rule keeps culturally distinct names apart at the cost of missing some borderline cases.
+- **Canonical spelling**: the variant with the largest cumulative SSA births, with deterministic alphabetical tie-break.
+- **Roll-up utility**: `_lib/variant_rollup.py::collapse_variants(df, groups=...)` aggregates a long-format frame by canonical name. Phase 4 / 7 / 8 import this rather than re-implementing.
+
+The opt-in vs default-on rollout is staged: Phase 8a / Phase 9 will add a `--use-variant-rollup` flag in a follow-up, so the first run after the substrate ships still produces canonical (un-collapsed) numbers and a sensitivity table comparing both. See `agent-assignments.md` A-237 for the rollout plan.
+
+## 4c. Phase 8a — synthetic-control divergence vs causal ATE (A-208)
+
+Phase 8a fits Abadie-style synthetic controls per attributed event and reports a per-year `ate_t<k>` for k = 1..5. We **do not** treat the average of those values as a "causal ATE" without further qualification:
+
+- **N_treated = 1** per event. Pooling single-unit synthetic controls into a "mean ATE across 200 events" is descriptive, not causal — each event has its own counterfactual.
+- **SUTVA is violated.** The phonetic-spillover work in Phase 6 shows that a cultural moment for one name lifts its acoustic neighbors. The donor pool must therefore exclude same-neighborhood names, but the spillover continues to bias the synthetic counterfactual upward.
+- **Donor-pool endogeneity.** Donors are drawn from non-spiking names matched on covariates. Names that *did* spike (other attributed events) are excluded — but that creates a "quieter than average" donor pool, biasing the divergence positive.
+
+We therefore report Phase 8a's outputs as **synthetic-control-adjusted divergences** (the literal column is `ate_t<k>` for backwards compatibility) and reserve the word **causal** for a strict subset that passes both:
+
+1. **Per-event placebo p-value < 0.10**, computed from 1,000 placebo synthetic-controls drawn from the matched donor pool (Abadie–Diamond–Hainmueller 2010 §IV).
+2. **Post/pre MSPE ratio > 5**, the standard Abadie diagnostic that the post-event divergence is large relative to the donor pool's pre-event fit error.
+
+Events meeting both gates carry `is_causal_candidate = TRUE` in `event_ates.parquet`. The full Phase 8a output remains useful as descriptive evidence even where neither gate is met; we just decline to call it causal.
+
 ## 4b. Reproducibility (A-203)
 
 Two non-determinism sources have been pinned:
