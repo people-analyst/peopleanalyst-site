@@ -130,7 +130,47 @@ const SURFACES: Surface[] = [
     settleMs: 1500,
   },
 
-  // ===== FOURTH & TWO — pending URL from Mike =====
+  // ===== FOURTH & TWO — Replit-hosted =====
+  {
+    product: "fourth-and-two",
+    slug: "magazine-landing",
+    url: "https://mfl-gm-consol.replit.app/",
+    caption: "Magazine landing — newsroom front and editorial entry point.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+  },
+  {
+    product: "fourth-and-two",
+    slug: "gm-console",
+    url: "https://mfl-gm-consol.replit.app/demo",
+    caption: "GM Console — guided workflow paths into roster, draft, and decision tooling.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+  },
+  {
+    product: "fourth-and-two",
+    slug: "draft-day",
+    url: "https://mfl-gm-consol.replit.app/draft/2026",
+    caption: "Draft Day — 2026 NFL prospect rankings, combine archetypes, and scouting reports.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+  },
+  {
+    product: "fourth-and-two",
+    slug: "analytics",
+    url: "https://mfl-gm-consol.replit.app/sandbox",
+    caption: "4th & 2 Analytics — Monte Carlo strategy engine and scenario sandbox.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+  },
+  {
+    product: "fourth-and-two",
+    slug: "game-center",
+    url: "https://mfl-gm-consol.replit.app/games",
+    caption: "Game Center — The Pick, Survivor, and the broader cover-art game roster.",
+    breakpoints: ["desktop"],
+    settleMs: 2500,
+  },
 ];
 
 const PUBLIC_ROOT = join(__dirname, "..", "public", "portfolio");

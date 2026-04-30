@@ -127,6 +127,13 @@ export const PROJECTS: Project[] = [
     story:
       "Fourth & Two is the bet that intelligence is more readable when it has a sensibility — a magazine voice on the front, a Monte Carlo engine on the back, and editorial discipline binding them. The platform exists because the middle — analytics with a point of view — was empty.",
     status: "private",
+    screenshots: [
+      { src: "/portfolio/fourth-and-two/magazine-landing-desktop.png", caption: "Magazine landing — newsroom front and editorial entry point" },
+      { src: "/portfolio/fourth-and-two/gm-console-desktop.png", caption: "GM Console — guided workflow paths into roster, draft, and decision tooling" },
+      { src: "/portfolio/fourth-and-two/draft-day-desktop.png", caption: "Draft Day — 2026 NFL prospect rankings with combine archetypes and scouting reports" },
+      { src: "/portfolio/fourth-and-two/analytics-desktop.png", caption: "4th & 2 Analytics — Monte Carlo strategy engine and scenario sandbox" },
+      { src: "/portfolio/fourth-and-two/game-center-desktop.png", caption: "Game Center — The Pick, Survivor, and the cover-art game roster" },
+    ],
   },
 
   {
