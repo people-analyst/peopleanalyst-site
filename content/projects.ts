@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
     slug: "pa-platform",
     headline: "People Analytics Platform",
     tagline:
-      "A hub-and-spoke ecosystem for AI-native people analytics — twenty production spokes on shared schemas and APIs, composable into packages for both standard data warehouse reporting and custom data science.",
+      "A hub-and-spoke ecosystem for AI-native people analytics — production spokes on shared schemas and APIs, composable into packages for both standard data warehouse reporting and custom data science.",
     audience:
       "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
     problem:
