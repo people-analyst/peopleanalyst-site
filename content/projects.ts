@@ -196,7 +196,7 @@ export const PROJECTS: Project[] = [
     slug: "penwright",
     headline: "Penwright",
     tagline:
-      "An AI-augmented authorship system — corpus control, packet-shaped composition, and a measurement framework that asks whether the writer is better without it in six months.",
+      "An AI-augmented authorship system — corpus control, packet-shaped composition, and a measurement framework that asks whether the writer is better with it, than without it, in six months.",
     audience:
       "Memoirists, essayists, and editorial writers who would rather become more capable than write faster.",
     problem:
