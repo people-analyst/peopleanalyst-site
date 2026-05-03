@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Authenticated Playwright session storage — credentials
 .auth/
+
+# DevPlane local project state (per-machine, not source of truth)
+.devplane/
