@@ -64,7 +64,6 @@ export default function Home() {
 
           <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm font-mono">
             <Stat label="products" value={String(PROJECTS.length)} />
-            <Stat label="PA Toolbox spokes" value="Many" />
             <Stat
               label="commits, last 12mo"
               value={stats ? stats.commitsLast365.toLocaleString() : "—"}
