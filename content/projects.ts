@@ -23,43 +23,6 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "pa-platform",
-    headline: "People Analytics Platform",
-    tagline:
-      "A hub-and-spoke ecosystem for AI-native people analytics — production spokes on shared schemas and APIs, composable into packages for both standard data warehouse reporting and custom data science.",
-    audience:
-      "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
-    problem:
-      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery, decision support — get re-implemented per product. The result is brittle, fragmented, expensive, and hostile to combination: each tool is good at its one thing, and useless next to its neighbor.",
-    built:
-      "A central hub (people-analytics-toolbox) plus a roster of production spokes that work standalone and compose. Each spoke produces a discrete artifact; spokes share data schemas and APIs so they pull into packages addressing real analytical needs without integration tax. Public-facing spokes include Calculus (210+ precomputed HR metrics), Conductor (metadata-grounded SQL/Python codegen), Reincarnation (RID/SID adaptive measurement), AnyComp (compensation OS), VOI Calculator (formal decision-theoretic value-of-information), Persona Factory, Survey Factory, and Competency Factory — alongside additional internal production spokes that power packages but stay back-end. Hub layer carries the cross-cutting services — Data Anonymizer (deterministic PII), Survey Engine, Preference Modeler, Segmentation Studio, Decision Support — that every spoke depends on. Standardized reporting and bespoke analytical work both run through the same substrate; a custom engagement is a new package composed from existing spokes, not a new build.",
-    novel: [
-      "Compartmentalable packages on shared data schemas and APIs — every spoke speaks the same anonymization, metric, segmentation, and survey vocabulary, so spokes compose without integration tax (the architectural conviction underneath the rest)",
-      "Reincarnation: cross-study item-response accumulation without confounding — adaptive selection over the full evidence pool, not just the current study",
-      "Conductor: metadata-grounded SQL/Python generation (not example-grounded) — the model sees schema, field semantics, and canonical metric definitions",
-      "Calculus: precomputed metric materialization so manager-level segmentations are instant rather than dashboard-render-blocked",
-      "VOI Calculator: formal Expected Value of Perfect/Sample Information as production software — essentially absent in commercial HR tooling",
-      "AnyComp: compensation as one coherent decision surface, not four disconnected screens",
-    ],
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Python",
-      "BigQuery",
-      "Postgres",
-      "pgvector",
-      "Vercel",
-      "Anthropic API",
-    ],
-    outcome:
-      "Hub plus 20 production spokes plus the cross-cutting hub services. Solo build since 2022. Several spokes deployed at enterprise clients; the platform composition powers both off-the-shelf reporting and bespoke analytical packages.",
-    role: "All roles.",
-    story:
-      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. Standardization where it earns its keep; custom analytical assembly where it earns its keep; the same substrate underneath both. The architecture is what makes a single founder productive at this scale.",
-    status: "private",
-  },
-
-  {
     slug: "devplane",
     headline: "DevPlane",
     tagline:
@@ -224,5 +187,42 @@ export const PROJECTS: Project[] = [
       { src: "/portfolio/vela/writers-desktop.png", caption: "Writers — staff voice infrastructure" },
       { src: "/portfolio/vela/membership-desktop-blurred.png", caption: "Membership — Stripe-backed Member tier (artwork tiles blurred)" },
     ],
+  },
+
+  {
+    slug: "pa-platform",
+    headline: "People Analytics Platform",
+    tagline:
+      "A hub-and-spoke ecosystem for AI-native people analytics — production spokes on shared schemas and APIs, composable into packages for both standard data warehouse reporting and custom data science.",
+    audience:
+      "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
+    problem:
+      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery, decision support — get re-implemented per product. The result is brittle, fragmented, expensive, and hostile to combination: each tool is good at its one thing, and useless next to its neighbor.",
+    built:
+      "A central hub (people-analytics-toolbox) plus a roster of production spokes that work standalone and compose. Each spoke produces a discrete artifact; spokes share data schemas and APIs so they pull into packages addressing real analytical needs without integration tax. Public-facing spokes include Calculus (210+ precomputed HR metrics), Conductor (metadata-grounded SQL/Python codegen), Reincarnation (RID/SID adaptive measurement), AnyComp (compensation OS), VOI Calculator (formal decision-theoretic value-of-information), Persona Factory, Survey Factory, and Competency Factory — alongside additional internal production spokes that power packages but stay back-end. Hub layer carries the cross-cutting services — Data Anonymizer (deterministic PII), Survey Engine, Preference Modeler, Segmentation Studio, Decision Support — that every spoke depends on. Standardized reporting and bespoke analytical work both run through the same substrate; a custom engagement is a new package composed from existing spokes, not a new build.",
+    novel: [
+      "Compartmentalable packages on shared data schemas and APIs — every spoke speaks the same anonymization, metric, segmentation, and survey vocabulary, so spokes compose without integration tax (the architectural conviction underneath the rest)",
+      "Reincarnation: cross-study item-response accumulation without confounding — adaptive selection over the full evidence pool, not just the current study",
+      "Conductor: metadata-grounded SQL/Python generation (not example-grounded) — the model sees schema, field semantics, and canonical metric definitions",
+      "Calculus: precomputed metric materialization so manager-level segmentations are instant rather than dashboard-render-blocked",
+      "VOI Calculator: formal Expected Value of Perfect/Sample Information as production software — essentially absent in commercial HR tooling",
+      "AnyComp: compensation as one coherent decision surface, not four disconnected screens",
+    ],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "BigQuery",
+      "Postgres",
+      "pgvector",
+      "Vercel",
+      "Anthropic API",
+    ],
+    outcome:
+      "Hub plus 20 production spokes plus the cross-cutting hub services. Solo build since 2022. Several spokes deployed at enterprise clients; the platform composition powers both off-the-shelf reporting and bespoke analytical packages.",
+    role: "All roles.",
+    story:
+      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. Standardization where it earns its keep; custom analytical assembly where it earns its keep; the same substrate underneath both. The architecture is what makes a single founder productive at this scale.",
+    status: "private",
   },
 ];

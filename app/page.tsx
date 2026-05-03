@@ -19,10 +19,10 @@ export default function Home() {
               <span className="text-ink-body">Feedback makes people — and A.I. — better. Data workflow is the spine.</span>
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              An AI-native people analytics ecosystem. A multi-agent
-              development cockpit. A fantasy football intelligence
-              platform. An intentional-baby-naming tool. An adaptive
-              figurative-art platform. They look unrelated. They are all
+              A multi-agent development cockpit. A fantasy football
+              intelligence platform. An intentional-baby-naming tool. An
+              adaptive figurative-art platform. An AI-native people
+              analytics ecosystem. They look unrelated. They are all
               instances of the same loop — measurement on the way in,
               calibration on the way through, better decisions on the way
               out — applied to whatever domain you take seriously.
