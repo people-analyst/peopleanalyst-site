@@ -31,7 +31,7 @@ export default function MagazineIndex() {
               Magazine · long-form
             </p>
             <h1 className="text-4xl sm:text-5xl text-ink tracking-tight leading-[1.05] font-medium">
-              People Analytics principal-issues thesis.
+              principal-issues.
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
               A working magazine for the principal-issues thesis,
