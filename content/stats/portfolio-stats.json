@@ -1,0 +1,141 @@
+{
+  "generatedAt": "2026-05-03T17:55:19.578Z",
+  "sinceUtc": "2025-05-03T17:54:48.812Z",
+  "owner": "people-analyst",
+  "repoCount": 25,
+  "commitsLast365": 6621,
+  "linesOfCode": 1986483,
+  "bytesTotal": 79459335,
+  "perRepo": [
+    {
+      "name": "vela",
+      "bytes": 20047229,
+      "commits": 3024
+    },
+    {
+      "name": "baby-namer",
+      "bytes": 4583546,
+      "commits": 848
+    },
+    {
+      "name": "MFL-GM-Consol",
+      "bytes": 10996907,
+      "commits": 569
+    },
+    {
+      "name": "people-analyst",
+      "bytes": 2933529,
+      "commits": 354
+    },
+    {
+      "name": "metric-market",
+      "bytes": 1403327,
+      "commits": 283
+    },
+    {
+      "name": "voi-calculator",
+      "bytes": 1073610,
+      "commits": 263
+    },
+    {
+      "name": "devplane",
+      "bytes": 1851165,
+      "commits": 257
+    },
+    {
+      "name": "meta-factory",
+      "bytes": 18462902,
+      "commits": 224
+    },
+    {
+      "name": "conductor",
+      "bytes": 1847635,
+      "commits": 193
+    },
+    {
+      "name": "anycomp",
+      "bytes": 1218688,
+      "commits": 142
+    },
+    {
+      "name": "data-anonymizer",
+      "bytes": 1300090,
+      "commits": 137
+    },
+    {
+      "name": "Kanbai",
+      "bytes": 1717508,
+      "commits": 66
+    },
+    {
+      "name": "segmentation-studio",
+      "bytes": 1366642,
+      "commits": 51
+    },
+    {
+      "name": "peopleanalyst-site",
+      "bytes": 238605,
+      "commits": 43
+    },
+    {
+      "name": "metric-engine-calculus",
+      "bytes": 825563,
+      "commits": 37
+    },
+    {
+      "name": "reincarnation",
+      "bytes": 1359232,
+      "commits": 29
+    },
+    {
+      "name": "decision-wizard",
+      "bytes": 1021417,
+      "commits": 28
+    },
+    {
+      "name": "calculus",
+      "bytes": 1327446,
+      "commits": 24
+    },
+    {
+      "name": "people-analytics-toolbox",
+      "bytes": 3850598,
+      "commits": 19
+    },
+    {
+      "name": "survey-respondent",
+      "bytes": 1020906,
+      "commits": 14
+    },
+    {
+      "name": "preference-modeler",
+      "bytes": 1009523,
+      "commits": 8
+    },
+    {
+      "name": "meta-factory-prod",
+      "bytes": 3267,
+      "commits": 4
+    },
+    {
+      "name": "principia",
+      "bytes": 0,
+      "commits": 2
+    },
+    {
+      "name": "analytics-player",
+      "bytes": 0,
+      "commits": 1
+    },
+    {
+      "name": "Performix",
+      "bytes": 0,
+      "commits": 1
+    }
+  ],
+  "notes": {
+    "linesOfCodeMethodology": "bytes / 40 chars-per-line estimate, summed across all detected languages per repo",
+    "commitsMethodology": "git commits on default branch since 2025-05-03T17:54:48.812Z; merge commits counted; PR-squashed commits count as 1",
+    "excludes": "archived repos, forks"
+  }
+}

@@ -10,7 +10,8 @@
     "research:sync": "tsx scripts/research-sync.ts",
     "portfolio:capture": "tsx scripts/capture-screenshots.ts",
     "portfolio:blur": "tsx scripts/blur-screenshots.ts",
-    "portfolio:auth": "tsx scripts/auth-capture.ts"
+    "portfolio:auth": "tsx scripts/auth-capture.ts",
+    "portfolio:stats": "tsx scripts/fetch-portfolio-stats.ts"
   },
   "dependencies": {
     "next": "16.2.4",
