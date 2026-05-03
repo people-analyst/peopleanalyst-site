@@ -1,10 +1,10 @@
 # Paper 1 (public) — Why AI Writing Tools Are Failing Us — and What Comes Next
 
-> **Provenance:** verbatim copy of `WHY AI WRITING TOOLS ARE FAILING US — AND WHAT COMES NEXT.txt`, drafted 2026-05-03. Public-audience version of Tier-1 Paper 1 of the Loom Research Program (see `program.md` and `loom-sub-paper-plan.md`). Companion technical version at `loom-paper-01-technical.md`. Frames the case for capability-development AI writing systems for a general reader.
+> **Provenance:** verbatim copy of `WHY AI WRITING TOOLS ARE FAILING US — AND WHAT COMES NEXT.txt`, drafted 2026-05-03. Public-audience version of Tier-1 Paper 1 of the Penwright Research Program (see `program.md` and `penwright-sub-paper-plan.md`). Companion technical version at `penwright-paper-01-technical.md`. Frames the case for capability-development AI writing systems for a general reader.
 
 ---
 
-📄 WHY AI WRITING TOOLS ARE FAILING US — AND WHAT COMES NEXT - A GENERAL AUDIENCE LIT BASED LOOM PRODUCT MANIFESTO DRAFT OUTLINE
+📄 WHY AI WRITING TOOLS ARE FAILING US — AND WHAT COMES NEXT - A GENERAL AUDIENCE LIT BASED PENWRIGHT PRODUCT MANIFESTO DRAFT OUTLINE
 
 1. The Problem No One Wants to Say Out Loud
 

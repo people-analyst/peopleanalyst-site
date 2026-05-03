@@ -113,7 +113,7 @@ AI's effects on beliefs, decisions, voting, purchasing; downstream collective ep
 
 ## III. Adjacent fields imported (Roadmap §III)
 
-These are the bodies of theory the HAI mainstream has under-engaged. The Loom Research Program (Track A) draws materially from this set; Track B is built around bringing it forward.
+These are the bodies of theory the HAI mainstream has under-engaged. The Penwright Research Program (Track A) draws materially from this set; Track B is built around bringing it forward.
 
 - ✅ *Companion-species and ethology of working partnerships* — [`sources/topic-reviews/companion-species-and-ethology-of-working-partnerships.md`](sources/topic-reviews/companion-species-and-ethology-of-working-partnerships.md)
 - ✅ *Cognitive apprenticeship, ZPD, and AI as a more-knowledgeable other* (cross-listed under Branch 7)
@@ -173,6 +173,6 @@ These six documents take the secondary reviews above and re-check substantive cl
 ## Cross-references
 
 - `roadmap.md` — the field-mapping document this map is indexed against
-- `program.md` — the twelve-paper Loom Research Program drawing from this literature
+- `program.md` — the twelve-paper Penwright Research Program drawing from this literature
 - `methodology.md` — how the reviews and syntheses were generated
 - `vela/docs/research/emotion-corpus-expansion/` — adjacent program at Vela; affective-computing overlap

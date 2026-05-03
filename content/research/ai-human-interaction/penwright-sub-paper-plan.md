@@ -1,10 +1,10 @@
-# Loom Research Program — Sub-Paper Plan
+# Penwright Research Program — Sub-Paper Plan
 
-> **Provenance:** verbatim copy of `LOOM RESEARCH PROGRAM — SUB-PAPER PLAN .txt` v1.0, drafted 2026-05-03. Defines the twelve-paper Loom Research Program, three tiers, shared dataset strategy, product-integration mapping, and three-phase publication strategy. The cleaned and integrated form lives in `program.md`; this file preserves the source as-is for reference.
+> **Provenance:** verbatim copy of `PENWRIGHT RESEARCH PROGRAM — SUB-PAPER PLAN .txt` v1.0, drafted 2026-05-03. Defines the twelve-paper Penwright Research Program, three tiers, shared dataset strategy, product-integration mapping, and three-phase publication strategy. The cleaned and integrated form lives in `program.md`; this file preserves the source as-is for reference.
 
 ---
 
-📄 LOOM RESEARCH PROGRAM — SUB-PAPER PLAN
+📄 PENWRIGHT RESEARCH PROGRAM — SUB-PAPER PLAN
 
 Version 1.0 — Publication + Product Integration Strategy
 
@@ -24,7 +24,7 @@ Tier 2 — Measurement + Mechanism
 operationalizes the system
 introduces metrics and constructs
 Tier 3 — Empirical Studies
-tests hypotheses using Loom data
+tests hypotheses using Penwright data
 2. Tier 1 — Foundational Papers
 📘 Paper 1 — AI-Augmented Authorship and Human Skill Development
 Purpose
@@ -33,7 +33,7 @@ Establish:
 
 the problem (AI deskilling risk)
 the opportunity (developmental systems)
-Loom as a model
+Penwright as a model
 Core Contribution
 
 Reframes AI writing from generation → human capability development
@@ -66,7 +66,7 @@ Research Anchors
 standpoint theory
 epistemic injustice
 AI bias literature
-Loom Tie-In
+Penwright Tie-In
 corpus selection system
 attribution visibility
 source integration
@@ -92,7 +92,7 @@ Research Anchors
 transactive memory
 translation theory
 cognitive load theory
-Loom Tie-In
+Penwright Tie-In
 packet builder
 retrieval layer
 structured drafting
@@ -113,7 +113,7 @@ Independence Index
 Integration Index
 Metacognitive Index
 Data Source
-Loom telemetry
+Penwright telemetry
 Output
 framework paper
 potential standard for others
@@ -133,7 +133,7 @@ excessive reliance reduces independent capability
 Data
 % corpus reliance
 independent writing performance
-Loom Features Used
+Penwright Features Used
 constraint mode
 independent writing gate
 📗 Paper 6 — Learning Loops in AI-Augmented Writing Systems
@@ -149,7 +149,7 @@ Defines learning loop architecture
 Data
 performance before/after interventions
 pattern recognition improvements
-Loom Features Used
+Penwright Features Used
 teach moments
 practice mode
 reflection layer
@@ -181,7 +181,7 @@ Design
 
 Groups:
 
-Loom users
+Penwright users
 Standard AI users
 No AI
 Duration
@@ -190,7 +190,7 @@ Duration
 
 Output
 
-Does Loom create better writers?
+Does Penwright create better writers?
 
 📊 Paper 9 — Transfer of Writing Skill Outside AI Systems
 Purpose
@@ -210,7 +210,7 @@ Purpose
 
 Study:
 
-how Loom affects attention
+how Penwright affects attention
 Anchors
 Stiegler
 attention ecology
@@ -244,7 +244,7 @@ Shared Dataset
 
 All papers draw from:
 
-Loom session data
+Penwright session data
 telemetry events
 writing outputs
 reflection logs

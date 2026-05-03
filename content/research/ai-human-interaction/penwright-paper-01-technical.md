@@ -1,6 +1,6 @@
 # Paper 1 (technical) — Human–AI Authorship, Skill Development, and Measurement
 
-> **Provenance:** verbatim copy of `HUMAN–AI AUTHORSHIP, SKILL DEVELOPMENT, AND MEASUREMENT.txt`, drafted 2026-05-03. Tier-1 foundational paper of the Loom Research Program (see `program.md` and `loom-sub-paper-plan.md`). A technical literature-review draft positioning Loom against the existing HAI, educational-psychology, and epistemic-justice literatures. Companion public-audience version at `loom-paper-01-public.md`.
+> **Provenance:** verbatim copy of `HUMAN–AI AUTHORSHIP, SKILL DEVELOPMENT, AND MEASUREMENT.txt`, drafted 2026-05-03. Tier-1 foundational paper of the Penwright Research Program (see `program.md` and `penwright-sub-paper-plan.md`). A technical literature-review draft positioning Penwright against the existing HAI, educational-psychology, and epistemic-justice literatures. Companion public-audience version at `penwright-paper-01-public.md`.
 >
 > **Status:** outline draft. Full prose draft pending — this file is the structural skeleton + claim inventory the prose draft will be built against.
 
@@ -64,7 +64,7 @@ Path	Outcome
 AI replaces writing	Deskilling
 AI scaffolds writing	Skill development
 
-👉 Loom explicitly targets the second path.
+👉 Penwright explicitly targets the second path.
 
 2.2 Phenomenology of Attention
 
@@ -80,9 +80,9 @@ AI Writing Risk
 fragmentation of attention
 loss of sustained reasoning capacity
 collapse of deep work into reactive editing
-Loom Alignment
+Penwright Alignment
 
-Loom’s:
+Penwright’s:
 
 Deep Writing Mode
 structured packet assembly
@@ -111,7 +111,7 @@ retrieval
 integration
 exploration
 
-👉 Loom’s corpus control + retrieval system is a controlled form of transactive memory.
+👉 Penwright’s corpus control + retrieval system is a controlled form of transactive memory.
 
 3. Epistemology and Power
 3.1 Standpoint Theory and Situated Knowledge
@@ -138,7 +138,7 @@ AI writing systems:
 
 reinforce dominant narratives
 suppress marginal or emerging voices
-Loom Innovation
+Penwright Innovation
 
 Corpus Control Layer
 
@@ -159,7 +159,7 @@ hermeneutical injustice
 AI Risk
 minority perspectives underrepresented
 certain experiences become “unspeakable”
-Loom Contribution
+Penwright Contribution
 
 By allowing:
 
@@ -187,7 +187,7 @@ LLMs can act as:
 BUT:
 
 only if they scaffold—not replace—performance
-Loom Alignment
+Penwright Alignment
 Practice Mode
 Constraint challenges
 pattern-based teaching
@@ -218,7 +218,7 @@ Human–AI systems require:
 aligned goals
 transparent processes
 trust calibration
-Loom Contribution
+Penwright Contribution
 authorship packet → shared goal structure
 explicit constraints → aligned tasks
 5.2 Psychoanalytic Perspectives
@@ -235,7 +235,7 @@ Users may:
 over-trust outputs
 defer judgment
 collapse agency
-Loom Safeguard
+Penwright Safeguard
 non-compliant AI stance
 counterposition panels
 attribution visibility
@@ -252,9 +252,9 @@ AI Analogy
 Human–AI writing:
 
 resembles collaborative improvisation
-Loom Extension
+Penwright Extension
 
-But Loom adds:
+But Penwright adds:
 
 structured constraint
 deliberate divergence
@@ -280,7 +280,7 @@ domains → accessible forms
 Risk
 flattening nuance
 false equivalence
-Loom Approach
+Penwright Approach
 explicit source attribution
 multi-source integration
 counterposition
@@ -300,9 +300,9 @@ AI:
 
 changes writing environment
 reshapes cognition itself
-Loom Position
+Penwright Position
 
-Loom is:
+Penwright is:
 
 a deliberately constructed cognitive niche
 
@@ -319,7 +319,7 @@ technologies reduce coordination costs
 AI Writing Effect
 writing becomes cheap
 quality becomes commoditized
-Loom Differentiation
+Penwright Differentiation
 shifts value from:
 output → capability
 10. Measurement Gap (Critical)
@@ -342,10 +342,10 @@ A system that measures:
 writing process
 skill acquisition
 independence over time
-11. Loom’s Contribution (Positioning)
+11. Penwright’s Contribution (Positioning)
 11.1 Novel Integration
 
-Loom combines:
+Penwright combines:
 
 phenomenology of skill
 cognitive apprenticeship
@@ -371,7 +371,7 @@ Write → reflect → practice → improve
 
 11.3 Research Contribution
 
-Loom introduces:
+Penwright introduces:
 
 A measurable model of AI-augmented human skill development
 
@@ -406,7 +406,7 @@ This review suggests:
 
 The future of AI writing is not automation, but augmentation with accountability
 
-Loom represents:
+Penwright represents:
 
 a shift from generation → development
 from black-box AI → controlled epistemology

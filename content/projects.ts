@@ -147,13 +147,13 @@ export const PROJECTS: Project[] = [
     slug: "vela",
     headline: "Vela",
     tagline:
-      "A contemplative platform that began with fine-art figurative work and has broadened into an adaptive-authorship substrate — magazine paced per-reader, Editorial Office of staff voices, Loom in /labs, and three editorial axes (figurative response · emotion architecture · developmental theology).",
+      "A contemplative platform that began with fine-art figurative work and has broadened into an adaptive-authorship substrate — magazine paced per-reader, Editorial Office of staff voices, Penwright in /labs, and three editorial axes (figurative response · emotion architecture · developmental theology).",
     audience:
       "Adults who want disciplined, taste-driven encounters — figurative art on one hand, longform editorial work on the other — and the research participants who help calibrate the underlying instruments.",
     problem:
       "Image platforms either flatten taste into engagement metrics or hide behind gatekeepers. Editorial platforms publish on calendars rather than to readers. Neither produces a reading rhythm. Neither learns from you. Vela is built on the bet that a single substrate can do both — taste-driven figurative discovery and longform editorial work — when adaptive measurement runs underneath.",
     built:
-      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player (Reincarnation engine) that learns desire and pool composition across visual rhyme and emotional register. A magazine with original fiction, editorial criticism, and three load-bearing editorial axes — figurative response, emotion architecture, and developmental theology — paced per-user (each reader's magazine begins when they arrive, not on a calendar). Loom: authorship system in /labs/loom (F-03 Authorship Packet UI MVP shipped; F-19 Adaptive Authorship Control Kernel is the spine — see Loom card below). Editorial Office: Writer's Desk (1:1 chat with each writer) and The Office (multi-writer convening with round-2 react). Stripe membership. Chrome extension for attribution capture. Derivative pipeline that produces new transformative works under license.",
+      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player (Reincarnation engine) that learns desire and pool composition across visual rhyme and emotional register. A magazine with original fiction, editorial criticism, and three load-bearing editorial axes — figurative response, emotion architecture, and developmental theology — paced per-user (each reader's magazine begins when they arrive, not on a calendar). Penwright: authorship system in /labs/penwright (F-03 Authorship Packet UI MVP shipped; F-19 Adaptive Authorship Control Kernel is the spine — see Penwright card below). Editorial Office: Writer's Desk (1:1 chat with each writer) and The Office (multi-writer convening with round-2 react). Stripe membership. Chrome extension for attribution capture. Derivative pipeline that produces new transformative works under license.",
     novel: [
       "Reincarnation engine: per-user desire scoring with RID/SID adaptive measurement and visual-rhyme sequencing",
       "Per-user magazine pacing — each reader's editorial schedule begins when they arrive; positioning wedge is \"your magazine begins when you do\"",
@@ -177,11 +177,11 @@ export const PROJECTS: Project[] = [
       "Playwright",
     ],
     outcome:
-      "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start. Loom in early build inside the same repo; Editorial Office and per-user magazine pacing in active development.",
+      "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start. Penwright in early build inside the same repo; Editorial Office and per-user magazine pacing in active development.",
     role: "Designer, engineer.",
     commits: "1,300+",
     story:
-      "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. The bet has broadened: the same substrate now hosts Loom (authorship system in /labs), the Editorial Office (writer collaboration), per-user magazine pacing, and three editorial axes that coexist without collapsing. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
+      "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. The bet has broadened: the same substrate now hosts Penwright (authorship system in /labs), the Editorial Office (writer collaboration), per-user magazine pacing, and three editorial axes that coexist without collapsing. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
     href: "https://vela.study",
     status: "live",
     screenshots: [
@@ -193,8 +193,8 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    slug: "loom",
-    headline: "Loom",
+    slug: "penwright",
+    headline: "Penwright",
     tagline:
       "An AI-augmented authorship system — corpus control, packet-shaped composition, and a measurement framework that asks whether the writer is better without it in six months.",
     audience:
@@ -202,14 +202,14 @@ export const PROJECTS: Project[] = [
     problem:
       "Most AI writing tools optimize for output fluency. They make it easier to produce something faster — and that something is often shaped by the model rather than the writer. The longer-term cost (capability erosion, voice flattening, sycophancy spirals, source attribution buried) is barely measured because the field measures what is easy to measure. The result is a generation of tools that look like assistants and act like substitutes.",
     built:
-      "An authorship environment that inverts the prompt-then-edit pattern. Writers assemble Authorship Packets — intent · structure · key ideas · relevant passages · counterpositions — before the AI is invoked. Corpus selection is explicit: writers choose which sources influence the work rather than inheriting the model's training distribution. The Adaptive Authorship Control Kernel (F-19) is the spine — central registry of skill measurement, intervention, and genre-aware behavior (memoir / nonfiction / fiction never collapsed). The Loom Measurement Framework — six skill dimensions, six derived indices, three measurement layers, five-step learning loop, and four non-negotiable failure modes — determines whether a session made the writer better. Lives inside Vela's repo (app/labs/loom/) for now; graduates when the design stabilizes.",
+      "An authorship environment that inverts the prompt-then-edit pattern. Writers assemble Authorship Packets — intent · structure · key ideas · relevant passages · counterpositions — before the AI is invoked. Corpus selection is explicit: writers choose which sources influence the work rather than inheriting the model's training distribution. The Adaptive Authorship Control Kernel (F-19) is the spine — central registry of skill measurement, intervention, and genre-aware behavior (memoir / nonfiction / fiction never collapsed). The Penwright Measurement Framework — six skill dimensions, six derived indices, three measurement layers, five-step learning loop, and four non-negotiable failure modes — determines whether a session made the writer better. Lives inside Vela's repo (app/labs/penwright/) for now; graduates when the design stabilizes.",
     novel: [
       "Authorship Packet Model — replaces freeform prompting with structured input units; the structure itself is data",
       "Corpus Control Layer — writer selects sources rather than inheriting the LLM's training distribution",
       "Adaptive Authorship Control Kernel (F-19) — central registry of measurement and intervention; genre-aware behavior forks copy + schema enums + prompts + metrics rather than collapsing them",
-      "Loom Measurement Framework — first multi-dimensional measurement system for AI-augmented writing skill development; four non-negotiable failure modes (output-only optimization · over-automation · weak measurement · ignoring genre differences) act as veto",
+      "Penwright Measurement Framework — first multi-dimensional measurement system for AI-augmented writing skill development; four non-negotiable failure modes (output-only optimization · over-automation · weak measurement · ignoring genre differences) act as veto",
       "Anti-invention constraint — when a structural rhetorical move requires biographical material the user has not supplied, the tool refuses to render rather than confabulating",
-      "Has its own published research program at peopleanalyst.com/research/ai-human-interaction (12-paper Loom Research Program across three tiers)",
+      "Has its own published research program at peopleanalyst.com/research/ai-human-interaction (12-paper Penwright Research Program across three tiers)",
     ],
     stack: [
       "Next.js 16",
@@ -221,10 +221,10 @@ export const PROJECTS: Project[] = [
       "Anthropic API",
     ],
     outcome:
-      "Early build inside Vela's repo (app/labs/loom). F-03 (Authorship Packet UI MVP) shipped. F-19 (Adaptive Authorship Control Kernel) is the architectural spine; it ships first or in parallel with the first feature. 19 features (F-01..F-19) sequenced across 6 implementation waves; 79 ASNs in flight.",
+      "Early build inside Vela's repo (app/labs/penwright). F-03 (Authorship Packet UI MVP) shipped. F-19 (Adaptive Authorship Control Kernel) is the architectural spine; it ships first or in parallel with the first feature. 19 features (F-01..F-19) sequenced across 6 implementation waves; 79 ASNs in flight.",
     role: "Designer, engineer.",
     story:
-      "Loom exists because the field of AI writing is being measured by output and not by capability. The longitudinal test — better writer without Loom in six months — is unfashionable but load-bearing. The alternative bet — better outputs faster, optimization toward fluency — is the bet most of the field has already taken. Loom is the bet on the other side: that writers can become more capable inside an AI-augmented environment, and that this can be measured rigorously enough to fail on its own terms. Seven non-negotiable rules in §7 of the vision doc act as the spine for every product decision (don't build generic AI writing features · don't collapse genre distinctions · don't hide source attribution · don't flatten emotional nuance · don't optimize for speed over authorship · don't make AI compliant · don't over-moralize).",
+      "Penwright exists because the field of AI writing is being measured by output and not by capability. The longitudinal test — better writer without Penwright in six months — is unfashionable but load-bearing. The alternative bet — better outputs faster, optimization toward fluency — is the bet most of the field has already taken. Penwright is the bet on the other side: that writers can become more capable inside an AI-augmented environment, and that this can be measured rigorously enough to fail on its own terms. Seven non-negotiable rules in §7 of the vision doc act as the spine for every product decision (don't build generic AI writing features · don't collapse genre distinctions · don't hide source attribution · don't flatten emotional nuance · don't optimize for speed over authorship · don't make AI compliant · don't over-moralize).",
     status: "private",
   },
 

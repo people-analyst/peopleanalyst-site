@@ -62,7 +62,7 @@ Fantasy-football intelligence platform. Monorepo: Next.js web (Team / Waiver / L
 
 Real-world application of the same systematic-decision-science frameworks underlying the People Analytics Platform — proves the patterns transfer to high-volume-decision consumer domains.
 
-### Loom · 2026 · in early build
+### Penwright · 2026 · in early build
 AI-assisted memoir composition workshop.
 
 **Outlier:** **voice-match with explicit anti-invention constraint.** When a structural rhetorical move requires biographical material the user hasn't supplied, the tool *refuses to render* rather than confabulating — enforced via per-rendering `invented_content[]` array surfaced as warnings, plus a Sonnet critic pass. Unusual for AI-writing tools, which default to producing something over flagging a limitation.
@@ -94,7 +94,7 @@ Scholarly corpus infrastructure. Ingests public-domain primary-source archives �
 
 **PeopleAnalyst** — Founder, Principal Consultant & Product Builder · *Mar 2012 – present* · Pittsburgh, PA *(previously Dallas, Austin, Springfield MO, Portsmouth VA)*
 - Founded the first niche people-analytics consulting practice in the US; served 25+ enterprise clients across pharmaceutical, tech, retail, healthcare, media.
-- Pivoted to AI-native product development in 2022; shipped a 15+ application platform plus Vela, Loom, Commonplace in adjacent domains.
+- Pivoted to AI-native product development in 2022; shipped a 15+ application platform plus Vela, Penwright, Commonplace in adjacent domains.
 - Published *People Analytics For Dummies* (Wiley, March 2019); built 22K LinkedIn audience through 97+ published articles.
 
 **The New York Times** — Consultant, Workforce Analytics & Compensation · *Aug 2025 – 2026 (contract, completed)* · Pittsburgh, PA
@@ -193,7 +193,7 @@ Scholarly corpus infrastructure. Ingests public-domain primary-source archives �
 
 ## Current Focus (2026)
 
-Simultaneously: (a) building out the AI-native People Analytics Platform ecosystem; (b) shipping Vela + Loom + Commonplace in adjacent domains; (c) applying to PhD programs at Carnegie Mellon and University of Pittsburgh; (d) seeking founder-track placement OR senior product leadership in applied-analytics startups, AI-native platform companies, and people-analytics platforms extending into AI.
+Simultaneously: (a) building out the AI-native People Analytics Platform ecosystem; (b) shipping Vela + Penwright + Commonplace in adjacent domains; (c) applying to PhD programs at Carnegie Mellon and University of Pittsburgh; (d) seeking founder-track placement OR senior product leadership in applied-analytics startups, AI-native platform companies, and people-analytics platforms extending into AI.
 
 **Open to:** founder-track programs (SPC, EF, On Deck, YC Visiting Group); Senior / Principal / Staff PM at applied-analytics SaaS; VP Product at legacy ERP companies modernizing with analytics + AI; Head of Product / AI at early-stage applied-analytics startups; research-leaning product roles at AI-native platform companies.
 

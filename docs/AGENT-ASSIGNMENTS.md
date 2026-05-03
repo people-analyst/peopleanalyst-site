@@ -28,7 +28,7 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 **Category:** literature review · highest-leverage frontier zone
 **Owns:** `content/research/ai-human-interaction/sources/topic-reviews/long-context-emergence.md`
 
-**Context:** The AI–Human Interaction program scaffold ships with this gap explicitly flagged (`literature-map.md` §VI). It is the highest-leverage near-term empirical frontier — drift, sycophancy spirals, evolving rapport, accumulating shared reference, breakdown modes in extended sessions. Almost no literature exists; what does exist is scattered across HCI, AI-safety, conversational-agent design, and clinical psychology of long-term relationships. A focused review is needed before Loom Paper 8 (longitudinal effects) can engage the right anchors.
+**Context:** The AI–Human Interaction program scaffold ships with this gap explicitly flagged (`literature-map.md` §VI). It is the highest-leverage near-term empirical frontier — drift, sycophancy spirals, evolving rapport, accumulating shared reference, breakdown modes in extended sessions. Almost no literature exists; what does exist is scattered across HCI, AI-safety, conversational-agent design, and clinical psychology of long-term relationships. A focused review is needed before Penwright Paper 8 (longitudinal effects) can engage the right anchors.
 
 **Prompt:** Run a multi-LLM deep-research pass on long-context emergence in conversational AI, following the template in `content/research/ai-human-interaction/methodology.md` §1.1. Topics to cover: drift across long sessions, sycophancy dynamics, evolving rapport / pseudo-relationship formation, breakdown modes (incoherence cascade, persona collapse), and the clinical-psychology adjacencies (transference, idealization, working-alliance development over months). Cite specifics. Flag uncertainty. Save the consolidated review at the path above. Save raw LLM outputs at `sources/syntheses/external-runs/long-context-emergence--<llm>--<YYYYMMDD>.md` if multiple LLMs were used.
 
@@ -110,18 +110,18 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 
 **Status:** OPEN
 **Category:** paper draft
-**Owns:** `content/research/ai-human-interaction/loom-paper-04-measurement.md`
+**Owns:** `content/research/ai-human-interaction/penwright-paper-04-measurement.md`
 
-**Context:** Tier-2 foundational paper of the Loom Research Program. The vision-document version exists at `vela/docs/VISION-LOOM-MEASUREMENT.md` (load-bearing internal spec). Paper 4 is the externally-facing, peer-review-shaped version of the same content. The vision doc says *what the framework is*; the paper says *what the framework contributes to the field, against what alternatives, with what evidence*.
+**Context:** Tier-2 foundational paper of the Penwright Research Program. The vision-document version exists at `vela/docs/VISION-PENWRIGHT-MEASUREMENT.md` (load-bearing internal spec). Paper 4 is the externally-facing, peer-review-shaped version of the same content. The vision doc says *what the framework is*; the paper says *what the framework contributes to the field, against what alternatives, with what evidence*.
 
-**Prompt:** Convert `vela/docs/VISION-LOOM-MEASUREMENT.md` into a standalone paper at `content/research/ai-human-interaction/loom-paper-04-measurement.md`. Required sections: abstract, introduction (positioning against existing AI-augmented-skill measurement work — minimal because the literature is sparse; that's the point), the framework itself (six dimensions, six indices, three layers, five-step learning loop), the four failure modes (§13 of the vision doc — non-negotiable veto), measurement-theory positioning (reflective vs formative; latent vs observed), threats to validity, comparison to existing instruments (HCI usability scales, educational-skill assessments, standardized writing rubrics — all of which are wrong for this purpose for specified reasons), what's measurable in v1 and what waits for production data accumulation. Tone: peer-review-shaped but not obsequious. Citations specific. Update `loom-sub-paper-plan.md` to reflect the converted form. Manifest entry already exists as forthcoming-style report; flip to live with the new path.
+**Prompt:** Convert `vela/docs/VISION-PENWRIGHT-MEASUREMENT.md` into a standalone paper at `content/research/ai-human-interaction/penwright-paper-04-measurement.md`. Required sections: abstract, introduction (positioning against existing AI-augmented-skill measurement work — minimal because the literature is sparse; that's the point), the framework itself (six dimensions, six indices, three layers, five-step learning loop), the four failure modes (§13 of the vision doc — non-negotiable veto), measurement-theory positioning (reflective vs formative; latent vs observed), threats to validity, comparison to existing instruments (HCI usability scales, educational-skill assessments, standardized writing rubrics — all of which are wrong for this purpose for specified reasons), what's measurable in v1 and what waits for production data accumulation. Tone: peer-review-shaped but not obsequious. Citations specific. Update `penwright-sub-paper-plan.md` to reflect the converted form. Manifest entry already exists as forthcoming-style report; flip to live with the new path.
 
 **Acceptance:**
 - Paper file lands at specified path
 - Vision doc still load-bearing internally — paper is the external-facing version, not a replacement
 - All four failure modes explicitly carried forward
 - Threats-to-validity section included
-- Manifest entry added as a `category: "reports"` with `initiative: "loom-research-program"`, `status: "live"`
+- Manifest entry added as a `category: "reports"` with `initiative: "penwright-research-program"`, `status: "live"`
 - Committed and pushed
 
 **Dependencies:** none (the vision doc is canonical source)
@@ -132,11 +132,11 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 
 **Status:** OPEN
 **Category:** paper draft
-**Owns:** `content/research/ai-human-interaction/loom-paper-03-authorship-packet.md`
+**Owns:** `content/research/ai-human-interaction/penwright-paper-03-authorship-packet.md`
 
-**Context:** Tier-1 foundational paper of the Loom Research Program. The vision-document version exists at `vela/docs/VISION-LOOM-AUTHORSHIP.md` (load-bearing internal spec, with the seven non-negotiable rules in §7). Paper 3 is the externally-facing version — defines the Authorship Packet Model as a structured-input alternative to freeform prompting, and positions it against the existing prompt-engineering, transactive-memory, and translation-theory literatures.
+**Context:** Tier-1 foundational paper of the Penwright Research Program. The vision-document version exists at `vela/docs/VISION-PENWRIGHT-AUTHORSHIP.md` (load-bearing internal spec, with the seven non-negotiable rules in §7). Paper 3 is the externally-facing version — defines the Authorship Packet Model as a structured-input alternative to freeform prompting, and positions it against the existing prompt-engineering, transactive-memory, and translation-theory literatures.
 
-**Prompt:** Convert `vela/docs/VISION-LOOM-AUTHORSHIP.md` into a standalone paper at `content/research/ai-human-interaction/loom-paper-03-authorship-packet.md`. Required sections: abstract, introduction (the prompt-engineering dead end), the Authorship Packet Model (intent · structure · key ideas · relevant passages · counterpositions), theoretical positioning (transactive memory, translation theory, cognitive load theory), the seven non-negotiable rules from §7 carried forward verbatim with brief commentary, comparison to alternative input shapes (freeform prompts, structured chain-of-thought, retrieval-augmented generation), threats to validity, what production data will adjudicate. Manifest entry as a `category: "reports"` with `initiative: "loom-research-program"`, `status: "live"`.
+**Prompt:** Convert `vela/docs/VISION-PENWRIGHT-AUTHORSHIP.md` into a standalone paper at `content/research/ai-human-interaction/penwright-paper-03-authorship-packet.md`. Required sections: abstract, introduction (the prompt-engineering dead end), the Authorship Packet Model (intent · structure · key ideas · relevant passages · counterpositions), theoretical positioning (transactive memory, translation theory, cognitive load theory), the seven non-negotiable rules from §7 carried forward verbatim with brief commentary, comparison to alternative input shapes (freeform prompts, structured chain-of-thought, retrieval-augmented generation), threats to validity, what production data will adjudicate. Manifest entry as a `category: "reports"` with `initiative: "penwright-research-program"`, `status: "live"`.
 
 **Acceptance:**
 - Paper file lands at specified path
@@ -153,11 +153,11 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 
 **Status:** OPEN
 **Category:** preregistration
-**Owns:** `content/research/ai-human-interaction/preregistrations/loom-paper-05-dependency.md`
+**Owns:** `content/research/ai-human-interaction/preregistrations/penwright-paper-05-dependency.md`
 
-**Context:** First OSF preregistration candidate for the Loom Research Program. Paper 5 (Dependency and Independence in AI-Assisted Writing) tests when AI helps vs. harms writer capability. Pre-registered hypotheses with yes-world / no-world consequences must be specified before data collection begins; formal OSF filing follows once the analysis pipeline is built and a run-in period of Loom production data is collected.
+**Context:** First OSF preregistration candidate for the Penwright Research Program. Paper 5 (Dependency and Independence in AI-Assisted Writing) tests when AI helps vs. harms writer capability. Pre-registered hypotheses with yes-world / no-world consequences must be specified before data collection begins; formal OSF filing follows once the analysis pipeline is built and a run-in period of Penwright production data is collected.
 
-**Prompt:** Draft a formal preregistration at the specified path, modeled on Vela's `docs/research/preregistrations/study-01.md`. Required sections: study title, version, frozen-at commit, hypotheses (H1, H2, H3... with yes-world / no-world predictions), data sources (Loom production telemetry — specify which event types and which derived indices), exclusion criteria, analysis plan (specific statistical tests, multiple-comparison correction strategy, pre-registered effect-size thresholds), threats-to-validity register, deviations log section. Genre-aware analysis required (memoir / nonfiction / fiction analyzed separately). The "what's measured" decomposition must reference the Loom Measurement Framework (PA-005's paper, or the vision doc until then). Manifest entry as `category: "preregistrations"`, `status: "live"`.
+**Prompt:** Draft a formal preregistration at the specified path, modeled on Vela's `docs/research/preregistrations/study-01.md`. Required sections: study title, version, frozen-at commit, hypotheses (H1, H2, H3... with yes-world / no-world predictions), data sources (Penwright production telemetry — specify which event types and which derived indices), exclusion criteria, analysis plan (specific statistical tests, multiple-comparison correction strategy, pre-registered effect-size thresholds), threats-to-validity register, deviations log section. Genre-aware analysis required (memoir / nonfiction / fiction analyzed separately). The "what's measured" decomposition must reference the Penwright Measurement Framework (PA-005's paper, or the vision doc until then). Manifest entry as `category: "preregistrations"`, `status: "live"`.
 
 **Acceptance:**
 - Preregistration file at specified path
@@ -176,7 +176,7 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 
 **Status:** OPEN
 **Category:** preregistration
-**Owns:** `content/research/ai-human-interaction/preregistrations/loom-paper-07-genre-effects.md`
+**Owns:** `content/research/ai-human-interaction/preregistrations/penwright-paper-07-genre-effects.md`
 
 **Context:** Second OSF preregistration candidate. Paper 7 (Genre-Specific Effects of AI Writing Systems) is load-bearing for the rest of the program — if AI effects collapse across memoir / nonfiction / fiction, then collapsed analysis everywhere else is defensible; if they don't, then the genre fork is non-negotiable through the entire program. Pre-registered hypothesis: AI effects are genre-dependent (nonfiction risks shallow argument; memoir risks emotional flattening; fiction risks generic narrative).
 
@@ -201,7 +201,7 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 **Category:** research-write-up · audience tier
 **Owns:** `content/research/ai-human-interaction/peer-review.md`
 
-**Context:** The AHI program scaffold ships with all four audience-tier slots present in the manifest (general-audience already live via `loom-paper-01-public`; peer-review, engineering, product all forthcoming). This assignment closes the peer-review slot.
+**Context:** The AHI program scaffold ships with all four audience-tier slots present in the manifest (general-audience already live via `penwright-paper-01-public`; peer-review, engineering, product all forthcoming). This assignment closes the peer-review slot.
 
 **Prompt:** Write a peer-review-shaped framing of the AHI program at `content/research/ai-human-interaction/peer-review.md`. Position the program against the existing literatures named in the topic-review corpus (HCI, CSCW, educational psychology / cognitive apprenticeship, working-alliance theory, transactive memory, niche construction, distributed cognition, phenomenology of skill). Use Namesake's `docs/research/reviews/academic-peer-review.md` (in baby-namer repo) as the structural model. ~1500-2500 words. Threats-to-validity register required (auto-ethnography of PI, single-system generalization, longitudinal-data run-in window). Manifest entry `ai-human-interaction:peer-review` flips from `forthcoming` to `live` once the file lands.
 
@@ -223,9 +223,9 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 **Category:** research-write-up · audience tier
 **Owns:** `content/research/ai-human-interaction/engineering.md`
 
-**Context:** Closes the engineering audience-tier slot for the AHI program. The Loom system inside Vela is the primary instrumentation surface; F-19 (Adaptive Authorship Control Kernel) is the architectural spine that all measurement runs through.
+**Context:** Closes the engineering audience-tier slot for the AHI program. The Penwright system inside Vela is the primary instrumentation surface; F-19 (Adaptive Authorship Control Kernel) is the architectural spine that all measurement runs through.
 
-**Prompt:** Write the engineering-reviewer's lens on the AHI program at `content/research/ai-human-interaction/engineering.md`. Cover: F-19 architecture (central registry of measurement and intervention; genre-aware fork pattern), the Loom Measurement Framework's instrumentation requirements, the production-data accumulation discipline, and the verification protocols for treating LLM outputs as evidence rather than answers. Failure modes and stress conditions explicit. ~1500-2500 words. Manifest entry `ai-human-interaction:engineering` flips to `live`.
+**Prompt:** Write the engineering-reviewer's lens on the AHI program at `content/research/ai-human-interaction/engineering.md`. Cover: F-19 architecture (central registry of measurement and intervention; genre-aware fork pattern), the Penwright Measurement Framework's instrumentation requirements, the production-data accumulation discipline, and the verification protocols for treating LLM outputs as evidence rather than answers. Failure modes and stress conditions explicit. ~1500-2500 words. Manifest entry `ai-human-interaction:engineering` flips to `live`.
 
 **Acceptance:**
 - File at the path
@@ -244,9 +244,9 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 **Category:** research-write-up · audience tier
 **Owns:** `content/research/ai-human-interaction/product.md`
 
-**Context:** Closes the product audience-tier slot. The AHI program's findings (current and projected) imply specific product decisions for Loom, for the broader Vela substrate, and for adjacent authoring environments.
+**Context:** Closes the product audience-tier slot. The AHI program's findings (current and projected) imply specific product decisions for Penwright, for the broader Vela substrate, and for adjacent authoring environments.
 
-**Prompt:** Write the product-implications framing of the AHI program at `content/research/ai-human-interaction/product.md`. Each implication must trace to a specific finding, a specific Loom design decision, or a specific architectural commitment. Cover: what the measurement framework implies for Loom's interaction design; what the seven non-negotiable rules of authorship (§7 of `vela/docs/VISION-LOOM-AUTHORSHIP.md`) imply for product roadmap priorities; what the genre-aware behavior pattern (memoir / nonfiction / fiction never collapsed) means for downstream surfaces. Honest about pre-data state. ~1500-2500 words. Manifest entry `ai-human-interaction:product` flips to `live`.
+**Prompt:** Write the product-implications framing of the AHI program at `content/research/ai-human-interaction/product.md`. Each implication must trace to a specific finding, a specific Penwright design decision, or a specific architectural commitment. Cover: what the measurement framework implies for Penwright's interaction design; what the seven non-negotiable rules of authorship (§7 of `vela/docs/VISION-PENWRIGHT-AUTHORSHIP.md`) imply for product roadmap priorities; what the genre-aware behavior pattern (memoir / nonfiction / fiction never collapsed) means for downstream surfaces. Honest about pre-data state. ~1500-2500 words. Manifest entry `ai-human-interaction:product` flips to `live`.
 
 **Acceptance:**
 - File at the path
@@ -259,15 +259,15 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 
 ---
 
-### PA-009 — External-operator pilot: recruit + onboard 5–10 outside Loom users
+### PA-009 — External-operator pilot: recruit + onboard 5–10 outside Penwright users
 
 **Status:** OPEN
 **Category:** decision · recruitment · long-running
 **Owns:** `content/research/ai-human-interaction/protocols/external-operator-pilot.md`
 
-**Context:** Mitigates the auto-ethnography threat-to-validity. The program's principal investigator (Mike) is also Loom's designer and most active user; this is acceptable for descriptive work but is an explicit threat to the causal claims any of the longitudinal papers (especially Paper 8) need to defend. An external-operator pilot — 5–10 outside Loom users, recruited, onboarded, and tracked under the same instrumentation — is the load-bearing mitigation. Without it, Paper 8 cannot carry weight beyond auto-ethnography.
+**Context:** Mitigates the auto-ethnography threat-to-validity. The program's principal investigator (Mike) is also Penwright's designer and most active user; this is acceptable for descriptive work but is an explicit threat to the causal claims any of the longitudinal papers (especially Paper 8) need to defend. An external-operator pilot — 5–10 outside Penwright users, recruited, onboarded, and tracked under the same instrumentation — is the load-bearing mitigation. Without it, Paper 8 cannot carry weight beyond auto-ethnography.
 
-**Prompt:** Draft a pilot protocol at the specified path. Required sections: recruitment criteria (writers who would benefit from Loom; range across memoir / nonfiction / fiction; experience-level diversity), recruitment channels (email lists, writing communities, paid recruitment via Prolific or similar), onboarding flow (account provisioning, instrumentation discipline, expectations setting), data-handling protocol (anonymization, consent, retention), success criteria (target number of writers active 3+ months at the data-collection threshold for Paper 5/7/8 to begin), what the pilot does *not* do (it is not the formal study; it is the data-baseline-builder for the formal study). Then file the recruitment work as concrete next-action assignments (separate from this one). Manifest entry as `category: "preregistrations"` with `slug: "external-operator-pilot-protocol"`.
+**Prompt:** Draft a pilot protocol at the specified path. Required sections: recruitment criteria (writers who would benefit from Penwright; range across memoir / nonfiction / fiction; experience-level diversity), recruitment channels (email lists, writing communities, paid recruitment via Prolific or similar), onboarding flow (account provisioning, instrumentation discipline, expectations setting), data-handling protocol (anonymization, consent, retention), success criteria (target number of writers active 3+ months at the data-collection threshold for Paper 5/7/8 to begin), what the pilot does *not* do (it is not the formal study; it is the data-baseline-builder for the formal study). Then file the recruitment work as concrete next-action assignments (separate from this one). Manifest entry as `category: "preregistrations"` with `slug: "external-operator-pilot-protocol"`.
 
 **Acceptance:**
 - Protocol file at specified path

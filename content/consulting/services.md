@@ -4,7 +4,9 @@ PeopleAnalyst is a consulting practice founded in 2012 around a specific bet: th
 
 The shape of an engagement varies. Sometimes it is a discovery sprint that produces a roadmap. Sometimes it is a multi-month build that stands up a function from zero. Sometimes it is a quiet quarterly partnership that lets an in-house team punch above its weight on the decisions that actually matter. The menu below is organized by what the work *does*, not which HR domain it sits in — because the methodology underneath transfers across domains, and most live engagements span several.
 
-If something here looks like the shape of a problem you have, [send a note](mailto:mike@peopleanalyst.com). The headings give the menu; expand any section for methodology and case-grounding.
+If something here looks like the shape of a problem you have, [send a note](mailto:mike@peopleanalyst.com).
+
+The headings give the menu; expand any section for methodology and case-grounding.
 
 ---
 
