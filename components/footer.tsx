@@ -1,10 +1,19 @@
 import Link from "next/link";
 
-const ELSEWHERE_LINKS: { label: string; href: string; external: boolean; note?: string }[] = [
-  { label: "Vela", href: "https://vela.study", external: true, note: "live" },
-  { label: "Namesake", href: "https://namesake.baby", external: true, note: "live" },
-  { label: "GitHub — people-analyst", href: "https://github.com/people-analyst", external: true },
+/**
+ * Live sites in the portfolio. Add to this list as new properties launch
+ * (Mike's standing direction — the My Work column should grow as more sites
+ * push out into the wild).
+ */
+const MY_WORK_LINKS: { label: string; href: string; note?: string }[] = [
+  { label: "Vela", href: "https://vela.study", note: "live" },
+  { label: "Namesake", href: "https://namesake.baby", note: "live" },
+];
+
+const GET_IN_TOUCH_LINKS: { label: string; href: string; external?: boolean }[] = [
+  { label: "mike@peopleanalyst.com", href: "mailto:mike@peopleanalyst.com" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/michaelcwest/", external: true },
+  { label: "GitHub — people-analyst", href: "https://github.com/people-analyst", external: true },
 ];
 
 export function Footer() {
@@ -13,10 +22,10 @@ export function Footer() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-8 py-10">
         <div>
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted">
-            Elsewhere
+            My Work
           </p>
           <ul className="mt-3 space-y-1.5 text-sm">
-            {ELSEWHERE_LINKS.map((l) => (
+            {MY_WORK_LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
@@ -41,14 +50,20 @@ export function Footer() {
             Get in touch
           </p>
           <ul className="mt-3 space-y-1.5 text-sm">
-            <li>
-              <a
-                href="mailto:mike@peopleanalyst.com"
-                className="text-ink-body hover:text-accent transition-colors"
-              >
-                mike@peopleanalyst.com
-              </a>
-            </li>
+            {GET_IN_TOUCH_LINKS.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  {...(l.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="text-ink-body hover:text-accent transition-colors"
+                >
+                  {l.external ? "↗ " : ""}
+                  {l.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
