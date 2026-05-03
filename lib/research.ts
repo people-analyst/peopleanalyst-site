@@ -7,6 +7,7 @@ import {
   type ProductId,
 } from "@/content/research/_manifest";
 import { CATEGORIES, type CategoryId } from "@/content/research/_taxonomy";
+import { ARCS, ARC_INDEX, type Arc, type ArcId } from "@/content/research/_arcs";
 
 const CONTENT_ROOT = join(process.cwd(), "content", "research");
 
@@ -63,4 +64,65 @@ export function getProductStatus(product: ProductId): { live: number; total: num
   };
 }
 
+// ===== Arc helpers =====
+
+export function getArcs(): Arc[] {
+  return ARCS;
+}
+
+export function getArc(id: string): Arc | undefined {
+  return ARC_INDEX[id as ArcId];
+}
+
+export function getEntriesForArc(arcId: ArcId): ManifestEntry[] {
+  return MANIFEST.filter((e) => e.arcs?.includes(arcId));
+}
+
+export function getEntriesForArcCategory(
+  arcId: ArcId,
+  category: CategoryId,
+): ManifestEntry[] {
+  return MANIFEST.filter(
+    (e) => e.arcs?.includes(arcId) && e.category === category,
+  );
+}
+
+/**
+ * Distinct products represented in an arc, ordered by first appearance in the
+ * MANIFEST. Useful for showing product chips on arc cards.
+ */
+export function getProductsInArc(arcId: ArcId): ProductId[] {
+  const seen = new Set<ProductId>();
+  const out: ProductId[] = [];
+  for (const e of MANIFEST) {
+    if (e.arcs?.includes(arcId) && !seen.has(e.product)) {
+      seen.add(e.product);
+      out.push(e.product);
+    }
+  }
+  return out;
+}
+
+export function getArcStatus(arcId: ArcId): { live: number; total: number } {
+  const entries = getEntriesForArc(arcId);
+  return {
+    live: entries.filter((e) => e.status === "live").length,
+    total: entries.length,
+  };
+}
+
+/**
+ * Resolve an arc's featured entry to a live ManifestEntry if available.
+ * Returns null if the featured slug is not yet live (so the caller can show
+ * a "forthcoming" affordance).
+ */
+export function getArcFeaturedEntry(arc: Arc): ManifestEntry | null {
+  if (!arc.featuredEntry) return null;
+  const entry = MANIFEST.find(
+    (e) => e.product === arc.featuredEntry!.product && e.slug === arc.featuredEntry!.slug,
+  );
+  return entry && entry.status === "live" ? entry : null;
+}
+
 export { CATEGORIES, MANIFEST };
+export type { ArcId };
