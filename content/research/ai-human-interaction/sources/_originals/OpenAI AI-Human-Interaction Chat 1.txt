@@ -1,0 +1,530 @@
+Psychoanalytic Theory for Human-AI Working Alliance Measurement.docx
+Document
+Companion-Species and Ethology of Working Partnerships.docx
+Document
+Ritual Studies and Non-Human Agents for Long-Term Human-AI Use.docx
+Document
+History of Mediation Technologies and AI.docx
+Document
+Translation and Interpreting Studies for AI as a Translator of Domains and Registers.docx
+Document
+Niche Construction Theory_ Feedback Between Organisms and Environments.docx
+Document
+Aesthetics of AI-Generated Art and AI-Augmented Practice.docx
+Document
+Improv Theatre and Ensemble Performance for Human-AI Dialogue and Collaboration.docx
+Document
+Institutional Economics of AI and the Reorganization of Work and Knowledge Production.docx
+Document
+Transactive Memory in Human-AI Teams.md
+File
+Memory, Mourning, and Digital Remains.docx
+Document
+Communication Accommodation Theory in Human-AI Interaction.docx
+Document
+Cognitive apprenticeship, ZPD, and AI as a more-knowledgeable other.docx
+Document
+Working Alliance and Rupture-Repair from Psychotherapy to Human-AI Interaction.docx
+Document
+Persuasion, Belief Change, and AI’s Epistemic Effects on Users.docx
+Document
+Next set
+Phenomenology of Attention in Post-2010 Theory and AI-Augmented Work.docx
+Document
+Phenomenology of Skill and AI-Augmented Expert Work.docx
+Document
+Feminist Epistemology, Standpoint Theory, and AI Knowledge Production.docx
+Document
+Disability Studies, Crip Theory, and AI as Access Infrastructure.docx
+Document
+Political Philosophy and Democratic Theory of AI after 2018.docx
+Document
+Indigenous and Non-Western Relational Ontologies in AI Ethics and Human-AI Interaction.docx
+Document
+Final set. Don't lose all the other inputs and suggestions you have given over the first two reply's - let's pick those up after this... 
+You crapped out there, redo that last reaction
+There are a lot of things I want. Instead of starting them all in this thread, can you give me a set of prompts I can use in this folder that we can use to create each of them. If we need to create some summary documents and put them directly into the folder document store, then let me know and let's do that at the same time..  In general here is what I want to do, not necssarily in this order. 1. embark in an effort to go get the studies, and create a data store of ai research, that I can use but that also we can make accessible from our website. 2. Publish literature review(s) and metastudies, where some contributions can be made.  3. A formal conceptual framework or meta model (as you kind of started above).. 4. measurement architecture. 5. I want to outline and then write a book "Bicycle Guide to Managing A.I."  or just "Managing AI" which is intended to be the ai eras essential guide for executive/management, the counterpart to such books that may exist for managing people.  This book is rooted entirely in research.  That book is written for an executive audience looking to implement AI in their organizations.  6. develop a list of features to add to an AI assisted software development product and vela, or meta-factory (ai assisted writing and art content tools), and 7.  develop high impact studies that combine useful/interesting opportunities in the research with my deep expertise in people analytics. 
+generate seed documents
+first literature review paper
+I would like all of that.  Start with the measurement framework.  Then, ideally, write a version of the overall literature review that is for technical/phd audience. Then a version that makes this research accessible to the public.  Then in followup there will need to be multiple independent sub-papers.   These seem like they will each require their own calls.
+continue
+Continue
+generate sub-paper plan
+Continue
+Write it
+paper 1
+o.k.
+o.k. write access paper
+write it
+connect to product design, design platform.
+I'm building a writing platform on on vela, which will likely spin out into its own software, loom, which I think these ideas can apply in, and that we can build in as integrative principles, or also use a surface to test, and apply longitudinal research. I'm also building a multi-agent development platform we are calling devplane or kanbai.  I'm trying to understand more about the platform you have in mind, what does it do?
+got you. this is like an analytics/data science layer for ai products that captures our measurement framework related to our model/research. And it's creating feedback loops for users as well as the system so hopefully they can see things coming and iterate towards better outcomes.
+schema and telemetry of this control layer you are speaking of, and then let's think about the rest of it and how it works.  
+You cut off there, what else?
+Continue, what next/
+Let me give you a bit more about Vela and Loom, so we can work specifically with that context.  # Vela + Loom — briefing for an external collaborator
+
+> **Audience:** an external LLM (or human) being brought in to help develop new **writing features**. This document is self-contained — paste it into the system prompt or first turn. It exists so the collaborator can grasp purpose, scope, vision, architecture, components, and the Vela-vs-Loom distinction without reading the rest of the repo.
+>
+> **Date:** 2026-05-03. Written by Vela's lead author (Mike West, mike@peopleanalyst.com).
+>
+> **What this is *not*:** a prompt for the collaborator to "do" something. It is orientation. The actual feature prompt comes separately.
+
+---
+
+## 1. One-paragraph orientation
+
+**Vela** (live at https://vela.study) is a fine-art figurative editorial platform that combines a curated image library, a magazine, an adaptive image-sequencing engine called *Reincarnation*, and a writing/research workspace called *Loom*. Its register is contemplative, editorially rigorous, desire-and-emotion-oriented. The editorial spine is shifting from "sex + art + religion" toward a broader "whole human" axis covering emotion, developmental psychology, and developmental theology, while keeping the visual core. The codebase is a single Next.js 16 + React 19 + Tailwind 4 app on Vercel, backed by Supabase Postgres, with Anthropic models doing the AI work.
+
+**Loom** is one product *inside* Vela: a long-form, draft-oriented writing workspace anchored to memoir corpus passages tagged on an Experience × Emotion taxonomy. It is currently used for compensated research sessions (Loom is the surface for the *study* — research participation, consent, compensation), and is being explored as a self-directed reflection surface as well. Loom is the primary place where any new "writing feature" will land or be informed.
+
+If you only remember three things:
+
+1. **Vela is the platform; Loom is one workspace inside it.** Many other surfaces also touch writing (the Magazine, Mosaic text library, Narrative Intelligence, the Office initiative). They are *related* but distinct.
+2. **The corpus is two-grade.** "Curator-grade" passages (~15 hand-labeled per source, themed/charge-tiered) drive editorial work. "Research-bulk-grade" passages (~50–150 paragraph-respecting chunks per source) drive retrieval and audits. Loom reads the bulk grade.
+3. **Adaptation is a first-class system, not a feature.** *Reincarnation* (for images) and the in-flight *Compass* (for written content) are the adaptive-intelligence layers. Anything you build for writing should expect to interoperate with — or eventually be measured by — these.
+
+---
+
+## 2. Vela — purpose & scope
+
+### 2.1 What Vela does today
+
+| Surface | Purpose |
+|---|---|
+| **Image library** (experience_units, ~385 active rows) | Curated artworks from museums (ARTIC, Met, BnF, Smithsonian, Europeana, Rijksmuseum), partner photographers, and Vela-generated derivatives. Single canonical row per artwork; every other product reads from here. |
+| **Player** (/play) | Sequenced viewing of images. 5-point rating at the bottom of each image advances to the next. Two modes: *learning* (early sessions, builds preference signal) and *calibrated* (after enough responses, adaptive ordering kicks in). |
+| **Reincarnation** | Adaptive intelligence layer behind the player. Scores units on an 8-dimension desire model, moves them between named pools (INFINITY → A/B/C/D → PURGATORY), maintains per-user user_desire_profiles, and shapes the player queue. Batch (nightly cron) + runtime. |
+| **Magazine** | Editorial articles + fiction series. Block-based article body (BlockRenderer); supports per-reader essay variants; matches images from the library to article blocks. |
+| **Mosaic** | Curated text passage library, sourced from books and documentaries. Feeds the magazine, audio readings, and /prepare flows. Two grades (see §1). |
+| **Narrative Intelligence (NI)** | Successor admin workbench for the text library: source ingest → excerpt review → quote explorer → insight workbench → guide builder. Public reader surface at /guide/[slug]. |
+| **The Reveal** + **Reveal Grid** | Discovery surfaces — single-image (Reveal) and curated multi-image (Reveal Grid). Different products that share a name. |
+| **Composites** | Multi-image grid arrangements (collages, not sequences). |
+| **Your Path / Saved / Profile** | Personal views over response data and user_desire_profiles. |
+| **Loom** *(this is the writing workspace; see §4)* | Long-form study workspace; memoir corpus + emotion-tagged retrieval; currently used for compensated research sessions. |
+| **Membership** | Stripe-backed Member tier, currently in test mode. |
+| **Adaptive authorship platform** (lib/platform/) | An embryonic shared kernel — CoreArgument, CoreVisualArgument, prompt library, expression engine. Strict no-Vela-imports rule, lint-enforced; Vela is the first app of a more general platform. |
+
+### 2.2 Strategic focus (the five things)
+
+Vela's main app is committed to doing **five things extraordinarily well**. Anything else lives in /labs until it is ready:
+
+1. **The study** — research participation, consent, compensation.
+2. **The player** — sequenced viewing with adaptive intelligence.
+3. **Taste discovery** — surfacing Reincarnation outputs back to the user (/your-path).
+4. **Museum query + navigation** — digital catalogs and pilgrimage tours.
+5. **Self-referencing profile-page proliferation** — artists, artworks, styles, museums, periods, movements, etc.; interlinked profiles whose volume + cross-linking density compound.
+
+Loom currently lives under /labs/loom because it is still being shaped, but it is intended to graduate into the main app as a first-class surface (likely under "the study" or as its own peer).
+
+### 2.3 Vela's editorial trajectory
+
+The original axis was **sex + art + religion**. As of 2026-04-30, Mike has explicitly broadened the axis to **"whole human"** — emotion as a core editorial spine, with developmental psychology and developmental theology as named expansion arcs. Memoir, therapy-transcript, and ethnographic-affect sources are being acquired deliberately to feed this. Desire remains a load-bearing internal construct (especially in Reincarnation) but is no longer the primary public-facing frame.
+
+The voice register, at its bar, sits roughly where: contemplative, precise, willing to name shame/desire/grief without flinching, never moralizing, never therapeutic-lite, never academic-arid. The Magazine voice doc (docs/magazine/VELA-MAGAZINE-VOICE.md) is load-bearing — Vela's voice is treated as a sensibility, not a style guide.
+
+### 2.4 Vision-adjacent sister systems (worth knowing exist)
+
+- **Compass** (in flight, ASN-1061..1087): Reincarnation's sister system *for written content*. Per-article 5-point impact rating + calibration probes between articles + chains-as-developmental-orderings + reader lookup events. The shape "developmental ordering" — not "topic similarity" — is the load-bearing concept. Any writing feature should at minimum not preclude Compass.
+- **Editorial Office** (ASN-1091..1096): Writer's Desk (1:1 chat with a writer-persona) + The Office (multi-writer convening) + writer-initiated pitches. Turns the existing AI-writer roster from a production tool into colleagues.
+- **Per-user magazine schedule**: Vela ships per-reader (their clock) not per-calendar week. Dissolves "publish weekly" pressure; converges with Reincarnation + Compass.
+- **Adaptive authorship platform** (lib/platform/): cross-property kernel; lib/platform/ may not import Vela-specific modules (lint-enforced). This is how Vela's pattern ports to sibling properties.
+- **Library-core multi-property pattern**: books / writers / passages / treatments are shared library-core; tag tables are property-scoped (property_id). Vela is property #1; sibling properties (e.g. Bicycle Guides) are planned.
+
+---
+
+## 3. Vela — architecture (just enough)
+
+### 3.1 Stack
+
+
+Browser (React 19)
+  ↓
+Next.js 16 App Router (Vercel — Fluid Compute)
+  ↓
+Route Handlers (app/api/**/route.ts) + Server Components / Actions
+  ↓
+Supabase (Postgres + Auth + Storage)
+  ↓
+Anthropic API (Claude / Haiku / Sonnet) for generation, classification, decomposition
++ Modal (FLUX LoRA training, vision research jobs)
++ Replicate (image transformations)
++ ElevenLabs (TTS for audio readings)
++ Stripe (membership, gallery purchases)
+
+
+### 3.2 Directory map (the parts a writing collaborator should know)
+
+| Path | Role |
+|---|---|
+| app/ | App Router: pages, layouts, Route Handlers |
+| app/api/ | REST-style JSON endpoints |
+| app/labs/loom/ | **Loom UI** — page.tsx, [track]/, layout |
+| app/admin/mosaic/, app/admin/ni/ | Text-library admin surfaces |
+| app/admin/magazine/ | Magazine editor |
+| components/loom/ | Loom workspace UI primitives (editor, retrieval pane, emotion-vocabulary panel, emergence log) |
+| components/magazine/ | Magazine renderer (BlockRenderer) |
+| lib/loom/ | **Loom domain logic** — tracks, sessions, emotion vocabulary, taxonomy |
+| lib/loom/taxonomy/ | Experience × Emotion canonical schema |
+| lib/text/, lib/ni/ | Mosaic + Narrative Intelligence domain libs |
+| lib/magazine/ | Magazine block parsing, illustration matcher, variants |
+| lib/platform/ | Adaptive authorship kernel — **may not import Vela-app modules** |
+| lib/platform/writer-retrieval/ | Cross-axis passage retrieval used by Loom + writer features |
+| lib/reincarnation/ | Adaptive intelligence (image side) |
+| lib/types.ts | Shared cross-cutting domain types |
+| lib/supabase/{client,server,service}.ts | Three Supabase clients (browser / SSR / service-role) |
+| supabase/migrations/ | DDL — source of truth for schema |
+| scripts/loom/ | Loom batch ops: taxonomy build, dual-tag apply, classify |
+
+### 3.3 Three Supabase clients — do not confuse
+
+- lib/supabase/client.ts — browser, **RLS enforced**.
+- lib/supabase/server.ts — SSR, **RLS enforced** (uses cookies).
+- lib/supabase/service.ts — service role, **bypasses RLS**. Admin and pipelines only. **Never call from a public route.**
+
+### 3.4 Auth shape
+
+- End-user auth: Supabase Auth (JWT in cookies via @supabase/ssr).
+- No middleware.ts. Auth is per-page via supabase.auth.getUser().
+- Admin gate: profiles.role === 'admin', checked per-page.
+
+---
+
+## 4. Loom — purpose & scope
+
+### 4.1 What Loom is
+
+Loom is a **long-form study workspace** where memoir, image responses, and reflection threads weave together. The labs-page intent paragraph (literal copy from the running app):
+
+> *"A long-form study workspace where memoir, image responses, and reflection threads weave together. Currently used for compensated research sessions; we are exploring whether the same surface should exist for self-directed reflection."*
+
+Practically it is:
+
+- A **draft editor** (markdown body, per-track, per-user, persisted to loom_draft_sessions).
+- A **retrieval pane** — pulls memoir-corpus passages relevant to the draft on demand via POST /api/writer/retrieve. Retrieval is **axis-aware**: an axis (an Experience category and/or a primary Emotion) restricts the pool to passages tagged with that axis, intersected with semantic similarity to the draft.
+- An **emotion-vocabulary panel** — given a primary emotion, surfaces ~5 representative passages with attribution so the writer can drop them in as quotes (lib/loom/emotion-vocabulary.ts).
+- An **emergence log** — captures memory-notes the writer attaches to their draft as they go (loom_emergence_events), optionally pinned to a passage (passage_id + passage_snippet).
+
+### 4.2 Tracks
+
+Loom is organized into **tracks** — slug-named topical containers, each with a default corpus bias. Current tracks (from lib/loom/tracks.ts):
+
+- spiritual-journey — Faith, doubt, practice
+- single-dad — Custody, work, tenderness
+- gen-x — Cohort texture, irony, fatigue
+- social-anxiety — Interior exposure, avoidance
+- cult — Belonging, control, exit
+- pioneer — Risk, frontier, self-invention
+- four-rooms *(provisional)*
+- illness-five-years *(provisional)*
+
+Each track currently shares a default corpus filter biased toward research-bulk-chunk memoir passages. Per-track tuning happens as the corpus grows.
+
+### 4.3 The Experience × Emotion taxonomy (load-bearing)
+
+Loom retrieval is built on a **two-axis tag schema** stored in loom_passage_tags (FK to mosaic_passages):
+
+| Field | What |
+|---|---|
+| experience_category | Slug from a merged top-down + bottom-up taxonomy (lib/loom/taxonomy/experience.ts) |
+| experience_subcategory | Optional finer label |
+| emotion_primary | One of EMOTION_PRIMARY_OPTIONS (lib/loom/taxonomy/emotion.ts) |
+| emotion_secondary | Up to 4 additional primaries |
+| valence | −1 (negative) … +1 (positive) |
+| arousal | 0 (calm) … 1 (activated) |
+| complexity_markers | Subset of COMPLEXITY_MARKERS |
+| tag_model, tag_version, tagged_at | Provenance |
+
+**Important:** the **shame family** is intentionally kept as nine *distinct* emotion_primary values (see SHAME_FAMILY_PRIMARIES). Do not collapse them into a single "shame" bucket in any API or feature surface.
+
+**Corpus scope:** memoir bulk = research-bulk-chunk theme ∩ mosaic_sources.source_type = 'book' (lib/loom/taxonomy/memoir-corpus.ts).
+
+### 4.4 Retrieval surface — POST /api/writer/retrieve
+
+The single HTTP entry point for "get me passages relevant to this draft." Body shape (simplified):
+
+
+json
+{
+  "draft": "<markdown the writer is currently working on>",
+  "axis": {
+    "experience_category": "...optional...",
+    "emotion_primary": "...optional...",
+    "query_text": "...optional override of draft for the semantic side..."
+  },
+  "corpus_filter": {
+    "themes": ["research-bulk-chunk"],
+    "passage_ids_allowlist": ["...optional manual id set..."]
+  }
+}
+
+
+Behavior:
+
+- If axis is set, results are restricted to loom_passage_tags matching that axis, **intersected** with semantic ranking (when draft or axis.query_text is non-empty).
+- If only corpus_filter.passage_ids_allowlist is provided, that's the pool.
+- If neither is set, the full corpus filtered by corpus_filter.themes is the pool.
+
+Library entry points: retrieveByAxis, listPassageIdsForAxis in lib/platform/writer-retrieval/cross-axis.ts. Types in lib/platform/writer-retrieval/types.ts.
+
+### 4.5 Loom data model (the tables you'd actually touch)
+
+| Table | Purpose |
+|---|---|
+| loom_draft_sessions | One row per (user, track, session). Fields: id, user_id, track_slug, title, body_markdown, created_at, updated_at. |
+| loom_emergence_events | Memory-notes captured during a session. Fields: id, user_id, track_slug, session_id, memory_note, passage_id, source_book_code, passage_snippet, created_at. |
+| loom_passage_tags | Two-axis tags on memoir passages (see §4.3). FK passage_id → mosaic_passages.id. |
+| mosaic_passages *(read-only from Loom)* | Source of all passages. The theme research-bulk-chunk selects bulk grade. |
+| mosaic_sources *(read-only from Loom)* | Per-source metadata: title, author, source type (book / documentary / etc.), license tier. |
+
+### 4.6 Loom operator runbook (so you understand the lifecycle)
+
+1. **Top-down taxonomy artifact** — npm run loom:taxonomy:top-down
+2. **Bottom-up clusters** — npm run loom:taxonomy:bottom-up -- --limit=800 --k=24 (optional Sonnet labels: --name-clusters)
+3. **Review markdown** — npm run loom:taxonomy:merge (optional --with-samples for 50 Haiku exemplars)
+4. **Mike** edits docs/loom/TAXONOMY-REVIEW-...md / category slugs
+5. **Apply migration** — supabase/migrations/20260424190100_loom_passage_tags.sql
+6. **Dual-tag corpus** — npm run loom:taxonomy:apply -- --dry-run --limit=20 then LOOM_TAXONOMY_APPLY_APPROVED=1 npm run loom:taxonomy:apply -- --execute --limit=…
+
+### 4.7 Loom UI primitives (components/loom/)
+
+- workspace-editor.tsx — markdown body editor.
+- retrieval-pane.tsx — calls /api/writer/retrieve, renders results.
+- emotion-vocabulary-panel.tsx — given a primary emotion, lists representative passages.
+- emergence-log.tsx — chronological list of memory-notes for the session.
+- track-navigation.tsx — switch tracks within a session context.
+- new-session-button.tsx — start a new draft for a track.
+
+---
+
+## 5. Vela vs Loom — key differences
+
+The clearest way to hold this distinction:
+
+| | **Vela** | **Loom** |
+|---|---|---|
+| **What it is** | The whole platform: image library + player + magazine + adaptive intelligence + writing workspace + study + membership | One workspace *inside* Vela: long-form drafting against memoir corpus with emotion-axis retrieval |
+| **Primary medium** | Images (with surrounding editorial text) | Text (drafts) — with optional retrieved passages |
+| **Primary actor** | Reader / participant / member | Writer / study participant in a long-form session |
+| **Primary corpus** | experience_units (385 curated images) | mosaic_passages filtered to memoir bulk (research-bulk-chunk ∩ book sources) |
+| **Adaptive engine** | Reincarnation (in production) — scores images, manages pools, builds adaptive queue | None today; Compass (planned) is the equivalent for written content. Loom retrieval is axis-restricted semantic, not adaptive in the Reincarnation sense |
+| **Consumption pattern** | Sequenced viewing with 5-point ratings advancing the queue | Drafting against an attached corpus with on-demand retrieval and an emergence log |
+| **Live URL** | https://vela.study (canonical) | https://vela.study/labs/loom (admin-gated; labs surface) |
+| **Code surface** | app/, lib/, components/ broadly | app/labs/loom/, lib/loom/, components/loom/, plus lib/platform/writer-retrieval/ for the retrieval engine |
+| **Status** | Production; ~385 active units; Stripe in test mode | Labs (admin-only); used for compensated research sessions; under active expansion |
+| **Ownership of "writing features"** | Magazine surfaces (/magazine) and the Office initiative — *publication-side* writing | Loom — *drafting-side* writing; the natural home for new authoring features |
+
+**Where the line blurs (and why it matters for new writing features):**
+
+- The **Magazine** is also "writing." If a feature targets reader experience of finished essays (per-reader variants, impact-rating capture, chain ordering), it lives on the magazine + Compass surface, not Loom.
+- The **Mosaic / NI** stack is the *source* layer — the curated text library that feeds both the magazine and Loom retrieval. New ingest, tagging, or theme work usually touches Mosaic/NI, not Loom.
+- The **Adaptive Authorship Platform** (lib/platform/) is the cross-property kernel; if a feature is designed to apply to multiple properties (Vela, Bicycle Guides, etc.), it belongs in lib/platform/, not lib/loom/. The lint guard enforces the boundary.
+- **Compass** does not exist yet but is funded and named. Anything you design that takes per-article rating + chain-position should expect Compass to ship beneath it.
+
+---
+
+## 6. Glossary — names that come up
+
+A short list of terms that show up in repo, docs, and conversation, with one-line definitions.
+
+| Term | What |
+|---|---|
+| **Reincarnation** | Adaptive intelligence layer for images: scoring, pool management, adaptive queue, per-user desire profiles. Batch + runtime. |
+| **Compass** | Reincarnation's sister system for *written* content. In flight (ASN-1061..1087). Per-article impact rating, calibration probes, chains-as-developmental-orderings. |
+| **Mosaic** | Curated text passage library (older/current). mosaic_sources + mosaic_passages. |
+| **Narrative Intelligence (NI)** | Successor admin workbench for the text library. sources_v2, excerpts, themes. Dual-write bridge from Mosaic. |
+| **Curator-grade vs research-bulk-grade** | Two grades of passages in Mosaic. Curator-grade (~15 hand-labeled per source) drives editorial. Research-bulk-grade (~50–150 paragraph-respecting chunks) drives retrieval and audits. The research-bulk-chunk theme tag distinguishes them. |
+| **Experience × Emotion taxonomy** | Loom's two-axis tag schema (loom_passage_tags). |
+| **Track** | Loom topical container (slug + label + default corpus bias). |
+| **Pool** | Word means three different things in Vela: (1) Reincarnation's experience_units.pool ladder INFINITY/D/C/B/A/PURGATORY; (2) /admin/lora/pool image curation pool for LoRA training; (3) /admin/training-pool LoRA promotion queue. **Three different systems, three different tables.** |
+| **Reveal vs Reveal Grid** | Two separate products that share a name. Reveal = single image discovery; Reveal Grid = curated multi-image grid. |
+| **lib/platform/** | Cross-property kernel. **Forbidden** to import any Vela-app module (lint-enforced). |
+| **Editorial Office** | Initiative (ASN-1091..1096): Writer's Desk + multi-writer convening + writer-initiated pitches. |
+| **Per-user magazine schedule** | Articles ship per-reader (their clock), not per-calendar week. |
+| **Three Rooms** | Keep/release exploration mode (image side); writes signals back to Reincarnation. |
+| **Your Path** | Personalized museum-journey + profile surface over user_desire_profiles. |
+| **The five things** | Vela's strategic focus list (see §2.2). New work should locate cleanly inside one of them or default to /labs. |
+| **DevPlane** | Vela's project/assignment tracking system (separate tool). Most non-trivial work is filed as an ASN-NNN assignment. |
+| **ASN-NNN** | Numbered assignment ID (e.g. ASN-588 for the original Loom Experience × Emotion taxonomy). |
+
+---
+
+## 7. Anti-goals + load-bearing rules a writing collaborator should respect
+
+**Rules to honor when proposing or designing a writing feature:**
+
+1. **Don't collapse the shame family.** Nine distinct emotion_primary values are kept on purpose.
+2. **Don't bypass the two-grade corpus distinction.** Curator-grade is editorial; research-bulk-grade is retrieval. Conflating them produces confident-but-wrong retrieval (the failure mode is "top hits are unrelated but high-similarity").
+3. **Don't default to topic similarity.** Compass's load-bearing concept is *developmental ordering*, not "more like this." If your feature is structurally a recommender, name that — and show how it interoperates with chains.
+4. **Don't import Vela-app modules from lib/platform/.** If a feature wants to be cross-property, it belongs in lib/platform/ and must stay clean.
+5. **Don't treat Loom as the magazine.** Loom is a drafting surface (writer-side). The magazine is a published surface (reader-side). Features are usually one or the other.
+6. **Don't quietly bypass attribution.** Every passage retrieved from Mosaic has an mosaic_sources row with title and author. Surfaced quotes must remain attributable; this is a load-bearing editorial constraint, not just a UX nicety.
+7. **Don't treat writing features as pure UI.** The corpus, the tags, the retrieval shape, and the eventual measurement (Compass) are all part of the design surface. The best feature proposals name the data + retrieval shape they need, not just the UI.
+8. **Don't moralize about emotion or desire.** Vela treats them as research objects, not problems to solve. Voice register matters; see docs/magazine/VELA-MAGAZINE-VOICE.md if voice is part of the feature.
+
+**Things Vela is deliberately *not* doing right now (so the collaborator can defer noise):**
+
+- Building generic AI writing assistants ("autocomplete this paragraph"). Loom's retrieval-and-attribution shape is intentional and not the same as "ghostwriter."
+- Optimizing for SEO / traffic at the expense of editorial register.
+- Building cross-cultural content without source-level rigor (the emotion corpus is being expanded *deliberately* with cited primary sources — see docs/research/emotion-corpus-expansion/).
+- Replacing human curation. Reincarnation surfaces signal; humans still make the editorial calls.
+
+---
+
+## 8. Where to look if you want more depth (for your own grounding)
+
+- **Architecture overview** — docs/ARCHITECTURE.md
+- **Product disambiguator** — docs/PRODUCT_INTEGRATION_MAP.md (the canonical "same word means different things" reference)
+- **Loom taxonomy** — docs/loom/TAXONOMY.md
+- **Compass vision** — docs/VISION-COMPASS.md
+- **Adaptive authorship vision** — docs/VISION-ADAPTIVE-AUTHORSHIP.md
+- **Magazine voice** — docs/magazine/VELA-MAGAZINE-VOICE.md
+- **Emotion corpus expansion (in flight)** — docs/research/emotion-corpus-expansion/
+- **Reincarnation (image-side adaptation)** — docs/REINCARNATION.md
+
+The collaborator does not need to read these; this briefing is intended to be sufficient. They are listed in case a specific feature requires a deeper anchor.
+
+---
+
+## 9. The active writing-features direction (as of 2026-05-03)
+
+This section names what is *currently* in flight on the writing side, so the collaborator knows where their work is most likely to land. Three initiatives are simultaneously open. The brief will tell the LLM which one is the target, but knowing all three helps it locate any proposal correctly.
+
+### 9.1 Editorial Office (ASN-1091..1096) — the newest, filed 2026-05-02
+
+**One-line:** turn the existing fictional-writer roster from a production tool into a colleagues-you-can-talk-to layer.
+
+**Premise (Mike, 2026-05-02):** *"I want to develop a kind of office culture so I don't have to make all decisions on my own. For inspiration, and for fun."*
+
+**The three layers:**
+
+1. **Writer's Desk** (ASN-1092) — 1:1 chat with a single writer (e.g., Dana Weiss). Mike opens a thread; Dana responds *in voice* from her dossier. Mike pastes a draft; Dana reacts. Mike asks "what would you write next week if it were up to you?"; Dana proposes. Streaming Anthropic call (claude-sonnet-4-6); dossier-as-system-prompt. Surface: app/admin/writers/[slug]/desk/.
+2. **The Office** (ASN-1093) — multi-writer convening. Mike drops a question or a draft into a meeting; N writers (≤8) respond independently in round 1; in optional round 2, each writer sees the others' responses and *reacts*. Disagreement is the point. Promise.allSettled fan-out. Surface: app/admin/office/.
+3. **Writer-initiated pitches** (ASN-1094) — weekly cron fires per active writer; each writer pitches 1–3 of: an article they want to write, a corpus passage they're sitting with, an editorial pushback, or a series proposal. Triage UI (app/admin/office/pitches/) with Pending / Accepted / Rejected / Parked tabs. Accept-as-draft auto-creates a magazine_articles row.
+
+**Schema** (ASN-1091, gates the cluster): writer_threads, writer_messages, office_meetings, office_meeting_responses, writer_pitches. Admin-only RLS in Wave-1.
+
+**Cross-system hooks** (ASN-1095): pitch-→-magazine-draft provenance; "Ask the Office" button on Compass chain/probe authoring surfaces; cost surface (OFFICE_DAILY_USD_LIMIT hard cap, default $5/day); office activity logged to writer_retrieval_usage.
+
+**Pulse dashboard** (ASN-1096): metrics for office activity (pitches per week, acceptance rate, meetings convened, top-engagement writers).
+
+**Load-bearing editorial constraints** (do not soften):
+
+- The Writer's Desk system-prompt frame includes: *"You are not a chatbot — you are a colleague with taste and history. Disagree if you'd disagree. Push back if you'd push back."* This sentence is the difference between Dana sounding like Dana and Dana sounding like Claude with a vocabulary palette.
+- The pitch frame includes: *"Pitches you wouldn't bother making aren't pitches."* This pushes writers toward conviction over compliance.
+- Round 2 of meetings is the surprising layer — agents often skip "let LLMs see each other"; here it's the whole point. Don't truncate the colleague-context aggressively.
+- Writers have **dossiers** (lib/writers/dossier-reader.ts reads from disk). The dossier is the writer's voice. Do NOT layer additional editorial-style instructions on top — if Dana's dossier says she opens with imagery, let her open with imagery. The writers are real to the extent we trust their dossiers.
+
+**Module location:** lib/office/ (kept separate from lib/writers/ which owns the production composition pipeline). The Office is *consumer* of writers, not part of the production surface.
+
+**If your feature work is on this arc:** the external LLM should know about dossiers, the streaming chat shape, the meeting fan-out pattern, the pitch-generation context budget (≤2k tokens of platform state per writer per session), and the editorial register rules above.
+
+### 9.2 Compass (ASN-1061..1087) — the adaptive layer for written content
+
+**One-line:** Reincarnation's sister system *for articles* — per-article rating, calibration probes, chains-as-developmental-orderings.
+
+**Premise (Mike, 2026-05-02):** *"Just like the version of the player where there is the 5-point scale built in at the bottom which enables the user in proceeding to the next image, we should deploy something similar with each article. We will specifically instruct users that this feedback enables us to serve them with content that is a better match for them, over time. In addition to the regular always-on feature we should have wizard and calibration exercises which we request from new users. We go to them and move them up a knowledge chain, as opposed to making them come to us."*
+
+**The load-bearing concept — chains, not topics:**
+
+A **chain** is a *developmental ordering* of articles, not a topic cluster. It has:
+
+- A name (e.g., "developmental theology", "from-I-like-sex-to-whole-human", "leading people: novice → tenured manager")
+- A calibration battery (forced-choice + continuum questions that locate a reader on the chain)
+- An ordering algorithm (which article to serve next given the reader's current position + what they just read)
+- A set of articles tagged into the chain *with positions* (article X is at position 3 in chain A; the same article may be at position 7 in chain B)
+- A scoring model (impact ratings + probe responses update the reader's position on the chain)
+
+Topic similarity says *"you read about Augustine, here's another Augustine piece."* Chain ordering says *"you read the entry-level Augustine piece on shame, you rated it as moving you, your position on the developmental-theology chain advanced from waypoint 2 to 4 — here's the waypoint-5 piece."* The reader is **escorted up the chain**, not handed similar items.
+
+**Two measurement primitives:**
+
+1. **Impact rating** (always-on, end of every article): 5-point scale (*how much did this move you?*) + optional direction tag (*more like this* / *shift register* / *less like this*). The shift-register tag is editorially load-bearing: a reader can rate a piece highly *and* signal "I want a different register next." That distinction is invisible to a single-dimension scorer.
+2. **Calibration probes** (light, between articles): forced-choice ("this vs. that" — choose which lands more) and continuum placement ("where do you sit on X?" 1–7 ordinal). Probes are how Compass moves from *reactive* (scoring what was read) to *active* (asking the user a sharp question that locates them on a chain in 15 seconds). Reincarnation does not have probes.
+
+**Wave 6 — reader lookup layer:** an inline lookup affordance the reader can hit on any term/concept in an article. Returns a gloss + 2–3 supporting passages from Mosaic. **Lookup events feed the profile** (a reader who looks up "kenosis" three times in a week is positioned differently than one who never does). Optional 0–5 per-lookup impact rating with editorially-load-bearing 0-floor (zero is a real signal — *"I asked, and the answer didn't help"* is worth knowing).
+
+**Schema** lives in lib/compass/ (or packages/factory/src/compass/ per cross-property pattern). Articles can belong to multiple chains; position is per-membership; the schema is a join table (compass_chain_memberships), not a column on articles.
+
+**Cross-property:** Compass is built to apply to Vela *and* Bicycle Guides (sibling property). Anything Compass-shaped should respect the library-core multi-property pattern (property_id columns).
+
+**If your feature work is on this arc:** the LLM should know about the chain shape, the impact-rating + direction-tag pair, the probe primitive (forced-choice and continuum), the per-(user, chain) profile shape, and the lookup-events-feed-profile pattern. Topic-similarity recommenders are the wrong default.
+
+**Vision doc:** docs/VISION-COMPASS.md (load-bearing).
+
+### 9.3 Loom Emotion Surfaces wave (ASN-930..938) + emotion corpus expansion (ASN-1023, ASN-1024, ASN-1025)
+
+**One-line:** extend Loom's Experience × Emotion taxonomy outward into public surfaces, and deepen the corpus that feeds it.
+
+**Public surfaces** (Emotion Architecture initiative, ASN-930..938):
+
+- Per-emotion profile pages (e.g., /emotions/shame) that surface representative passages, related writers, and editorial pieces tagged to the emotion.
+- A **crowd-rating mechanism** (ASN-934) — readers rate passage-emotion match. Conceptual centerpiece of the wave: the corpus tags get refined by reader judgment over time.
+- Magazine guides organized by emotion (entry points into longer reads).
+- Loom integration — the emotion-vocabulary panel surfacing the same passages a reader can encounter on the public surface.
+
+**Corpus expansion** (currently in flight, file open in IDE):
+
+- ASN-1023 — broader emotion corpus expansion. Source-class composition matters: 0.15 emotions/passage in the current corpus is a source-class signal (memoir is sporadic-but-gold), not a prompt bug. Expand toward psychology + affective-research deliberately.
+- ASN-1024 — therapy-transcript corpus (published-for-training material; Carl Rogers, Yalom, Grosz, Phillips, etc. — distinguished from raw clinical records, which are out of scope).
+- ASN-1025 — corpus architecture protecting editorial coherence as the corpus broadens past memoir.
+
+**External deep-research prompts** (currently in flight): docs/research/emotion-corpus-expansion/external-deep-research-prompts.md defines five prompts (per-emotion literature review, source-discovery, historiography, cross-cultural ethnography, therapy-transcript discovery) that are run across multiple LLMs and synthesized back into corpus-acquisition decisions.
+
+**If your feature work is on this arc:** the LLM should know about the Experience × Emotion taxonomy (§4.3 above), the shame-family-stays-distinct rule, the curator-grade vs research-bulk-grade distinction, the source-class composition framing, and the existing external-deep-research prompt format (so it can author or refine prompts in the same shape if needed).
+
+### 9.4 Adjacent dispatch-ready editorial work (ASN-1058..1060, 1088..1090)
+
+Three Wave-1/2/3 editorial planning docs and three dispatch-ready essays (Julian of Eclanum as counter-pillar to Augustine; "Parables Are Not Illustrations" leading from Crossan; "Why Writing the Body Works" trauma-writing methodology). These are *content* work, not feature work, but they are the proof material the writing features are built to serve. If a feature is for writers (Office) or for readers of long-form essays (Compass), these are the kinds of pieces it will operate on.
+
+### 9.5 Anti-targets — what "writing features" does NOT mean here
+
+The phrase "writing features" frequently maps, in other projects, to one of these — none of which are currently the target:
+
+- **Generic AI writing assistants** ("autocomplete this paragraph", "rewrite this in the style of X"). Vela has voice-rewriting infrastructure for the writer roster; expanding it generically is not a current push.
+- **SEO content generators.** Editorial register is the load-bearing axis; SEO is downstream of register, not upstream.
+- **Comment/community surfaces.** Vela is reader-facing one-way today (apart from impact ratings, which Compass is building).
+- **A "ghostwriter"-style tool that writes essays.** The writer roster + dossiers handle this for the magazine; the human-author surfaces (Loom, Office) are for *human* authoring with retrieval support, not for AI replacing the human.
+
+If a feature proposal drifts into one of these, the LLM has lost the thread.
+
+---
+
+## 10. How to use this briefing with the external LLM
+
+Suggested first-turn structure when handing off to the external LLM:
+
+1. Paste this entire document as system context (or as the first user turn).
+2. State the actual feature ask in your second turn: *"With that context, here's what I want to build…"*
+3. Ask the LLM to **restate** Vela vs Loom in its own words before it proposes anything — that catches misreadings cheaply.
+4. When it proposes a feature, ask it to name (a) which surface it lives on (Vela / Loom / Magazine / Mosaic / Platform), (b) what corpus shape it needs, (c) what retrieval shape it needs, (d) how it interoperates with Compass and Reincarnation, and (e) what could go wrong if the load-bearing rules in §7 are violated.
+
+That sequence consistently produces grounded proposals from a cold-start collaborator.
+Yes, I think these ideas are fitting together. Test that here. Let's iterate this together hard. Whereas initially we might have been thinking people are asking AI to write something for them with only input before or after AI does the work, which is problematic. In loom, what we are doing is equipping the human writing process, helping them through "writers block", essentially enabling them to very loosely indicate events, or feelings, or writing objectives, and where loom is drawing from memoir & other writing patterns, excerpts to offer examples, which can then be applied to the writers actual situation, or in the case of certain non-fiction writing, actually enabling brining in external sources and citing them. They can both base their work and structure on existing written pieces or they can go through excercise of "they say, I say" (identifying counterpositions that are misconceptions and correcting them) or diverging in places that suite the writers intent.  The AI is being used in a fundamentally different way. Now, there are possible varients here, one is that the writer is assisted as they assemble their work bit by bit. They may be able to very rapidly write this way because they don't have to divert to research every time they enter a new section. Gosh, how do I describe a sunrise after x. or gosh, what was it like in Illinois in july because the AI can very quickly bring in corpus to support that, potentially even enabling varients based on the external works found for that element, but not breaking the copyright on any of them specifically.   Another way the platform can work is that the writer can build up much of the structure of a written piece and select favorable corpus excerpt elements (perhaps rating each the degree to which it moves them or that it relates to their experience) and then hand that assembled packet to AI to say, o.k. now write this in my voice. The degree to which the human has been actively involved in the outline of the story and selection of examples that resonate, should result in a unique work, rather than just a hallucination or muddle, which will constantly miss. There may be other types of writer excercises built in - not sure yet, I will need to research and play with this, but that should provide orientaiton to the space and how it is intended to work. I imagine some divergence on fiction, memoir, and non-fiction genre creations, albeit at core it may work fundamentally the same.  I wanted to mention that in addition to this new approach to the writing process itself, there may be other differentiating means of control. In vela/loom the writer should have control of the corpus that is being leveraged in the writing process - both increasing control and transparency, whereas general llm the corpus is black box, and may not weight in the way the author wants to... e.g. there are sociological problems in the general model as well, because it is effectively only taking where the weight of attention in the past has been, which are the survivors, this has been influenced by power.  The writer may want/need to go somewhere different, and ability to control corpus and leverage even fragments of a barely surviving or barely emerging corpus not well reflected in the general should be a strength of this platform.  
+Have we built enough features here, to combat the problems that were raised by the research, or can we go further? I think nailing the solution to the major problem(s) of AI are the inherent intent of these platforms.
+Regarding, using loom for 6 months and becoming a better writer, not worse, um, I mean I didn't start out with this, but now I'm here- isn't that a better purpose overall. I mean sure, loom will help you get something written well, but at the same time, I think deep down inside the person has feelings of cheap victory if they are not learning, which is not the product experience or reputation we want to create. I would prefer that yes, it helps you advance toward your dream of writing this thing, but in that process, it also stops periodically and teaches you. It uses example works, and other writers corpus that we have brought in, to help the writer learn structure, flow, all of the things that the writer needs to get better at the craft, and both shows them and asks them to play with that.  So that when the moment comes and this person, very possibly a student as it may turn out, has to do it on their own they can. Through this we may see a generation of people who write and think better, not worse, as result of AI. That should be the goal. The alternative is dystopian.  
+Vision here is close and good. Now let's shift to how we execute on these ideas. since we have some existing software created already, I need a way to communicate with that environment that is clear enough to get them where we are trying to go, and such that it can scaffold and then build out these features.
+Excellent. All excellent. Please note, it should be clear the distinction between some features built for non-fiction writing, and fiction/memoir, as relevance between some of the features do not port.   We should design for both and we will need to specify so it can fork them appropriately. Others may cross over and that can be indicated as well. With that stated, why don't you produce the fist, and then we will keep building on that. 
+excellent, next
+Next set
+next
+next
+next
+next
+next
+next
+Next
+Next
+Next
+Next
+These are all fantastic, just curious. How many more of these do we have?
+I want the rest of the features you planned, mentioned above. We don't need to switch to execution just yet. I was just checking in. Net.
+The last set of features you did not build out as deeply as the ones prior, I'm concerned they will get short changed by claude. What do you think?
+O.k. I have not shared anything from 14 on with claude so we need those built out properly. If I understand you correctly that is what we are doing from here
+o.k. go
+next
+next
+next
+next?
+next?
+Can you write a handoff document so I can open a new chat in this folder, and so we can pick up where we left off. Perhaps thinking about the UI side, the research side, or other threads, which we were not able to complete here on this thread. 

@@ -1,0 +1,405 @@
+📄 HUMAN–AI AUTHORSHIP, SKILL DEVELOPMENT, AND MEASUREMENT OUTLINE DRAFT
+
+A Technical Literature Review for AI-Augmented Writing Systems Outline Draft
+
+1. Introduction
+
+The rapid integration of large language models (LLMs) into writing workflows has produced a fundamental tension:
+
+AI systems can dramatically improve output quality, but may simultaneously degrade the underlying human capability to write, reason, and structure thought.
+
+This tension is not merely practical—it is epistemological, cognitive, and developmental.
+
+Most current AI writing systems:
+
+optimize for output fluency
+rely on opaque training distributions
+position the human as editor rather than author
+
+This raises three unresolved problems:
+
+Skill Degradation (Deskilling Risk)
+Epistemic Opacity (Black-box knowledge sourcing)
+Measurement Absence (No framework for human improvement)
+
+This paper synthesizes multiple research traditions to address:
+
+How can AI systems be designed to improve human authorship capability, and how can that improvement be measured rigorously over time?
+
+2. Conceptual Foundations
+2.1 Phenomenology of Skill and AI-Augmented Expertise
+
+The Dreyfus model (novice → expert) describes expertise as:
+
+progressing from rule-based reasoning to intuitive, embodied performance
+
+Hubert Dreyfus argued that:
+
+expertise cannot be reduced to symbolic manipulation
+it emerges through situated, embodied engagement
+
+Later work (e.g., Maurice Merleau-Ponty) introduces:
+
+body schema → tools become extensions of perception
+Implication for AI Writing
+
+LLMs risk:
+
+interrupting the progression toward intuitive expertise
+replacing “coping” with “selection”
+
+However, if properly integrated:
+
+AI can become part of the extended cognitive system
+Key Tension
+Path	Outcome
+AI replaces writing	Deskilling
+AI scaffolds writing	Skill development
+
+👉 Loom explicitly targets the second path.
+
+2.2 Phenomenology of Attention
+
+Work by Bernard Stiegler and Yves Citton reframes attention as:
+
+a cultural and technical achievement, not just a cognitive resource
+
+AI systems:
+
+do not just offload cognition
+they restructure attentional ecology
+AI Writing Risk
+fragmentation of attention
+loss of sustained reasoning capacity
+collapse of deep work into reactive editing
+Loom Alignment
+
+Loom’s:
+
+Deep Writing Mode
+structured packet assembly
+
+→ restore intentional attention structures
+
+2.3 Transactive Memory and Cognitive Offloading
+
+Transactive memory theory (Wegner):
+
+knowledge is distributed across systems
+
+Modern extension:
+
+AI becomes a cognitive partner
+Risk
+over-reliance leads to:
+reduced recall
+reduced synthesis ability
+Opportunity
+
+If structured:
+
+AI can support:
+retrieval
+integration
+exploration
+
+👉 Loom’s corpus control + retrieval system is a controlled form of transactive memory.
+
+3. Epistemology and Power
+3.1 Standpoint Theory and Situated Knowledge
+
+Donna Haraway:
+
+“All knowledge is situated.”
+
+Sandra Harding:
+
+“Strong objectivity requires acknowledging perspective.”
+
+AI Problem
+
+LLMs:
+
+appear neutral
+are actually:
+trained on historically dominant voices
+shaped by power structures
+Consequence
+
+AI writing systems:
+
+reinforce dominant narratives
+suppress marginal or emerging voices
+Loom Innovation
+
+Corpus Control Layer
+
+Writers:
+
+choose sources
+control influence
+override default distributions
+
+👉 This is a direct operationalization of standpoint epistemology
+
+3.2 Epistemic Injustice
+
+Miranda Fricker:
+
+testimonial injustice
+hermeneutical injustice
+AI Risk
+minority perspectives underrepresented
+certain experiences become “unspeakable”
+Loom Contribution
+
+By allowing:
+
+custom corpus inclusion
+experience × emotion tagging
+
+→ expands what can be articulated and retrieved
+
+4. Developmental and Learning Theory
+4.1 Cognitive Apprenticeship
+
+Rooted in:
+
+Lev Vygotsky (Zone of Proximal Development)
+
+Learning occurs when:
+
+support is provided just beyond current ability
+AI Application
+
+LLMs can act as:
+
+“more knowledgeable other”
+
+BUT:
+
+only if they scaffold—not replace—performance
+Loom Alignment
+Practice Mode
+Constraint challenges
+pattern-based teaching
+
+→ align with ZPD scaffolding
+
+4.2 Skill Acquisition vs Automation
+
+Educational research shows:
+
+Approach	Outcome
+Automation-first	Reduced skill
+Scaffolded learning	Increased skill
+Key Insight
+
+The presence of AI is not the issue—the structure of interaction is
+
+5. Relational Models of Human–AI Interaction
+5.1 Working Alliance Theory
+
+Edward Bordin:
+
+alliance = goals + tasks + bond
+Application to AI
+
+Human–AI systems require:
+
+aligned goals
+transparent processes
+trust calibration
+Loom Contribution
+authorship packet → shared goal structure
+explicit constraints → aligned tasks
+5.2 Psychoanalytic Perspectives
+
+Key constructs:
+
+projection
+idealization
+dependency
+AI Risk
+
+Users may:
+
+over-trust outputs
+defer judgment
+collapse agency
+Loom Safeguard
+non-compliant AI stance
+counterposition panels
+attribution visibility
+6. Improvisation and Collaborative Cognition
+6.1 Improv Theory
+
+Keith Johnstone:
+
+“yes-and”
+offer acceptance
+co-creation
+AI Analogy
+
+Human–AI writing:
+
+resembles collaborative improvisation
+Loom Extension
+
+But Loom adds:
+
+structured constraint
+deliberate divergence
+
+👉 Not just “yes-and,” but:
+
+“yes—and understand why”
+
+7. Translation Theory
+7.1 AI as Translator of Domains
+
+Translation theory (Lawrence Venuti):
+
+domestication vs foreignization
+fidelity vs transformation
+AI Behavior
+
+LLMs:
+
+translate:
+ideas → language
+domains → accessible forms
+Risk
+flattening nuance
+false equivalence
+Loom Approach
+explicit source attribution
+multi-source integration
+counterposition
+
+→ preserves difference, not just similarity
+
+8. Niche Construction and Co-Evolution
+8.1 Core Idea
+
+Kevin Laland:
+
+organisms shape environments
+environments shape organisms
+AI Implication
+
+AI:
+
+changes writing environment
+reshapes cognition itself
+Loom Position
+
+Loom is:
+
+a deliberately constructed cognitive niche
+
+Designed to:
+
+reinforce skill
+avoid degradation loops
+9. Institutional and Economic Perspectives
+9.1 Transaction Costs and AI
+
+Oliver Williamson:
+
+technologies reduce coordination costs
+AI Writing Effect
+writing becomes cheap
+quality becomes commoditized
+Loom Differentiation
+shifts value from:
+output → capability
+10. Measurement Gap (Critical)
+
+Across all literature:
+
+👉 There is no unified framework for measuring:
+
+human skill development
+in AI-augmented systems
+longitudinally
+Existing Limitations
+HCI → short-term usability
+Education → controlled environments
+AI → output evaluation
+Missing Piece
+
+A system that measures:
+
+writing process
+skill acquisition
+independence over time
+11. Loom’s Contribution (Positioning)
+11.1 Novel Integration
+
+Loom combines:
+
+phenomenology of skill
+cognitive apprenticeship
+epistemic control
+transactive memory
+relational AI theory
+11.2 Key Innovations
+1. Authorship Packet
+
+Structured input replacing prompts
+
+2. Corpus Control
+
+Epistemic agency for the writer
+
+3. Measurement Framework
+
+Multi-dimensional skill tracking
+
+4. Learning Loop
+
+Write → reflect → practice → improve
+
+11.3 Research Contribution
+
+Loom introduces:
+
+A measurable model of AI-augmented human skill development
+
+12. Open Research Questions
+1. Skill Transfer
+
+Does improvement persist outside the system?
+
+2. Optimal Assistance Level
+
+How much AI support maximizes learning?
+
+3. Dependency Thresholds
+
+When does assistance become harmful?
+
+4. Genre Differences
+
+Do learning dynamics differ across:
+
+nonfiction
+memoir
+fiction?
+13. Conclusion
+
+AI writing systems are at a crossroads:
+
+optimize for output → risk cognitive decline
+optimize for development → enable human advancement
+
+This review suggests:
+
+The future of AI writing is not automation, but augmentation with accountability
+
+Loom represents:
+
+a shift from generation → development
+from black-box AI → controlled epistemology
+from output quality → human capability
