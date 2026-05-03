@@ -16,7 +16,7 @@ The headline question executives bring to a planning cycle is rarely *what is th
 
 The methodology spans Monte Carlo simulation, formal Value-of-Information analysis (EVPI / EVSI), Kepner-Tregoe structured decision analysis, and the Rapid Collaborative Insight (RCI) framework — collaboration combined with disciplined analysis to converge faster than either alone. The deliverables are usually models executives can interrogate live (not slide decks), regression-based surrogate calculators that distill the simulation into instant what-ifs, and a written record of the decisions made, the alternatives considered, and the assumptions that would invalidate the recommendation.
 
-*Recent example: 2025 Annual Incentive Plan and RSU compensation cycle for The New York Times — Monte Carlo modeling at population scale, regression surrogate calculators, and a $1.6M reallocation recommendation grounded in distribution-of-outcome analysis rather than a point estimate.*
+*Recent example: 2025 Annual Incentive Plan and RSU compensation cycle for The New York Times — Monte Carlo modeling at population scale, regression surrogate calculators, and a cross-program reallocation recommendation grounded in distribution-of-outcome analysis rather than a point estimate.*
 
 ### 2. People analytics function build
 
