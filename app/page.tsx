@@ -83,11 +83,11 @@ export default function Home() {
               </p>
             )}
             <p className="pt-3 text-xs text-ink-muted leading-relaxed font-sans">
-              The products are the surface. The hub-and-spoke architecture
-              underneath the People Analytics Platform — anonymization, metric
-              calculation, adaptive measurement, codegen — is how solo cadence
-              stays sustainable. Other products bring their own spokes; some
-              cross-pollinate back into the toolbox.
+              The platform-level products are the surface. The hub-and-spoke
+              architecture underneath — coupled with DevPlane, a kanban-based
+              multi-agent multi-platform software-development integration
+              layer — is how software development with a small team can be
+              so productive.
             </p>
             <p className="text-xs text-ink-muted leading-relaxed font-sans italic">
               Stats refresh manually via{" "}
