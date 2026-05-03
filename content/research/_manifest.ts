@@ -1,4 +1,5 @@
 import type { CategoryId, AudienceTier } from "./_taxonomy";
+import type { ArcId } from "./_arcs";
 
 export type ProductId =
   | "vela"
@@ -17,6 +18,13 @@ export type ManifestEntry = {
   summary?: string;
   audienceTier?: AudienceTier;
   initiative?: string;
+  /**
+   * Research-arc tags. Multi-arc; an entry can sit under more than one. Entries
+   * with no arc tag (engineering critiques, pipeline-status, raw bibliographies)
+   * stay accessible via the per-product surface but do not surface on the
+   * arc-organized /research index.
+   */
+  arcs?: ArcId[];
   source?: {
     repo: string;
     path: string;
@@ -114,6 +122,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "What Vela's research program is, what threads it runs, where its methods generalize, and how to read further. The outside-reader one-pager — distinct from the internal twelve-RQ program plan.",
     source: { repo: VELA_REPO, path: "docs/research/OVERVIEW.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -124,6 +133,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Adaptive measurement, dual-grade corpus ingestion, RID/SID architecture, and the standards reports inherit.",
     source: { repo: VELA_REPO, path: "docs/research/methodology.md" },
+    arcs: ["adaptive-measurement", "aesthetic-response"],
     status: "live",
   },
   {
@@ -134,6 +144,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Methodological note on the Vela ingestion architecture — when to favor the dual-grade pattern, when multi-faceted extraction wins.",
     source: { repo: VELA_REPO, path: "docs/research/multi-faceted-vs-dual-grade.md" },
+    arcs: ["adaptive-measurement"],
     status: "live",
   },
 
@@ -147,6 +158,7 @@ export const MANIFEST: ManifestEntry[] = [
       "What separates desire (move-toward) from preference (like) in figurative response.",
     initiative: "rq-program",
     source: { repo: VELA_REPO, path: "docs/research/papers/rq1-desire-vs-preference.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -157,6 +169,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Which compositional features mediate response, and how do they interact.",
     initiative: "rq-program",
     source: { repo: VELA_REPO, path: "docs/research/papers/rq2-compositional-features.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -167,6 +180,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "How desire moves over a session and across sessions.",
     initiative: "rq-program",
     source: { repo: VELA_REPO, path: "docs/research/papers/rq3-temporal-dynamics.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -177,6 +191,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Which dimensions of variance separate participants and how stable they are.",
     initiative: "rq-program",
     source: { repo: VELA_REPO, path: "docs/research/papers/rq4-individual-differences.md" },
+    arcs: ["aesthetic-response", "adaptive-measurement"],
     status: "live",
   },
   {
@@ -187,6 +202,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Field positioning across the desire / aesthetic / measurement literature.",
     initiative: "rq-program",
     source: { repo: VELA_REPO, path: "docs/research/papers/literature-review.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -197,6 +213,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "First-volume analysis of the desire-index instrument.",
     initiative: "rq-program",
     source: { repo: VELA_REPO, path: "docs/research/desire-index-vol1-analysis.md" },
+    arcs: ["aesthetic-response", "adaptive-measurement"],
     status: "live",
   },
   // Christianity / sex / shame thread
@@ -211,6 +228,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/papers/christianity-sex-shame-literature-review.md",
     },
+    arcs: ["religion-morality"],
     status: "live",
   },
   {
@@ -221,6 +239,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "A research note synthesizing the historical case.",
     initiative: "christianity-sex-shame",
     source: { repo: VELA_REPO, path: "docs/research/2026-04-23-christianity-sex-hangup.md" },
+    arcs: ["religion-morality"],
     status: "live",
   },
   {
@@ -234,6 +253,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/2026-04-23-christianity-reinterpretation-pattern.md",
     },
+    arcs: ["religion-morality"],
     status: "live",
   },
   {
@@ -247,6 +267,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/2026-04-23-augustine-across-his-works.md",
     },
+    arcs: ["religion-morality"],
     status: "live",
   },
   // Text-aesthetic thread
@@ -261,6 +282,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/papers/text-aesthetic-literature-review.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   // Boudoir Studios Program — full initiative
@@ -275,6 +297,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/boudoir-studios-program/00-research-proposal.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -287,6 +310,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/boudoir-studios-program/01-literature-review.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -299,6 +323,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/boudoir-studios-program/02-paper-outlines.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -311,6 +336,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/boudoir-studios-program/03-methodology.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   // Artist studies methods
@@ -322,6 +348,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Methodological notes for the Warhol artist study.",
     initiative: "artist-studies",
     source: { repo: VELA_REPO, path: "docs/research/warhol-methods.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -331,6 +358,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Klimt — methods",
     initiative: "artist-studies",
     source: { repo: VELA_REPO, path: "docs/research/klimt-methods.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -340,6 +368,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Schiele — methods",
     initiative: "artist-studies",
     source: { repo: VELA_REPO, path: "docs/research/schiele-methods.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -349,6 +378,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Sargent — methods",
     initiative: "artist-studies",
     source: { repo: VELA_REPO, path: "docs/research/sargent-methods.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -358,6 +388,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Emotion corpus expansion (2026-04)",
     summary: "Notes on the emotion-corpus expansion plan.",
     source: { repo: VELA_REPO, path: "docs/research/emotion-corpus-expansion-2026-04.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   // Museum diversity-of-beauty thread
@@ -373,6 +404,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/papers/museum-diversity-of-beauty-research-questions.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -383,6 +415,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Cross-museum comparison of how cultural and physical diversity of beauty is represented. Three sub-questions: (a) museum-vs-museum corpus differences, (b) museum vs. its primary audience location, (c) how representation has shifted over time using artwork dates. Forthcoming write-up; questions doc is the live entry above.",
     initiative: "museum-diversity",
+    arcs: ["aesthetic-response"],
     status: "forthcoming",
   },
   {
@@ -392,6 +425,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Museum diversity-of-beauty — literature map",
     summary: "Forthcoming — field positioning for the diversity-of-beauty thread.",
     initiative: "museum-diversity",
+    arcs: ["aesthetic-response"],
     status: "forthcoming",
   },
 
@@ -404,6 +438,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "General-audience entry point into the Vela research program.",
     audienceTier: "general-audience",
     source: { repo: VELA_REPO, path: "docs/research/papers/public-introduction.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -417,6 +452,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/papers/christianity-sex-shame-public-introduction.md",
     },
+    arcs: ["religion-morality"],
     status: "live",
   },
   {
@@ -430,6 +466,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/papers/text-aesthetic-public-introduction.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -439,6 +476,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Peer-review framing",
     summary: "Headline findings positioned for academic peer review.",
     audienceTier: "peer-review",
+    arcs: ["aesthetic-response"],
     status: "forthcoming",
   },
   {
@@ -468,6 +506,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Literature map (cross-thread)",
     summary: "Map of the field across the major Vela research threads.",
     source: { repo: VELA_REPO, path: "docs/research/literature-map.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -486,6 +525,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Christianity, sex, and shame — literature map",
     initiative: "christianity-sex-shame",
     source: { repo: VELA_REPO, path: "docs/research/christianity-sex-shame-literature-map.md" },
+    arcs: ["religion-morality"],
     status: "live",
   },
   {
@@ -504,6 +544,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Text-aesthetic literature map",
     initiative: "text-aesthetic",
     source: { repo: VELA_REPO, path: "docs/research/text-aesthetic-literature-map.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -524,6 +565,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Study 01 — preregistration",
     summary: "First preregistered Vela study.",
     source: { repo: VELA_REPO, path: "docs/research/preregistrations/study-01.md" },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -537,6 +579,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/protocols/theological-coherence-intervention-v0.1.md",
     },
+    arcs: ["religion-morality"],
     status: "live",
   },
   {
@@ -549,6 +592,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/boudoir-studios-program/crawl-protocol.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
   {
@@ -561,6 +605,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: VELA_REPO,
       path: "docs/research/boudoir-studios-program/inventory-protocol.md",
     },
+    arcs: ["aesthetic-response"],
     status: "live",
   },
 
@@ -620,6 +665,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "How cultural-diffusion research is conducted at Namesake — instruments, sources, and standards.",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/methodology.md" },
+    arcs: ["adaptive-measurement", "cultural-diffusion"],
     status: "live",
   },
 
@@ -632,6 +678,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Headline cultural-diffusion findings.",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/cultural-diffusion.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -642,6 +689,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Why naming-event blockbusters do not always cause spread.",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/blockbuster_paradox_report.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -652,6 +700,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Spatial autocorrelation results across the SSA-derived corpus.",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/moran_report.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -662,6 +711,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Moderation analyses across diffusion variables.",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/moderation_tests.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -671,6 +721,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Phase 5 — null model results",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/phase5_null_model_results.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -680,6 +731,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Phase 6 — phonetic spillover",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/phase6_phonetic_spillover.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -689,6 +741,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Phase 7a — Granger causality",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/phase7a_granger_causality.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -698,6 +751,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Phase 7b — Hawkes process fit",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/phase7b_hawkes_fit.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -707,6 +761,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Phase 7c — Bass diffusion",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/phase7c_bass_diffusion.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -717,6 +772,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Where the upper bound of name-spread prediction lives.",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reports/predictability_ceiling.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -729,6 +785,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: NAMESAKE_REPO,
       path: "docs/research/reports/variance_decomposition_report.md",
     },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
 
@@ -741,6 +798,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "The diffusion findings, written for a general reader.",
     audienceTier: "general-audience",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reviews/general-audience-explainer.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -750,6 +808,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Academic peer-review framing",
     audienceTier: "peer-review",
     source: { repo: NAMESAKE_REPO, path: "docs/research/reviews/academic-peer-review.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -780,6 +839,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary: "Field positioning across the cultural-diffusion literature.",
     initiative: "cultural-diffusion",
     source: { repo: NAMESAKE_REPO, path: "docs/research/literature-map.md" },
+    arcs: ["cultural-diffusion"],
     status: "live",
   },
   {
@@ -806,6 +866,7 @@ export const MANIFEST: ManifestEntry[] = [
       repo: NAMESAKE_REPO,
       path: "docs/research/preregistrations/cultural-diffusion-study-01.md",
     },
+    arcs: ["cultural-diffusion", "adaptive-measurement"],
     status: "live",
   },
 
@@ -826,6 +887,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "research-program",
     title: "The Fourth & Two research program",
     summary: "Forthcoming — research arc to be designed.",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -833,6 +895,7 @@ export const MANIFEST: ManifestEntry[] = [
     category: "methodology",
     slug: "methodology",
     title: "Methodology",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -841,6 +904,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "decisions-under-uncertainty",
     title: "Decisions under uncertainty in fantasy",
     summary: "Anticipated thread — Monte Carlo decision support, principal-issues-set framing.",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -858,6 +922,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "general-audience",
     title: "General-audience explainer",
     audienceTier: "general-audience",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -866,6 +931,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "peer-review",
     title: "Peer-review framing",
     audienceTier: "peer-review",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -889,6 +955,7 @@ export const MANIFEST: ManifestEntry[] = [
     category: "bibliography",
     slug: "literature-map",
     title: "Literature map",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -896,6 +963,7 @@ export const MANIFEST: ManifestEntry[] = [
     category: "preregistrations",
     slug: "preregistration",
     title: "Preregistration(s)",
+    arcs: ["decision-support"],
     status: "forthcoming",
   },
   {
@@ -913,6 +981,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "research-program",
     title: "The People Analytics Platform research program",
     summary: "Forthcoming — research arc to be designed.",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -920,6 +989,7 @@ export const MANIFEST: ManifestEntry[] = [
     category: "methodology",
     slug: "methodology",
     title: "Methodology",
+    arcs: ["organizational-measurement", "adaptive-measurement"],
     status: "forthcoming",
   },
   {
@@ -929,6 +999,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "The principal-issues thesis",
     summary:
       "Anticipated headline thread — load-bearing analytics, the Three A's, NAV, why most companies cannot do people analytics. Draft v3 exists locally and is being prepared for publication.",
+    arcs: ["organizational-measurement", "decision-support"],
     status: "forthcoming",
   },
   {
@@ -938,6 +1009,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Hub-and-spoke as moat",
     summary:
       "Anticipated thread — architectural defensibility of a single-author people-analytics platform.",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -947,6 +1019,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "RID/SID adaptive measurement",
     summary:
       "Anticipated thread — cross-study item-response accumulation without confounding.",
+    arcs: ["adaptive-measurement", "organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -955,6 +1028,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "general-audience",
     title: "General-audience explainer",
     audienceTier: "general-audience",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -963,6 +1037,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "peer-review",
     title: "Peer-review framing",
     audienceTier: "peer-review",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -986,6 +1061,7 @@ export const MANIFEST: ManifestEntry[] = [
     category: "bibliography",
     slug: "literature-map",
     title: "Literature map",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -993,6 +1069,7 @@ export const MANIFEST: ManifestEntry[] = [
     category: "preregistrations",
     slug: "preregistration",
     title: "Preregistration(s)",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1012,6 +1089,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Coordination cost in heterogeneous AI tool ecosystems. Outside-reader brief on what the program studies, why now, and what it contributes.",
     source: { repo: DEVPLANE_REPO, path: "docs/research/OVERVIEW.md" },
+    arcs: ["coordination-cost"],
     status: "live",
   },
   {
@@ -1022,6 +1100,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Operational discipline (assignment registry, handoff protocol, two-phase actor handoff, shared-index commit, coordination-event log) plus research discipline (pre-registered predictions, falsifiable constructs, acknowledged researcher position, threats-to-validity register).",
     source: { repo: DEVPLANE_REPO, path: "docs/research/methodology.md" },
+    arcs: ["coordination-cost"],
     status: "live",
   },
   {
@@ -1032,6 +1111,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "The full three-arm research program: Agent↔Agent, Human↔AI, and Interface (the lead arm). C1 — risk compensation in human-AI coordination — is the lead study. Theoretical lineage across cockpit HCI, CSCW, empirical SE, behavioral decision-making, and stigmergic-coordination literatures.",
     source: { repo: DEVPLANE_REPO, path: "docs/research/PROGRAM.md" },
+    arcs: ["coordination-cost"],
     status: "live",
   },
   {
@@ -1040,6 +1120,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "general-audience",
     title: "General-audience explainer",
     audienceTier: "general-audience",
+    arcs: ["coordination-cost"],
     status: "forthcoming",
   },
   {
@@ -1048,6 +1129,7 @@ export const MANIFEST: ManifestEntry[] = [
     slug: "peer-review",
     title: "Peer-review framing",
     audienceTier: "peer-review",
+    arcs: ["coordination-cost"],
     status: "forthcoming",
   },
   {
@@ -1074,6 +1156,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Cockpit/process-control HCI · CSCW · empirical software engineering · behavioral decision-making · multi-agent systems and stigmergic coordination. With explicit confidence flags ([C] canonical, [F] field-level, [DR] open for deep-research expansion).",
     source: { repo: DEVPLANE_REPO, path: "docs/research/LITERATURE-REVIEW.md" },
+    arcs: ["coordination-cost"],
     status: "live",
   },
   {
@@ -1084,6 +1167,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Formal proposal for the C1 lead study. Pre-registered hypotheses with yes-world / no-world consequences; pre-committed coding rules for failure attribution; Bayesian structural time-series analysis plan; threats-to-validity register. The proposal serves as pre-registration in spirit; formal OSF filing follows once the analysis pipeline is built and a run-in period of data is collected.",
     source: { repo: DEVPLANE_REPO, path: "docs/research/PROPOSAL.md" },
+    arcs: ["coordination-cost"],
     status: "live",
   },
   {
@@ -1106,6 +1190,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "A source-graded survey of organizational measurement, output as a book + queryable database, rendered from one underlying registry. Outside-reader brief on what it codifies, why now, and how it relates to the rest of the portfolio via @measurement/core.",
     source: { repo: PRINCIPIA_REPO, path: "docs/research/OVERVIEW.md" },
+    arcs: ["organizational-measurement", "adaptive-measurement"],
     status: "live",
   },
   {
@@ -1116,6 +1201,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Source selection, source-quality grading rubric (A–D), statistical-metadata extraction protocol, schema discipline against @measurement/core, versioning + snapshots, novelty verification, threats to validity, author position.",
     source: { repo: PRINCIPIA_REPO, path: "docs/research/methodology.md" },
+    arcs: ["organizational-measurement", "adaptive-measurement"],
     status: "live",
   },
   {
@@ -1126,6 +1212,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "17 construct families across 4 tiers (foundational · derivative · composite · outcomes), 8 queued for sequencing, 3 parallel threads (surveys · infrastructure · book draft).",
     source: { repo: PRINCIPIA_REPO, path: "docs/research/PROGRAM.md" },
+    arcs: ["organizational-measurement"],
     status: "live",
   },
   {
@@ -1135,6 +1222,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Engagement — construct-family survey",
     summary:
       "First tier-1 family. Densest accumulated literature; serves as the methodology proof-of-method. UWES, Gallup Q12, MEI, JES, plus the Kahn-tradition qualitative work. Blocked on @measurement/core extraction (vela ASN-1013).",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1144,6 +1232,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Job satisfaction — construct-family survey",
     summary:
       "Tier-1, second in the queue. Long history; classic measurement-model debates (global vs facet; affective vs cognitive). JDI, MSQ, JSS, Brief Index of Affective Job Satisfaction.",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1153,6 +1242,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Organizational commitment — construct-family survey",
     summary:
       "Tier-1, third. Tripartite measurement model (Allen & Meyer affective / continuance / normative) is canonical and well-tested.",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1163,6 +1253,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Public framing of the survey-as-instrument argument — what builders, practitioners, and researchers can do with a queryable, source-graded measurement registry that they could not do before.",
     audienceTier: "general-audience",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1173,6 +1264,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Positioning against the existing measurement-handbook tradition (Schmitt & Highhouse 2013; Borman et al. 2003) and the meta-analytic synthesis tradition (Hunter & Schmidt 2004; Cooper 2017). What Principia adds, what it does not claim to add.",
     audienceTier: "peer-review",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1203,6 +1295,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Three-layer field orientation — measurement theory, construct-specific instrumentation, meta-analytic accumulations. Where Principia sits between layers 2 and 3 as the indexing layer.",
     source: { repo: PRINCIPIA_REPO, path: "docs/research/literature-map.md" },
+    arcs: ["organizational-measurement"],
     status: "live",
   },
   {
@@ -1222,6 +1315,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Preregistration(s)",
     summary:
       "Synthesis-analytic preregistrations land here as construct-family surveys surface meta-analytic gaps. None filed yet — first will land alongside the engagement survey if a meta-analytic gap appears.",
+    arcs: ["organizational-measurement"],
     status: "forthcoming",
   },
   {
@@ -1243,6 +1337,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "AI–Human Interaction — overview",
     summary:
       "What AI does to human capability over time. Loom is the lead empirical apparatus; the broader frame extends to AI as long-term cognitive partner across professions and domains.",
+    arcs: ["capability-development", "coordination-cost"],
     status: "live",
   },
   {
@@ -1252,6 +1347,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Methodology",
     summary:
       "Multi-LLM deep-research with synthesis discipline; Loom production-instrument design; the Loom Measurement Framework (six skill dimensions, six derived indices, three measurement layers, five-step learning loop) with four non-negotiable failure modes; pre-registered hypotheses; genre-aware analysis required.",
+    arcs: ["capability-development", "adaptive-measurement"],
     status: "live",
   },
   {
@@ -1261,6 +1357,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "The twelve-paper Loom Research Program plus six cross-cutting programs",
     summary:
       "Track A — twelve sub-papers across three tiers (foundational theory · measurement and mechanism · longitudinal empirical studies) drawing from a shared dataset generated by Loom in production. Track B — six cross-cutting research programs the Loom evidence may eventually seed.",
+    arcs: ["capability-development", "coordination-cost"],
     status: "live",
   },
   {
@@ -1271,6 +1368,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Tier-1 foundational paper. Synthesizes phenomenology of skill, attention theory, transactive memory, standpoint theory, epistemic injustice, cognitive apprenticeship, working-alliance theory, psychoanalytic theory, improv theory, translation theory, niche construction, and institutional economics into a single positioning argument for Loom. Outline draft.",
     initiative: "loom-research-program",
+    arcs: ["capability-development"],
     status: "live",
   },
   {
@@ -1281,6 +1379,7 @@ export const MANIFEST: ManifestEntry[] = [
     summary:
       "Publication-and-product-integration strategy for the twelve-paper Loom program. Three tiers, shared-dataset discipline, three-phase publication windows, paper-to-feature mapping. Verbatim source.",
     initiative: "loom-research-program",
+    arcs: ["capability-development"],
     status: "live",
   },
   {
@@ -1292,6 +1391,7 @@ export const MANIFEST: ManifestEntry[] = [
       "Public-audience version of Tier-1 Paper 1. Frames the case for capability-development AI writing systems for a general reader. Outline draft.",
     audienceTier: "general-audience",
     initiative: "loom-research-program",
+    arcs: ["capability-development"],
     status: "live",
   },
   {
@@ -1301,6 +1401,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Peer-review framing",
     summary: "Forthcoming — peer-review positioning of headline findings against the existing HAI, educational-psychology, and working-alliance literatures.",
     audienceTier: "peer-review",
+    arcs: ["capability-development"],
     status: "forthcoming",
   },
   {
@@ -1328,6 +1429,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Literature map",
     summary:
       "Index of 29 secondary literature reviews + 6 cross-LLM syntheses, organized by the twelve-branch HAI field map plus frontier zones, adjacent fields, and deep intersections. Honest gap-flagging at the bottom.",
+    arcs: ["capability-development", "coordination-cost"],
     status: "live",
   },
   {
@@ -1337,6 +1439,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Field-mapping roadmap",
     summary:
       "The twelve-branch HAI field map, frontier zones, adjacent fields the mainstream has under-engaged, deep intersections where genuine theoretical integration is possible, and six cross-cutting research programs. Verbatim source — load-bearing field orientation.",
+    arcs: ["capability-development", "coordination-cost"],
     status: "live",
   },
   {
@@ -1346,6 +1449,7 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Preregistration(s)",
     summary:
       "Forthcoming — Paper 5 (dependency) and Paper 7 (genre) are the first OSF candidates. Protocols in draft; formal filing follows once the analysis pipeline is built and a run-in period of Loom production data is collected.",
+    arcs: ["capability-development"],
     status: "forthcoming",
   },
   {
