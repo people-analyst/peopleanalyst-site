@@ -235,7 +235,7 @@ Not constantly—but at the right moments.
 
 The real test of any AI writing system is simple:
 
-After using it for months, are you better without it?
+After using it for months, are you better with it, than without it?
 
 If the answer is no:
 
