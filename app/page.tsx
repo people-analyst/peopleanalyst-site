@@ -15,14 +15,14 @@ export default function Home() {
               Mike West · Pittsburgh, PA
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.05] font-medium">
-              Five products. One conviction.{" "}
+              Many products. One conviction.{" "}
               <span className="text-ink-body">Feedback makes people — and A.I. — better. Data workflow is the spine.</span>
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              A multi-agent development cockpit. A fantasy football
-              intelligence platform. An intentional-baby-naming tool. An
-              adaptive figurative-art platform. An AI-native people
-              analytics ecosystem. They look unrelated. They are all
+              A range of products across coding, fantasy decisions, naming,
+              figurative art, AI-augmented authorship, performance
+              analytics, people analytics, and the cross-portfolio
+              infrastructure underneath. They look unrelated. They are all
               instances of the same loop — measurement on the way in,
               calibration on the way through, better decisions on the way
               out — applied to whatever domain you take seriously.
@@ -30,11 +30,11 @@ export default function Home() {
           </div>
 
           <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm font-mono">
-            <Stat label="products" value="5" />
+            <Stat label="products" value={String(PROJECTS.length)} />
             <Stat label="spokes underneath" value="20" />
             <Stat label="commits, 12mo" value="5,974" />
             <p className="pt-3 text-xs text-ink-muted leading-relaxed font-sans">
-              The five products are the surface. The hub-and-spoke architecture
+              The products are the surface. The hub-and-spoke architecture
               underneath — anonymization, metric calculation, adaptive
               measurement, codegen — is how solo cadence stays sustainable.
             </p>

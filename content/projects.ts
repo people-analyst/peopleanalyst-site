@@ -147,15 +147,18 @@ export const PROJECTS: Project[] = [
     slug: "vela",
     headline: "Vela",
     tagline:
-      "A contemplative platform for fine-art figurative work — adaptive sequencing, museum sourcing, editorial magazine.",
+      "A contemplative platform that began with fine-art figurative work and has broadened into an adaptive-authorship substrate — magazine paced per-reader, Editorial Office of staff voices, Loom in /labs, and three editorial axes (figurative response · emotion architecture · developmental theology).",
     audience:
-      "Adults who want disciplined, taste-driven encounters with figurative art — and the research participants who help calibrate it.",
+      "Adults who want disciplined, taste-driven encounters — figurative art on one hand, longform editorial work on the other — and the research participants who help calibrate the underlying instruments.",
     problem:
-      "Image platforms either flatten taste into engagement metrics or hide behind gatekeepers. Neither produces a reading rhythm. Neither learns from you.",
+      "Image platforms either flatten taste into engagement metrics or hide behind gatekeepers. Editorial platforms publish on calendars rather than to readers. Neither produces a reading rhythm. Neither learns from you. Vela is built on the bet that a single substrate can do both — taste-driven figurative discovery and longform editorial work — when adaptive measurement runs underneath.",
     built:
-      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player that learns desire and pool composition. A magazine with original fiction and editorial criticism. Stripe membership. A Chrome extension for attribution capture. A derivative pipeline that produces new transformative works under license.",
+      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player (Reincarnation engine) that learns desire and pool composition across visual rhyme and emotional register. A magazine with original fiction, editorial criticism, and three load-bearing editorial axes — figurative response, emotion architecture, and developmental theology — paced per-user (each reader's magazine begins when they arrive, not on a calendar). Loom: authorship system in /labs/loom (F-03 Authorship Packet UI MVP shipped; F-19 Adaptive Authorship Control Kernel is the spine — see Loom card below). Editorial Office: Writer's Desk (1:1 chat with each writer) and The Office (multi-writer convening with round-2 react). Stripe membership. Chrome extension for attribution capture. Derivative pipeline that produces new transformative works under license.",
     novel: [
       "Reincarnation engine: per-user desire scoring with RID/SID adaptive measurement and visual-rhyme sequencing",
+      "Per-user magazine pacing — each reader's editorial schedule begins when they arrive; positioning wedge is \"your magazine begins when you do\"",
+      "Three editorial axes (figurative response · emotion architecture · developmental theology) coexist on a single substrate; emotion is now the core editorial axis (post the 2026-04-30 pivot)",
+      "Editorial Office — Writer's Desk + multi-writer convening turns the writer roster from production tool into colleagues",
       "Pill paradigm: 80 admin pages collapsed into ~7 named flows, each a typed pill expression",
       "Adaptive authorship platform underneath — Vela is property #1; siblings reuse the substrate",
       "Museum-grade attribution and license discipline as a first-class feature, not a footnote",
@@ -174,11 +177,11 @@ export const PROJECTS: Project[] = [
       "Playwright",
     ],
     outcome:
-      "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start.",
+      "Live at vela.study. Stripe membership in live mode. Magazine publishing weekly. ~1,300 commits since project start. Loom in early build inside the same repo; Editorial Office and per-user magazine pacing in active development.",
     role: "Designer, engineer.",
     commits: "1,300+",
     story:
-      "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
+      "Vela began as a bet that taste compounds when given a substrate. The substrate is the asymmetry: AI holds the survived corpus, humans hold the unsurvived response. Vela is the place where those two meet — careful sourcing on one side, calibrated human signal on the other, and a magazine for the language in between. The bet has broadened: the same substrate now hosts Loom (authorship system in /labs), the Editorial Office (writer collaboration), per-user magazine pacing, and three editorial axes that coexist without collapsing. It is also the reference implementation for an adaptive-authorship platform that future siblings will sit on top of.",
     href: "https://vela.study",
     status: "live",
     screenshots: [
@@ -187,6 +190,109 @@ export const PROJECTS: Project[] = [
       { src: "/portfolio/vela/writers-desktop.png", caption: "Writers — staff voice infrastructure" },
       { src: "/portfolio/vela/membership-desktop-blurred.png", caption: "Membership — Stripe-backed Member tier (artwork tiles blurred)" },
     ],
+  },
+
+  {
+    slug: "loom",
+    headline: "Loom",
+    tagline:
+      "An AI-augmented authorship system — corpus control, packet-shaped composition, and a measurement framework that asks whether the writer is better without it in six months.",
+    audience:
+      "Memoirists, essayists, and editorial writers who would rather become more capable than write faster.",
+    problem:
+      "Most AI writing tools optimize for output fluency. They make it easier to produce something faster — and that something is often shaped by the model rather than the writer. The longer-term cost (capability erosion, voice flattening, sycophancy spirals, source attribution buried) is barely measured because the field measures what is easy to measure. The result is a generation of tools that look like assistants and act like substitutes.",
+    built:
+      "An authorship environment that inverts the prompt-then-edit pattern. Writers assemble Authorship Packets — intent · structure · key ideas · relevant passages · counterpositions — before the AI is invoked. Corpus selection is explicit: writers choose which sources influence the work rather than inheriting the model's training distribution. The Adaptive Authorship Control Kernel (F-19) is the spine — central registry of skill measurement, intervention, and genre-aware behavior (memoir / nonfiction / fiction never collapsed). The Loom Measurement Framework — six skill dimensions, six derived indices, three measurement layers, five-step learning loop, and four non-negotiable failure modes — determines whether a session made the writer better. Lives inside Vela's repo (app/labs/loom/) for now; graduates when the design stabilizes.",
+    novel: [
+      "Authorship Packet Model — replaces freeform prompting with structured input units; the structure itself is data",
+      "Corpus Control Layer — writer selects sources rather than inheriting the LLM's training distribution",
+      "Adaptive Authorship Control Kernel (F-19) — central registry of measurement and intervention; genre-aware behavior forks copy + schema enums + prompts + metrics rather than collapsing them",
+      "Loom Measurement Framework — first multi-dimensional measurement system for AI-augmented writing skill development; four non-negotiable failure modes (output-only optimization · over-automation · weak measurement · ignoring genre differences) act as veto",
+      "Anti-invention constraint — when a structural rhetorical move requires biographical material the user has not supplied, the tool refuses to render rather than confabulating",
+      "Has its own published research program at peopleanalyst.com/research/ai-human-interaction (12-paper Loom Research Program across three tiers)",
+    ],
+    stack: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Supabase",
+      "pgvector",
+      "Vercel",
+      "Anthropic API",
+    ],
+    outcome:
+      "Early build inside Vela's repo (app/labs/loom). F-03 (Authorship Packet UI MVP) shipped. F-19 (Adaptive Authorship Control Kernel) is the architectural spine; it ships first or in parallel with the first feature. 19 features (F-01..F-19) sequenced across 6 implementation waves; 79 ASNs in flight.",
+    role: "Designer, engineer.",
+    story:
+      "Loom exists because the field of AI writing is being measured by output and not by capability. The longitudinal test — better writer without Loom in six months — is unfashionable but load-bearing. The alternative bet — better outputs faster, optimization toward fluency — is the bet most of the field has already taken. Loom is the bet on the other side: that writers can become more capable inside an AI-augmented environment, and that this can be measured rigorously enough to fail on its own terms. Seven non-negotiable rules in §7 of the vision doc act as the spine for every product decision (don't build generic AI writing features · don't collapse genre distinctions · don't hide source attribution · don't flatten emotional nuance · don't optimize for speed over authorship · don't make AI compliant · don't over-moralize).",
+    status: "private",
+  },
+
+  {
+    slug: "performix",
+    headline: "Performix",
+    tagline:
+      "Enterprise performance data analytics — sister vertical to the People Analytics Platform, and the first non-Vela consumer of the dual-grade research-ingest pattern being lifted into shared infrastructure.",
+    audience:
+      "Enterprise organizations that need performance-data analytics under the same architectural discipline as the broader People Analytics Platform — but with a vertical product surface rather than a hub-and-spoke composition.",
+    problem:
+      "Performance data — review cycles, calibration, distribution shape, multi-rater dynamics — is among the densest, most consequential, and most poorly-instrumented data in any organization. Most products either treat it as a transaction record (HRIS posture) or as a dashboard (BI posture). Neither captures the analytical posture the data actually warrants — comparative, longitudinal, distribution-aware, decision-support-shaped.",
+    built:
+      "Early build. The architectural bet: Performix is the first instance of the library-core multi-property pattern outside Vela — proving that the research-ingest, dual-grade corpus, and adaptive-measurement substrate ports cleanly to a non-Vela vertical brand. Currently a placeholder repo; substance arrives as the research-ingest extraction (from Vela into MetaFactory's packages/research-ingest/) lands and Performix becomes its first consumer. The Research Ingestion paradigm rollout (ASN-1000+) is the cross-fleet sequencing.",
+    novel: [
+      "First non-Vela consumer of the dual-grade research-ingest pipeline — a real port test of the library-core substrate",
+      "First test of the library-core multi-property pattern outside Vela — if patterns transfer, the cross-property substrate is real; if they don't, the substrate has to be re-thought",
+      "Vertical-product surface against the same architectural substrate as the broader People Analytics Platform",
+    ],
+    stack: [
+      "TypeScript",
+      "Next.js",
+      "Supabase",
+      "pgvector",
+      "Vercel",
+      "Anthropic API",
+    ],
+    outcome:
+      "Early build. Repo seeded; substance gated on the research-ingest extraction landing in MetaFactory.",
+    role: "Designer, engineer.",
+    story:
+      "Performix is the test of the cross-property pattern. If the library-core substrate (dual-grade ingestion, adaptive measurement, the canonical-vocabulary discipline) ports cleanly from Vela into a vertical that shares no editorial subject matter, the architecture is real. If it doesn't, the substrate is Vela-specific and the multi-property bet has to be re-thought. Either result is informative.",
+    status: "private",
+  },
+
+  {
+    slug: "meta-factory",
+    headline: "MetaFactory",
+    tagline:
+      "A focused production-factory monorepo — book ingestion, job/competency/persona/survey factories, and the dual-grade research-ingest pipeline shared across the portfolio.",
+    audience:
+      "The portfolio itself. MetaFactory is internal infrastructure consumed by Vela, Performix, the People Analytics Platform, and others.",
+    problem:
+      "Cross-cutting infrastructure — book ingestion at chapter-respecting fidelity, schema-conformant typed extraction, job/competency/persona generation, survey factories — gets re-implemented per consumer when there is no production-factory substrate. The half-renovated state is worse than either decision: a 'Universal Information Factory' framing that tried to do too much, the resulting analytics-vs-production drift, and a multi-hundred-file cleanup-doc midden in the repo root that documents an effort that did not land. The substrate has to be narrowed and its purpose made legible in 30 seconds.",
+    built:
+      "A monorepo of production factories — book ingestion (collector / organizer / referee), job-matching, competency, personas, surveys, pay, business-plan, variableizer — plus core infrastructure (asset registry, storage resolver, schemas, prompts, deep-research agent). Currently undergoing the consolidation drive (ASN-1003): KEEP/DROP rule fully executed (production factories KEEP; analytics offerings DROP); the dual-grade research-ingest pipeline migrated in from Vela; the cleanup-doc midden archived; CLAUDE.md / AGENTS.md / README rewritten to actual current state.",
+    novel: [
+      "Production-factory architecture — every package outputs an artifact; analytics offerings explicitly excluded",
+      "Dual-grade corpus ingestion — same database holds editorially-selected curator passages and bulk research chunks, distinguished by tag",
+      "Cryptographic provenance contract — SHA-256 tracked for every source file; safe-delete invariants require hash verification on backup and durable storage before any local delete",
+      "~$0.13 per research-run synthesis at 30K+ passage scale — most 'AI research' tools run 10–100× more expensive because they retrieve without pattern extraction",
+      "Schema-extracted measurement vocabulary (@measurement/core) shared across consumers — Principia, the People Analytics Platform, and the toolbox/hub all subscribe rather than reinventing constructs / instruments / items / measures / effect-sizes",
+    ],
+    stack: [
+      "TypeScript",
+      "Next.js",
+      "Supabase",
+      "pgvector",
+      "OpenAI embeddings",
+      "Anthropic API",
+      "Vercel",
+    ],
+    outcome:
+      "Private. Five-track consolidation in flight (audit · pruning · production-factory finalization · research-ingest migration · consumer rewiring). Eight sub-ASNs (ASN-1004..ASN-1011) under the parent (ASN-1003).",
+    role: "Designer, engineer.",
+    story:
+      "MetaFactory exists because cross-portfolio infrastructure can't be re-built per consumer and can't sit half-renovated forever. The narrowing decision is made — production over analytics — and what's outstanding is executing the cuts, finalizing what remains, and lifting Vela's research-ingest pipeline back in (because Vela built dual-grade ingestion when MetaFactory's API-based approach lost fidelity, and that pipeline now belongs in the substrate). The interesting bet is whether a focused production-factory substrate compounds across consumers fast enough to justify the consolidation cost.",
+    status: "private",
   },
 
   {
