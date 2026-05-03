@@ -292,3 +292,46 @@ body {
     margin: 0.5in 0.6in;
   }
 }
+
+/* Accordion (details/summary) inside research-prose. Used on the consulting
+   page to let readers scan service headings + openers and expand for the
+   methodology + case-study detail underneath. */
+.research-prose details {
+  border-top: 1px solid var(--paper-divider);
+  padding: 1rem 0 0.5rem;
+  margin-top: 1.25rem;
+}
+.research-prose details > summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-muted);
+  user-select: none;
+}
+.research-prose details > summary::-webkit-details-marker {
+  display: none;
+}
+.research-prose details > summary::after {
+  content: "+ expand";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--accent);
+}
+.research-prose details[open] > summary::after {
+  content: "− collapse";
+}
+.research-prose details > summary:hover {
+  color: var(--ink-secondary);
+}
+.research-prose details > *:not(summary) {
+  margin-top: 1rem;
+}
+.research-prose details > *:not(summary):first-of-type {
+  margin-top: 1.25rem;
+}
