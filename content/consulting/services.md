@@ -128,7 +128,9 @@ Periodic engagement for in-house analytics leaders who want a sounding board, me
 <details>
 <summary>What gets coached · engagement shape</summary>
 
-The methodologies most often coached: Rapid Collaborative Insight, Net Activated Value, the Three A's framework, Lean People Analytics, the Quantitative Model of Human Resources, and the **Principal-Issues Thesis** — the methodological spine that names load-bearing measurement sets across domains and explains why most people-analytics functions are stuck. Engagements usually run as a recurring quarterly cadence or as on-call advisory across a defined period.
+The methodologies most often coached: Rapid Collaborative Impact (RCI), Net Activated Value, the Three A's framework, Lean People Analytics, the Quantitative Model of Human Resources, and the **Principal-Issues Thesis** — the methodological spine that names load-bearing measurement sets across domains and explains why most people-analytics functions are stuck. Engagements usually run as a recurring quarterly cadence or as on-call advisory across a defined period.
+
+For the long version of the argument underneath this work, see [*Why People Analytics Is Stuck — and How to Unstick It*](/magazine/rapid-collaborative-impact) — the RCI essay that names the framework, the four-S synthesis, and why most organizations cannot do people analytics even though it has been demonstrably valuable for two decades.
 
 </details>
 
