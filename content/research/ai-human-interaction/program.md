@@ -34,7 +34,7 @@ The program runs on two coordinated tracks, drawing from a single dataset genera
 
 **Paper 8 — Longitudinal Effects of AI-Assisted Writing on Skill Development.** The core validation study. Three groups: Penwright users · standard-AI users · no-AI controls. 3–6 month duration. Output: does Penwright create better writers, measured against the framework defined in Paper 4?
 
-**Paper 9 — Transfer of Writing Skill Outside AI Systems.** Tests independence directly: blind writing tasks with no AI allowed. Capability-transfer rather than in-system performance is the key claim. The longitudinal test is *"better writer without Penwright in 6 months."*
+**Paper 9 — Transfer of Writing Skill Outside AI Systems.** Tests independence directly: blind writing tasks with no AI allowed. Capability-transfer rather than in-system performance is the key claim. The longitudinal test is *"better writer with Penwright, than without it, in 6 months."*
 
 **Paper 10 — Cognitive Load and Attention in AI Writing Systems.** Studies how Penwright affects attention. Anchors: Stiegler's attention ecology, Citton's *Ecology of Attention*. Data: session duration, interruption patterns, flow-state indicators.
 

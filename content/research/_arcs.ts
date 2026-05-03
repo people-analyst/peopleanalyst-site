@@ -79,7 +79,7 @@ export const ARCS: Arc[] = [
     id: "capability-development",
     label: "AI–human capability development (longitudinal)",
     blurb:
-      "What does AI do to human capability over months and years, and what kinds of system design support development rather than dependence? Authorship-system design, the Penwright Measurement Framework, the longitudinal test that asks whether a writer is better without the system after six months.",
+      "What does AI do to human capability over months and years, and what kinds of system design support development rather than dependence? Authorship-system design, the Penwright Measurement Framework, the longitudinal test that asks whether a writer is better with the system, than without it, after six months.",
     whyItMatters:
       "Existing AI–human-interaction research clusters in single-session, individual-level, descriptive studies. Almost no longitudinal work exists. The arc is a bet that capability-development can be measured, and that the design of the interaction structure — not the model on the other side — is what determines whether AI augments or substitutes. Penwright (inside Vela) is the lead empirical apparatus; the AHI program owns the published-paper trajectory.",
     spans: ["ai-human-interaction", "vela"],

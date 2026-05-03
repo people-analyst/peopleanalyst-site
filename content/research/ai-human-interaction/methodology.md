@@ -72,7 +72,7 @@ Detailed in companion document `vela/docs/VISION-PENWRIGHT-MEASUREMENT.md` (load
 - **Falsifiable, operationalized constructs** — every construct decomposed into a measurable index before being invoked in claims.
 - **Genre-aware analysis required** — no claim is accepted that collapses memoir / nonfiction / fiction.
 - **Acknowledged researcher position** — the principal investigator is also the system designer and a Penwright user; this is auto-ethnography for descriptive work and an explicit threat-to-validity for causal claims, mitigated through external operators where claims require generalization.
-- **Capability-transfer is the load-bearing test** — the longitudinal claim is *"better writer without Penwright in 6 months,"* measured against an external baseline, not against in-system performance.
+- **Capability-transfer is the load-bearing test** — the longitudinal claim is *"better writer with Penwright, than without it, in 6 months,"* measured against an external baseline, not against in-system performance.
 
 ---
 
