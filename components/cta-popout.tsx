@@ -173,7 +173,7 @@ export function CtaPopout() {
                   });
                   setStep("hidden");
                 }}
-                className="inline-block px-4 py-2 bg-ink text-paper-bg font-mono text-xs uppercase tracking-[0.15em] hover:bg-accent transition-colors text-center"
+                className="inline-block px-4 py-2 bg-ink text-paper font-mono text-xs uppercase tracking-[0.15em] hover:bg-accent transition-colors text-center"
               >
                 {cta.primary.label} →
               </a>
@@ -215,14 +215,14 @@ export function CtaPopout() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full px-3 py-2 bg-paper-bg border border-paper-divider text-sm text-ink focus:border-accent focus:outline-none font-mono"
+                className="w-full px-3 py-2 bg-paper border border-paper-divider text-sm text-ink focus:border-accent focus:outline-none font-mono"
                 autoComplete="email"
               />
               <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
                 <button
                   type="submit"
                   disabled={submitting || !email.trim()}
-                  className="inline-block px-4 py-2 bg-ink text-paper-bg font-mono text-xs uppercase tracking-[0.15em] hover:bg-accent transition-colors disabled:opacity-50 text-center"
+                  className="inline-block px-4 py-2 bg-ink text-paper font-mono text-xs uppercase tracking-[0.15em] hover:bg-accent transition-colors disabled:opacity-50 text-center"
                 >
                   {submitting ? "Subscribing…" : "Subscribe →"}
                 </button>
