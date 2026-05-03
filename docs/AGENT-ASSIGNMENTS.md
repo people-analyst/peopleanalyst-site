@@ -195,6 +195,70 @@ Self-contained assignment queue for the peopleanalyst-site repo. Pattern paralle
 
 ---
 
+### PA-010 — AHI peer-review framing (audience tier)
+
+**Status:** OPEN
+**Category:** research-write-up · audience tier
+**Owns:** `content/research/ai-human-interaction/peer-review.md`
+
+**Context:** The AHI program scaffold ships with all four audience-tier slots present in the manifest (general-audience already live via `loom-paper-01-public`; peer-review, engineering, product all forthcoming). This assignment closes the peer-review slot.
+
+**Prompt:** Write a peer-review-shaped framing of the AHI program at `content/research/ai-human-interaction/peer-review.md`. Position the program against the existing literatures named in the topic-review corpus (HCI, CSCW, educational psychology / cognitive apprenticeship, working-alliance theory, transactive memory, niche construction, distributed cognition, phenomenology of skill). Use Namesake's `docs/research/reviews/academic-peer-review.md` (in baby-namer repo) as the structural model. ~1500-2500 words. Threats-to-validity register required (auto-ethnography of PI, single-system generalization, longitudinal-data run-in window). Manifest entry `ai-human-interaction:peer-review` flips from `forthcoming` to `live` once the file lands.
+
+**Acceptance:**
+- File at the specified path; tone peer-review-shaped (not promotional)
+- Specific cite-able anchors against named literatures
+- Threats-to-validity register included
+- Genre-aware analysis required where claims involve writing (memoir / nonfiction / fiction not collapsed)
+- Manifest entry flipped to `live`
+- Committed and pushed
+
+**Dependencies:** PA-005 (Paper 4 measurement) preferable but not blocking — the vision doc can serve as the measurement-framework reference
+
+---
+
+### PA-011 — AHI engineering critique (audience tier)
+
+**Status:** OPEN
+**Category:** research-write-up · audience tier
+**Owns:** `content/research/ai-human-interaction/engineering.md`
+
+**Context:** Closes the engineering audience-tier slot for the AHI program. The Loom system inside Vela is the primary instrumentation surface; F-19 (Adaptive Authorship Control Kernel) is the architectural spine that all measurement runs through.
+
+**Prompt:** Write the engineering-reviewer's lens on the AHI program at `content/research/ai-human-interaction/engineering.md`. Cover: F-19 architecture (central registry of measurement and intervention; genre-aware fork pattern), the Loom Measurement Framework's instrumentation requirements, the production-data accumulation discipline, and the verification protocols for treating LLM outputs as evidence rather than answers. Failure modes and stress conditions explicit. ~1500-2500 words. Manifest entry `ai-human-interaction:engineering` flips to `live`.
+
+**Acceptance:**
+- File at the path
+- Specific architectural choices named with their trade-offs
+- Failure modes explicit (kernel-registry drift, instrumentation latency, missing-data-window handling)
+- Manifest entry flipped to `live`
+- Committed and pushed
+
+**Dependencies:** none
+
+---
+
+### PA-012 — AHI product implications (audience tier)
+
+**Status:** OPEN
+**Category:** research-write-up · audience tier
+**Owns:** `content/research/ai-human-interaction/product.md`
+
+**Context:** Closes the product audience-tier slot. The AHI program's findings (current and projected) imply specific product decisions for Loom, for the broader Vela substrate, and for adjacent authoring environments.
+
+**Prompt:** Write the product-implications framing of the AHI program at `content/research/ai-human-interaction/product.md`. Each implication must trace to a specific finding, a specific Loom design decision, or a specific architectural commitment. Cover: what the measurement framework implies for Loom's interaction design; what the seven non-negotiable rules of authorship (§7 of `vela/docs/VISION-LOOM-AUTHORSHIP.md`) imply for product roadmap priorities; what the genre-aware behavior pattern (memoir / nonfiction / fiction never collapsed) means for downstream surfaces. Honest about pre-data state. ~1500-2500 words. Manifest entry `ai-human-interaction:product` flips to `live`.
+
+**Acceptance:**
+- File at the path
+- Each implication traces to a specific design decision or finding (not generic product wishes)
+- Honest about pre-data state where applicable
+- Manifest entry flipped to `live`
+- Committed and pushed
+
+**Dependencies:** PA-005, PA-006 (Paper 4 + Paper 3 prose drafts) preferable but not blocking
+
+---
+
 ### PA-009 — External-operator pilot: recruit + onboard 5–10 outside Loom users
 
 **Status:** OPEN

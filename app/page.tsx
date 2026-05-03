@@ -31,12 +31,14 @@ export default function Home() {
 
           <aside className="lg:col-span-4 lg:border-l lg:border-paper-divider lg:pl-6 space-y-4 text-sm font-mono">
             <Stat label="products" value={String(PROJECTS.length)} />
-            <Stat label="spokes underneath" value="20" />
+            <Stat label="PA Toolbox spokes" value="Many" />
             <Stat label="commits, 12mo" value="5,974" />
             <p className="pt-3 text-xs text-ink-muted leading-relaxed font-sans">
               The products are the surface. The hub-and-spoke architecture
-              underneath — anonymization, metric calculation, adaptive
-              measurement, codegen — is how solo cadence stays sustainable.
+              underneath the People Analytics Platform — anonymization, metric
+              calculation, adaptive measurement, codegen — is how solo cadence
+              stays sustainable. Other products bring their own spokes; some
+              cross-pollinate back into the toolbox.
             </p>
           </aside>
         </section>
