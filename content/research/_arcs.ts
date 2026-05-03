@@ -26,6 +26,16 @@ export type Arc = {
 
 export const ARCS: Arc[] = [
   {
+    id: "organizational-measurement",
+    label: "Organizational measurement",
+    blurb:
+      "What is the load-bearing measurement set for organizations, and why are most stuck? The principal-issues thesis, construct-family surveys, instrument-grade evidence, queryable measurement registries, and the hub-and-spoke discipline that lets a measurement vocabulary be consumed across many applications without drift.",
+    whyItMatters:
+      "Load-bearing organizational measurement is unevenly distributed across organizations and disciplines. The same construct gets measured five different ways across five different studies; effect-size tables live scattered through chapters of textbooks. This arc names the measurement set for organizations and builds the substrate for it. The methodology generalizes — clinical psychology, educational measurement, marketing research — anywhere a field has the expertise but not the indexing.",
+    spans: ["principia", "pa-platform"],
+    featuredEntry: { product: "pa-platform", slug: "principal-issues-thesis" },
+  },
+  {
     id: "adaptive-measurement",
     label: "Adaptive measurement & psychometric architecture",
     blurb:
@@ -94,16 +104,6 @@ export const ARCS: Arc[] = [
       "The thread takes a particular cluster of inherited moral discomfort seriously enough to do the historical work, the scholarly retrieval, and the experimental-protocol design. Output is editorial; methodology is research-grade. The arc is currently Vela-only; it surfaces questions about how moral arguments persist, mutate, and get re-grounded across institutional contexts that have purchase well outside the figurative-art surface domain.",
     spans: ["vela"],
     featuredEntry: { product: "vela", slug: "christianity-sex-shame-public-introduction" },
-  },
-  {
-    id: "organizational-measurement",
-    label: "Organizational measurement",
-    blurb:
-      "What is the load-bearing measurement set for organizations, and why are most stuck? The principal-issues thesis, construct-family surveys, instrument-grade evidence, queryable measurement registries, and the hub-and-spoke discipline that lets a measurement vocabulary be consumed across many applications without drift.",
-    whyItMatters:
-      "Load-bearing organizational measurement is unevenly distributed across organizations and disciplines. The same construct gets measured five different ways across five different studies; effect-size tables live scattered through chapters of textbooks. This arc names the measurement set for organizations and builds the substrate for it. The methodology generalizes — clinical psychology, educational measurement, marketing research — anywhere a field has the expertise but not the indexing.",
-    spans: ["principia", "pa-platform"],
-    featuredEntry: { product: "pa-platform", slug: "principal-issues-thesis" },
   },
 ];
 
