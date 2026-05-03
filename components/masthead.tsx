@@ -24,6 +24,9 @@ export function Masthead() {
           <Link href="/stack" className="hover:text-accent transition-colors">
             stack
           </Link>
+          <Link href="/consulting" className="hover:text-accent transition-colors">
+            consulting
+          </Link>
           <Link href="/cv" className="hover:text-accent transition-colors">
             cv
           </Link>
