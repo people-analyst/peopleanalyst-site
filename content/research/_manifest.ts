@@ -1180,6 +1180,39 @@ export const MANIFEST: ManifestEntry[] = [
     source: { repo: DEVPLANE_REPO, path: "docs/research/PIPELINE_STATUS.md" },
     status: "live",
   },
+  {
+    product: "devplane",
+    category: "reports",
+    slug: "synthesis-convergence-2026-05-02",
+    title: "Feature brainstorm convergence (2026-05-02)",
+    summary:
+      "Five parallel cluster lenses (coordination, working alliance, trust calibration, governance, identity) synthesized 143 raw features from the AI-research corpus into a Now/Next/Later/Killed slate. Documents the convergence map (which primitives appeared in 3+ clusters) and the decision rule that filed 14 cards into the shipping wave.",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/feature-brainstorm-convergence-2026-05-02.md" },
+    arcs: ["coordination-cost"],
+    status: "live",
+  },
+  {
+    product: "devplane",
+    category: "reports",
+    slug: "phenomenology-delta-2026-05-02",
+    title: "Phenomenology delta — attention-as-duration & skill formation (2026-05-02)",
+    summary:
+      "Cross-references the post-2010 phenomenology-of-attention literature (Stiegler, Citton, Hayles) and phenomenology-of-skill (Dreyfus, Merleau-Ponty, Heersmink) against the 14-card synthesis slate. Surfaces what the existing measurement set covers (verification load, withdrawal disruption) and what it misses (sustained reasoning duration, situation-disclosing experience, transparency-vs-incorporation). Source for DP-88 (sustained-reasoning window) and DP-91 (phenomenology probe).",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/phenomenology-delta-2026-05-02.md" },
+    arcs: ["coordination-cost"],
+    status: "live",
+  },
+  {
+    product: "devplane",
+    category: "reports",
+    slug: "cross-application-mapping-2026-05-02",
+    title: "Cross-application AI-surface mapping (2026-05-02)",
+    summary:
+      "Inventory of AI surfaces across vela and meta-factory, mapped to the 14-card synthesis slate. Identifies which devplane primitives port directly to other portfolio apps (origin marker, multi-axis reviewer, sycophancy circuit-breaker) and which require app-specific adaptation. Source document for the cross-repo dispatch wave (DP-93 through DP-96).",
+    source: { repo: DEVPLANE_REPO, path: "docs/research/cross-application-mapping-2026-05-02.md" },
+    arcs: ["coordination-cost"],
+    status: "live",
+  },
 
   // ===== PRINCIPIA =====
   {
