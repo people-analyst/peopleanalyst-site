@@ -300,6 +300,230 @@ cd /Users/mikewest/peopleanalyst-site && /Users/mikewest/devplane/bin/dp.js acti
 
 ---
 
+## Magazine initiative — Wave 1 (foundation)
+
+Companion plan: `docs/magazine/PLAN.md` (the strategic + execution plan covering everything the magazine needs to compound). Numbering jumps to PA-100+ for visual separation from the AHI-program ASNs above.
+
+### PA-100 — Voice doc (Mike-authored with AI critic support)
+
+**Status:** OPEN
+**Category:** editorial · Mike-fronted (NOT agent-doable end-to-end)
+**Owns:** `docs/magazine/VOICE.md` (NEW)
+
+**Context:** Voice is the calibration north-star for every drafting session. Without it, articles drift toward AI-toned prose; with it, the magazine compounds a recognizable register. Vela's analog is `docs/magazine/VELA-MAGAZINE-VOICE.md` (load-bearing). PA's voice is *Mike's* voice, so this isn't an agent-authored task — it's a Mike-drafted spec with AI playing critic during refinement.
+
+**Prompt:** Draft `docs/magazine/VOICE.md` covering:
+- How the magazine sounds vs the book vs LinkedIn posts vs a peer-review paper vs a conference talk
+- What claims it does and doesn't make (no marketing-toned overreach; no vendor-neutral hand-waving)
+- Calibration phrases (e.g., "when in doubt, sound like the principal-issues essay")
+- Voice anti-patterns to flag (excessive hedging; jargon-without-explanation; unearned authority claims)
+- The "second-person executive" register PA leans on vs the "first-person memoirist" register Vela uses
+- Concrete examples: a paragraph of PA-magazine prose, a paragraph of LinkedIn-Mike prose, a paragraph of book-Mike prose, with notes on what makes each register distinctive
+
+**Acceptance:**
+- File created at the path
+- Voice is *operationalized* — a downstream agent can read this and produce in-register prose for an article
+- Includes ≥3 paragraph-length voice examples + commentary
+- Committed and pushed
+
+**Dependencies:** none. This unblocks Wave 2.
+
+---
+
+### PA-101 — Column shapes definition + naming
+
+**Status:** OPEN
+**Category:** editorial scaffolding
+**Owns:** `docs/magazine/COLUMN-SHAPES.md` (NEW)
+
+**Context:** Vela has Mosaic and Constellation as named editorial moves. PA's analog: 2-4 *named shapes* that articles inherit so readers learn what to expect and writers have a discipline that prevents drift. See `docs/magazine/PLAN.md` §2 for candidate shapes.
+
+**Prompt:** Define the column shapes at `docs/magazine/COLUMN-SHAPES.md`. For each shape: name (Mike picks), 2-3 sentence description, structural anatomy (sections / patterns), example pieces from the seed list that fit, voice notes specific to the shape. Initial candidates from PLAN.md: *Research v Field*, *Framework drill-down*, *Case study*, *Cross-portfolio meta-piece*. Mike refines names and adds/removes shapes.
+
+**Acceptance:**
+- File at the path
+- Each shape has a structural anatomy (so a writer can pattern-match)
+- Naming reads as editorial conventions, not technical labels
+- Committed and pushed
+
+**Dependencies:** PA-100 (voice doc) preferable but not blocking — shapes can be defined before voice is final.
+
+---
+
+### PA-102 — Source-anchoring schema (relatedResearch / relatedConsulting)
+
+**Status:** OPEN
+**Category:** infrastructure · agent-doable
+**Owns:** `content/magazine/_meta.ts`, `app/magazine/[slug]/page.tsx`, optional updates to `app/research/arc/[arc]/page.tsx`
+
+**Context:** Articles should bidirectionally link to the research arc / research entry / consulting case they derive from. Each magazine article surface shows its anchors; each arc detail page shows its relevant magazine pieces.
+
+**Prompt:** Extend `MagazineArticle` type in `content/magazine/_meta.ts` with optional fields:
+- `relatedResearch?: { product: ProductId; slug: string; arc?: ArcId }[]` — pointers to research-surface entries
+- `relatedConsulting?: string[]` — slugs/section refs in `content/consulting/services.md` (or just free text labels)
+- `relatedPortfolio?: string[]` — slugs from `content/projects.ts`
+
+Update the existing `rapid-collaborative-impact` entry to populate these (e.g., principal-issues thesis arc, Vela RID/SID work, NYT compensation, PA Platform card). Update `app/magazine/[slug]/page.tsx` to render an "Anchored in" sidebar/section showing the related items as links. Optional bonus: update `app/research/arc/[arc]/page.tsx` to surface a "Magazine pieces in this arc" section listing magazine articles whose `relatedResearch` includes the current arc.
+
+**Acceptance:**
+- Schema extended
+- `rapid-collaborative-impact` entry populated with anchors
+- Article page renders the anchor section
+- Typecheck clean
+- Committed and pushed
+
+**Dependencies:** none. Agent-doable end-to-end.
+
+---
+
+### PA-103 — Editorial calendar / pipeline-status doc
+
+**Status:** OPEN
+**Category:** editorial scaffolding · agent-doable
+**Owns:** `docs/magazine/EDITORIAL-CALENDAR.md` (NEW)
+
+**Context:** Per `docs/magazine/PLAN.md` §7, the seed list contains ~17 named pieces with status (D = drafted somewhere; P = polished; S = shipped; F = future). Stand up a tracking doc that's the live source-of-truth for editorial state — what's queued, what's drafting, what's shipped, what's parked.
+
+**Prompt:** Lift the seed-list table from `PLAN.md` §7 into a standalone `docs/magazine/EDITORIAL-CALENDAR.md`. Add: per-piece "next action" column (e.g., "draft from book chapter X," "polish Mar 2026 NYT doc + scrub client confidentiality"), drafting-cadence target (one piece every 2-3 weeks), pipeline-state convention (Ready → Drafting → Polishing → Reviewing → Shipped). Reference back to PLAN.md §7 as the seed-list source-of-truth (not a duplicate; the calendar is the *operational* view).
+
+**Acceptance:**
+- File at the path
+- Calendar mirrors PLAN.md §7 with operational additions (next-action, cadence target, state convention)
+- Committed and pushed
+
+**Dependencies:** none. Agent-doable.
+
+---
+
+## Magazine initiative — Wave 2 (first articles, blocked on PA-100 voice doc)
+
+### PA-110 — First 4S piece: *Science*
+
+**Status:** OPEN — **BLOCKED on PA-100 (voice doc)**
+**Category:** article · 4S banner
+**Owns:** `content/magazine/4s-science.md` + `_meta.ts` entry
+
+**Context:** Per PLAN.md §7, the *Science* S is the most contested + most under-emphasized + most needs Mike's voice asserting it. The principal-issues essay's §"4S Synthesis" + Mike's broader writing on behavioral-science-at-the-heart establish the thesis; this piece extends and stands alone.
+
+**Prompt:** Draft `content/magazine/4s-science.md` (~3000-5000 words). Source materials: principal-issues essay §"4S Synthesis", relevant book chapters on behavioral science underneath HR analytics, the "people aren't machines" argument, the science-vs-data-science distinction. Use the voice doc (PA-100) as the calibration spec. Use the column shape that fits (likely *Framework drill-down* or whatever PA-101 defines). Add `_meta.ts` entry with: kicker = "4S · Science", appropriate `relatedResearch` (probably principia + AHI program), `relatedConsulting` (the function-build + custom-architecture sections of the consulting page).
+
+**Acceptance:**
+- Article file at path
+- Voice consistent with PA-100 spec
+- Sources anchored via `relatedResearch[]`
+- Manifest entry added
+- Committed and pushed
+
+**Dependencies:** PA-100 (voice), PA-102 (schema)
+
+---
+
+### PA-111 — NYT Compensation Cycle case study
+
+**Status:** OPEN — **BLOCKED on PA-100 (voice doc)**
+**Category:** article · Case study
+**Owns:** `content/magazine/nyt-compensation-cycle.md` + `_meta.ts` entry
+
+**Context:** Lowest-effort polish in the seed list — the technical doc was already written (Mar 2026, 11K words). Needs scrub for client confidentiality + reshape for editorial format. Per the consulting-page precedent: scrub the $ figure (already done elsewhere); name the methodology + decision-shape but not internal sums.
+
+**Prompt:** Polish `/Users/mikewest/Desktop/Mike/NYT_AIP_RSU_Technical_Documentation_FINAL.docx` (already at-hand) into a magazine case study at `content/magazine/nyt-compensation-cycle.md`. Trim to 3000-4000 words. Scrub: any specific dollar figures (per consulting-page precedent), specific person names, specific band thresholds. Keep: the methodology (Monte Carlo at population scale + regression surrogate calculators), the structural insight (compensation distribution within ratings drives unit-level cost), the decision shape (scenario 1 vs scenario 2 framing). Voice per PA-100 spec.
+
+**Acceptance:**
+- Article file at path; client-confidentiality-scrubbed
+- 3000-4000 words
+- Manifest entry added with `relatedConsulting` linking to the Decision-support-under-uncertainty section of consulting page
+- Committed and pushed
+
+**Dependencies:** PA-100 (voice), PA-102 (schema)
+
+---
+
+### PA-112 — NAV deep-dive
+
+**Status:** OPEN — **BLOCKED on PA-100**
+**Category:** article · Framework drill-down
+**Owns:** `content/magazine/net-activated-value.md` + `_meta.ts` entry
+
+**Prompt:** Draft a piece on Net Activated Value (NAV) as the single indexable KPI tying human-capital state to dollar outcomes. Source: book chapter + principal-issues essay §"Principal Metric Tying Human Capital To Dollars: NAV". Length 2500-4000 words. Cover: why a single indexable KPI matters; the CAMS framework underneath NAV; ELV calculation; NAV as a thinking tool not an accounting measure; how it surfaces in C-suite conversation. Voice per PA-100.
+
+**Acceptance:**
+- Article file at path
+- Manifest entry added
+- Committed and pushed
+
+**Dependencies:** PA-100, PA-102
+
+---
+
+### PA-113 — Why CAMS
+
+**Status:** OPEN — **BLOCKED on PA-100**
+**Category:** article · CAMS banner anchor piece
+**Owns:** `content/magazine/why-cams.md` + `_meta.ts` entry
+
+**Prompt:** Draft a 2500-4000 word piece on CAMS — the activation framework — as a self-contained methodology argument. Source: book chapters + principal-issues essay. This is the *anchor* piece for the CAMS banner; subsequent pieces drill down into Capability, Alignment, Motivation, Support individually. Frame: why each of the four conditions matters; why the conjunction (not just one or two) matters; the 8-item survey; the index thresholds (≥70 activated; <60 at-risk).
+
+**Acceptance:**
+- Article file at path
+- Manifest entry with `kicker = "CAMS"`
+- Committed and pushed
+
+**Dependencies:** PA-100, PA-102
+
+---
+
+## Magazine initiative — Wave 3 (Writer's Desk MVP)
+
+### PA-300 — Writer's Desk MVP: 2-3 critic-personas wired into drafting
+
+**Status:** OPEN
+**Category:** infrastructure · drafting tool
+**Owns:** `.cursor/rules/magazine-critics/*.md` (one per persona) OR `lib/magazine/critics.ts` (saved-prompts module) — implementation detail TBD
+
+**Context:** Per PLAN.md §4, PA's Writer's Desk = single-author + AI as a critic-roster. MVP starts with 2-3 named personas the writer can summon during drafting for targeted feedback.
+
+**Prompt:** Build the MVP critic-roster. Pick 2-3 from PLAN.md §4 candidates: *the skeptical academic measurement-handbook editor*, *the founder reading on a Saturday*, *the smart non-specialist who's never heard of CAMS*, *the data scientist skeptic*, *the bored skeptic*, *the Foucauldian critic*. For each: a saved-prompt that loads the persona's perspective + a calibrated set of failure modes to look for + an output format (e.g., "list 3-7 specific concerns; for each, name the paragraph + the failure mode + a suggested fix"). Wire them so the writer can summon a critic against any draft section in Cursor (likely via `.cursor/rules/` or a saved-prompts file Mike copy-pastes).
+
+**Acceptance:**
+- 2-3 personas implemented + tested against the principal-issues essay (does the academic-editor persona surface real concerns?)
+- Implementation chosen (Cursor rules / saved-prompts file / lib module)
+- Documentation at `docs/magazine/WRITERS-DESK.md` — how to invoke each persona
+- Committed and pushed
+
+**Dependencies:** none — orthogonal to articles being drafted
+
+---
+
+### PA-302 — Architectural validation: Penwright kernel hosts critic-roster
+
+**Status:** OPEN — **DEPENDS on PA-300 + Penwright kernel work in vela**
+**Category:** architectural research / cross-product
+**Owns:** finding documented at `docs/magazine/PENWRIGHT-KERNEL-VALIDATION.md` (NEW)
+
+**Context:** Penwright's Adaptive Authorship Control Kernel (F-19) was designed for memoir/nonfiction/fiction genre-aware behavior. Open question per PLAN.md §4: can the same kernel host a *per-author critic-roster* for analytical writing? If yes, Penwright is more general than its scope. If no, that's a real architectural finding.
+
+**Prompt:** Once PA-300 ships and the Penwright kernel work in vela is far enough along (probably ASN-1106..1108 — kernel schema, registry, adapter PoC), validate whether the critic-roster can be hosted as a kernel-level construct. Try implementing PA-300's critics as kernel registrations. Document what works and what doesn't. Outcome: either fold the critic-roster into Penwright (more general kernel) OR document why it's PA-magazine-specific infrastructure that doesn't generalize.
+
+**Acceptance:**
+- Validation attempted
+- Finding documented with concrete evidence (works / partial / doesn't)
+- If "works" — refactor PA-300 to consume the kernel
+- If "doesn't" — finding informs Penwright's scope going forward
+- Committed and pushed
+
+**Dependencies:** PA-300 + vela ASN-1106..1108
+
+---
+
+## Magazine initiative — Wave 4+ (filed in PLAN.md §9; not pre-filed as ASNs)
+
+The following are queued but not yet filed as full ASNs in this batch:
+- **Corpus substrate work** (lives in vela / meta-factory queues): cross-tag behavioral-science books for PA retrieval, reactivate dormant meta-factory books, targeted acquisition of PA canonical texts, extract dual-grade pipeline to `meta-factory/packages/research-ingest/` (already on vela's research-ingest paradigm rollout — ASN-1000+)
+- **Field-Reporting initiative** (PA-400+): protocol + first Field-sourced piece — gated on Mike's commit/park decision per PLAN.md §6
+- **Distribution helpers** (PA-200+): LinkedIn cross-post, Medium API integration, unified `npm run magazine:export-distribution` — file when 3+ articles are queued for syndication
+
+---
+
 ## Done
 
 *(empty — populate as PA assignments ship)*
