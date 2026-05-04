@@ -35,11 +35,9 @@ export default function MagazineIndex() {
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
               A working magazine for the principal-issues thesis,
-              AI–human-interaction research, and the methodology spine
-              underneath the PeopleAnalyst portfolio. Pieces appear when
-              they're worth saying. The publication cadence is the slowest
-              part of the work; the speed comes from getting the load-bearing
-              set right first.
+              AI–human-interaction, and the methodology spine underneath
+              PeopleAnalyst research and development. And an experiment
+              in bi-directional adaptive learning.
             </p>
             <p className="text-base text-ink-body leading-relaxed max-w-[60ch]">
               Currently a small set of pieces, growing as the program does.

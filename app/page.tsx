@@ -45,20 +45,20 @@ export default function Home() {
         <section className="py-16 sm:py-24 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-x-8 gap-y-6">
           <div className="lg:col-span-8 space-y-6">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-muted">
-              Mike West · Pittsburgh, PA
+              Portfolio · Mike West · Pittsburgh, PA
             </p>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-ink tracking-tight leading-[1.05] font-medium">
-              Many products. One conviction.{" "}
+              Many designs. One conviction.{" "}
               <span className="text-ink-body">Feedback makes people — and A.I. — better. Data workflow is the spine.</span>
             </h1>
             <p className="text-lg sm:text-xl text-ink-body leading-relaxed max-w-[60ch]">
-              A range of products across coding, fantasy decisions, naming,
-              figurative art, AI-augmented authorship, performance
-              analytics, people analytics, and the cross-portfolio
-              infrastructure underneath. They look unrelated. They are all
-              instances of the same loop — measurement on the way in,
-              calibration on the way through, better decisions on the way
-              out — applied to whatever domain you take seriously.
+              A range of analytical products across coding, fantasy
+              football, baby naming, figurative art, AI-augmented
+              authorship, and enterprise people analytics, including
+              human performance and all that relates. They sound unrelated.
+              They are all instances of the same loop — measurement in,
+              reflection within, better decisions out — applied to whatever
+              you care about.
             </p>
           </div>
 
