@@ -153,10 +153,16 @@ Follow-up ASN to file in vela queue when ready: planned migration to rename `loo
 
 ## How to pick up next session
 
-1. Read **this file** + `docs/research-followup-rollout.md` for the cross-portfolio rollout state
-2. `cat MEMORY.md` (or check `~/.claude/projects/...memory/MEMORY.md`) for live conventions
-3. Check Mike's pending-actions list above before starting any new work that depends on Resend env vars or DevPlane domain
-4. The arc-foundation work (`content/research/_arcs.ts`) is the architectural spine for any new research entries — tag entries with `arcs: ArcId[]` so they surface on the arc index
-5. Magazine articles go in `content/magazine/<slug>.md` + entry in `content/magazine/_meta.ts`. Magazine name is "principal-issues" (working). Mike will iterate on the title.
+**START HERE:** read **`AGENTS.md`** (now substantive — the orientation doc; was placeholder until this session). It covers stack, definition-of-done, critical rules, Tailwind 4 token reference, available scripts, sister repos, workflow patterns, conventions, known gotchas, and pending Mike-actions.
 
-Working tree clean. All commits pushed. Local devplane-site is the only orphan — by design, waiting on Mike's bless.
+Then:
+
+1. This file + `docs/research-followup-rollout.md` for the cross-portfolio rollout state
+2. `docs/AGENT-ASSIGNMENTS.md` for the work queue (PA-001..PA-012 = AHI followups; PA-100+ = magazine initiative)
+3. `docs/magazine/PLAN.md` for the magazine initiative — comprehensive strategic + execution plan
+4. `~/.claude/projects/-Users-mikewest-vela/memory/MEMORY.md` for live conventions (auto-memory namespace; the lowercase-people-analytics rule etc. live there)
+5. Check Mike's pending-actions list (in `AGENTS.md` and below) before starting any work that depends on Resend env vars or DevPlane domain.
+
+**Recommended workflow** going forward (per the session-end conversation): launch Claude Code from `/Users/mikewest/peopleanalyst-site/` for pure PA-site work — clean PA-rooted context, no vela CLAUDE.md inheritance, project-specific session. Cursor open in PA-site, `npm run dev` for live preview. Cross-repo work (Penwright rename, corpus-substrate, etc.) keeps a vela-rooted session as the meta base camp.
+
+Working tree clean. All commits pushed. Local `devplane-site` is the only orphan — by design, waiting on Mike's bless.
