@@ -1444,9 +1444,9 @@ export const MANIFEST: ManifestEntry[] = [
     category: "audience-tiers",
     slug: "engineering",
     title: "Engineering critique",
-    summary: "Forthcoming — engineering reviewer's lens on the Penwright Measurement Framework, the Adaptive Authorship Control Kernel (F-19), and the instrumentation discipline.",
+    summary: "Engineering reviewer's lens on the Penwright Measurement Framework, the Adaptive Authorship Control Kernel (F-19), and the instrumentation discipline.",
     audienceTier: "engineering",
-    status: "forthcoming",
+    status: "live",
   },
   {
     product: "ai-human-interaction",
