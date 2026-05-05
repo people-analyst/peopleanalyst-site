@@ -486,7 +486,8 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Engineering critique",
     summary: "Architecture and instrument design from an engineering reviewer's lens.",
     audienceTier: "engineering",
-    status: "forthcoming",
+    source: { repo: VELA_REPO, path: "docs/research/reviews/engineering-critique.md" },
+    status: "live",
   },
   {
     product: "vela",
