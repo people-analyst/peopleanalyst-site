@@ -22,7 +22,7 @@ Every assignment has three artefacts:
 | Repo | ID | Title | Status | Manifest entry |
 |------|-----|-------|--------|---------------|
 | vela | ASN-1184 | Peer-review framing | OPEN | `vela:peer-review-framing` |
-| vela | ASN-1185 | Engineering critique | OPEN | `vela:engineering-critique` |
+| vela | ASN-1185 | Engineering critique | DONE (`75285c8`) | `vela:engineering-critique` |
 | vela | ASN-1186 | Product implications | OPEN | `vela:product-implications` |
 | vela | ASN-1187 | Museum diversity-of-beauty write-up | OPEN | `vela:museum-diversity-of-beauty` |
 | vela | ASN-1188 | Museum-diversity literature map | OPEN | `vela:museum-diversity-literature-map` |
