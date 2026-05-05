@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     problem:
       "AI coding tools' productivity claims rest on agent-side measurements — lines produced, tasks completed, time-to-PR. If the Ironies of Automation are operative — operator vigilance falling as agent reliability rises — those measurements systematically overstate net effect. There is no operator-side cockpit catching the loss.",
     built:
-      "A multi-agent kanban with a completion-block protocol that tracks per-card execution across heterogeneous AI tools. Continuous coordination-event log. Two-phase actor handoff (builder → reviewer) where the second transition requires an artifact only the reviewer can produce. Cross-tool sync via a hub SDK so an operator coordinates Cursor, Claude Code, Replit, and other agents through one board. The continuous production telemetry that runs the C1 risk-compensation field study — a pre-registered test of Bainbridge 1983 in real coding work.",
+      "A multi-agent kanban with a completion-block protocol that tracks per-card execution across heterogeneous AI tools. Continuous coordination-event log. Two-phase actor handoff (builder → reviewer) where the second transition requires an artifact only the reviewer can produce. Cross-tool sync via a hub SDK so an operator coordinates Cursor, Claude Code, Replit, and other agents through one board. The continuous production telemetry that runs the C1 risk-compensation field study — a pre-registered test of Bainbridge 1983 in real coding work, with hypotheses, analysis plan, and falsification criteria specified before data accumulates.",
     novel: [
       "Two-phase actor handoff (builder → reviewer) where the second transition requires an artifact only the reviewer can produce — enforces review without trusting it",
       "Coordination-event log as a research instrument, not just an audit trail — the apparatus for the C1 risk-compensation field study",
@@ -153,14 +153,13 @@ export const PROJECTS: Project[] = [
     problem:
       "Image platforms either flatten taste into engagement metrics or hide behind gatekeepers. Editorial platforms publish on calendars rather than to readers. Neither produces a reading rhythm. Neither learns from you. Vela is built on the bet that a single substrate can do both — taste-driven figurative discovery and longform editorial work — when adaptive measurement runs underneath.",
     built:
-      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) with full attribution and license discipline. An adaptive player (Reincarnation engine) that learns desire and pool composition across visual rhyme and emotional register. A magazine with original fiction, editorial criticism, and three load-bearing editorial axes — figurative response, emotion architecture, and developmental theology — paced per-user (each reader's magazine begins when they arrive, not on a calendar). Penwright: authorship system in /labs/penwright (F-03 Authorship Packet UI MVP shipped; F-19 Adaptive Authorship Control Kernel is the spine — see Penwright card below). Editorial Office: Writer's Desk (1:1 chat with each writer) and The Office (multi-writer convening with round-2 react). Stripe membership. Chrome extension for attribution capture. Derivative pipeline that produces new transformative works under license.",
+      "385 active works pulled from museum APIs (ARTIC, Met, BnF, Smithsonian, Europeana) under full attribution and license discipline. The Reincarnation engine learns per-reader desire and pool composition across visual rhyme and emotional register. A magazine with original fiction, editorial criticism, and three load-bearing editorial axes — figurative response, emotion architecture, developmental theology — paced per-user (each reader's magazine begins when they arrive, not on a calendar). Penwright lives in /labs/penwright (F-03 Authorship Packet UI MVP shipped; F-19 Adaptive Authorship Control Kernel is the spine). Editorial Office: Writer's Desk for 1:1 with each writer; The Office for multi-writer convening with round-2 react. Stripe membership in live mode. Derivative pipeline that produces new transformative works under license.",
     novel: [
       "Reincarnation engine: per-user desire scoring with RID/SID adaptive measurement and visual-rhyme sequencing",
       "Per-user magazine pacing — each reader's editorial schedule begins when they arrive; positioning wedge is \"your magazine begins when you do\"",
       "Three editorial axes (figurative response · emotion architecture · developmental theology) coexist on a single substrate; emotion is now the core editorial axis (post the 2026-04-30 pivot)",
       "Editorial Office — Writer's Desk + multi-writer convening turns the writer roster from production tool into colleagues",
-      "Pill paradigm: 80 admin pages collapsed into ~7 named flows, each a typed pill expression",
-      "Adaptive authorship platform underneath — Vela is property #1; siblings reuse the substrate",
+      "Adaptive-authorship substrate underneath — Vela is property #1; siblings reuse the substrate",
       "Museum-grade attribution and license discipline as a first-class feature, not a footnote",
     ],
     stack: [
@@ -232,17 +231,19 @@ export const PROJECTS: Project[] = [
     slug: "performix",
     headline: "Performix",
     tagline:
-      "Enterprise performance data analytics — sister vertical to the People Analytics Platform, and the first non-Vela consumer of the dual-grade research-ingest pattern being lifted into shared infrastructure.",
+      "Performance analytics with a behavioral posture — rater dynamics, calibration politics, distribution shape — on the shared adaptive-measurement substrate. The first vertical port of the library-core pattern outside Vela.",
     audience:
-      "Enterprise organizations that need performance-data analytics under the same architectural discipline as the broader People Analytics Platform — but with a vertical product surface rather than a hub-and-spoke composition.",
+      "Enterprise organizations that treat performance review as behavioral data — rater dynamics, calibration politics, the motivational consequences of distribution choices — rather than as a transaction record.",
     problem:
-      "Performance data — review cycles, calibration, distribution shape, multi-rater dynamics — is among the densest, most consequential, and most poorly-instrumented data in any organization. Most products either treat it as a transaction record (HRIS posture) or as a dashboard (BI posture). Neither captures the analytical posture the data actually warrants — comparative, longitudinal, distribution-aware, decision-support-shaped.",
+      "Performance data is the densest behavioral surface in HR — rater bias (halo, recency, leniency, severity), distribution politics (forced ranking, ceiling compression, sandbagging-under-cap), multi-rater agreement, longitudinal career-arc shape, and the motivational consequences of every rating call — and it's among the most poorly-instrumented data in any organization. Most products treat it as a transaction record (HRIS posture) or a dashboard (BI posture). Neither captures the analytical posture the data warrants: comparative, longitudinal, distribution-aware, small-N-honest, decision-support-shaped, and explicitly behavioral.",
     built:
-      "Early build. The architectural bet: Performix is the first instance of the library-core multi-property pattern outside Vela — proving that the research-ingest, dual-grade corpus, and adaptive-measurement substrate ports cleanly to a non-Vela vertical brand. Currently a placeholder repo; substance arrives as the research-ingest extraction (from Vela into MetaFactory's packages/research-ingest/) lands and Performix becomes its first consumer. The Research Ingestion paradigm rollout (ASN-1000+) is the cross-fleet sequencing.",
+      "Early build. Two simultaneous bets. The analytical bet: a behaviorally-grounded posture — rater dynamics treated as signal not noise, multi-rater agreement (ICC, kappa) surfaced not averaged away, distribution comparison across managers and units, longitudinal career-arc shape under small-N inference (most managers rate <10 people) — produces insights neither HRIS-posture products nor BI-posture dashboards can. The architectural bet: Performix is the first vertical port of the library-core multi-property pattern outside Vela — testing whether the dual-grade research-ingest, adaptive measurement, and canonical-vocabulary discipline host a non-editorial vertical cleanly. Substance arrives as the research-ingest extraction lands in MetaFactory's packages/research-ingest/ and Performix becomes its first consumer.",
     novel: [
-      "First non-Vela consumer of the dual-grade research-ingest pipeline — a real port test of the library-core substrate",
-      "First test of the library-core multi-property pattern outside Vela — if patterns transfer, the cross-property substrate is real; if they don't, the substrate has to be re-thought",
-      "Vertical-product surface against the same architectural substrate as the broader People Analytics Platform",
+      "Behavioral posture on performance data — rater dynamics, calibration politics, and distribution shape treated as the signal, not the noise to be averaged away",
+      "Multi-rater statistics surfaced where most products show only the average — ICC and rater-agreement diagnostics make compression and rater-effect bias legible",
+      "Longitudinal career-arc analysis under small-N constraints — most managers rate <10 people; the stats discipline has to match",
+      "First non-Vela consumer of the dual-grade research-ingest pipeline — a real port test of the library-core pattern",
+      "If the substrate ports cleanly to a vertical that shares no editorial subject matter, the cross-property architecture is real; if it doesn't, the substrate is Vela-specific and the multi-property bet has to be re-thought",
     ],
     stack: [
       "TypeScript",
@@ -256,7 +257,7 @@ export const PROJECTS: Project[] = [
       "Early build. Repo seeded; substance gated on the research-ingest extraction landing in MetaFactory.",
     role: "Designer, engineer.",
     story:
-      "Performix is the test of the cross-property pattern. If the library-core substrate (dual-grade ingestion, adaptive measurement, the canonical-vocabulary discipline) ports cleanly from Vela into a vertical that shares no editorial subject matter, the architecture is real. If it doesn't, the substrate is Vela-specific and the multi-property bet has to be re-thought. Either result is informative.",
+      "Performix is two bets at once. The analytical bet: performance review data is behavioral (rater dynamics, distribution politics, motivational consequences of every rating call) and statistically tractable under the right discipline (multi-rater agreement, distribution comparison, longitudinal shape under small-N) — and the field today has neither posture. The architectural bet: the library-core substrate from Vela — adaptive measurement, dual-grade research-ingest, canonical vocabulary — ports into a non-editorial vertical, or it doesn't. If both land, you have a behaviorally-honest performance product on a portable substrate. If either fails, the failure is informative.",
     status: "private",
   },
 
@@ -264,19 +265,19 @@ export const PROJECTS: Project[] = [
     slug: "meta-factory",
     headline: "MetaFactory",
     tagline:
-      "A focused production-factory monorepo — book ingestion, job/competency/persona/survey factories, and the dual-grade research-ingest pipeline shared across the portfolio.",
+      "Production-factory monorepo for the portfolio — competency models, personas, survey instruments, job profiles, pay analyses, all extracted from a dual-grade research corpus with cryptographic provenance. Internal substrate; every artifact it ships is human-facing.",
     audience:
-      "The portfolio itself. MetaFactory is internal infrastructure consumed by Vela, Performix, the People Analytics Platform, and others.",
+      "The portfolio itself. MetaFactory is internal infrastructure consumed by Vela, Performix, the People Analytics Platform, and others — but every artifact it ships (competencies, personas, instruments, job profiles) is downstream-consumed by humans making decisions about other humans.",
     problem:
-      "Cross-cutting infrastructure — book ingestion at chapter-respecting fidelity, schema-conformant typed extraction, job/competency/persona generation, survey factories — gets re-implemented per consumer when there is no production-factory substrate. The half-renovated state is worse than either decision: a 'Universal Information Factory' framing that tried to do too much, the resulting analytics-vs-production drift, and a multi-hundred-file cleanup-doc midden in the repo root that documents an effort that did not land. The substrate has to be narrowed and its purpose made legible in 30 seconds.",
+      "Cross-cutting infrastructure — book ingestion at chapter-respecting fidelity, schema-conformant extraction of behavioral constructs, job/competency/persona generation, survey factories — gets re-implemented per consumer when there's no production-factory substrate. The cost isn't only engineering: each consumer ends up with its own slightly-drifted definition of competency, persona, engagement, effect-size, and behavioral constructs that should be comparable across products become incomparable. The half-renovated state is worse than either decision: a 'Universal Information Factory' framing that tried to do too much, the resulting analytics-vs-production drift, and a multi-hundred-file cleanup-doc midden in the repo root that documents an effort that didn't land. The substrate has to be narrowed and its purpose made legible in 30 seconds.",
     built:
-      "A monorepo of production factories — book ingestion (collector / organizer / referee), job-matching, competency, personas, surveys, pay, business-plan, variableizer — plus core infrastructure (asset registry, storage resolver, schemas, prompts, deep-research agent). Currently undergoing the consolidation drive (ASN-1003): KEEP/DROP rule fully executed (production factories KEEP; analytics offerings DROP); the dual-grade research-ingest pipeline migrated in from Vela; the cleanup-doc midden archived; CLAUDE.md / AGENTS.md / README rewritten to actual current state.",
+      "A monorepo of production factories — book ingestion (collector / organizer / referee with statistical-quality referee gates); job-matching from extracted role-DNA; competency models extracted from organizational-psychology canon; persona factory; survey-instrument factory with item-bank-honest construct mapping; pay; business-plan; variableizer — plus core infrastructure (asset registry, storage resolver, schemas, prompts, deep-research agent). Currently undergoing the consolidation drive (ASN-1003): KEEP/DROP rule fully executed (production factories KEEP; analytics offerings DROP); the dual-grade research-ingest pipeline migrated in from Vela; the cleanup-doc midden archived; CLAUDE.md / AGENTS.md / README rewritten to actual current state.",
     novel: [
-      "Production-factory architecture — every package outputs an artifact; analytics offerings explicitly excluded",
+      "Production-factory architecture — every package outputs a behavioral artifact (competency model, persona, survey instrument, job profile, pay analysis); analytics offerings explicitly excluded",
       "Dual-grade corpus ingestion — same database holds editorially-selected curator passages and bulk research chunks, distinguished by tag",
       "Cryptographic provenance contract — SHA-256 tracked for every source file; safe-delete invariants require hash verification on backup and durable storage before any local delete",
-      "~$0.13 per research-run synthesis at 30K+ passage scale — most 'AI research' tools run 10–100× more expensive because they retrieve without pattern extraction",
-      "Schema-extracted measurement vocabulary (@measurement/core) shared across consumers — Principia, the People Analytics Platform, and the toolbox/hub all subscribe rather than reinventing constructs / instruments / items / measures / effect-sizes",
+      "~$0.13 per research-run synthesis at 30K+ passage scale — most 'AI research' tools run 10–100× more expensive because they retrieve without pattern extraction. The discipline is statistical: extract patterns once, cite the evidence, don't re-retrieve",
+      "Schema-extracted measurement vocabulary (@measurement/core) shared across consumers — constructs, items, instruments, effect-sizes defined once in canonical form, so behavioral measurement compares cleanly across Performix / Principia / PA Platform / the toolbox. Cross-product comparison becomes structurally possible rather than aspirational",
     ],
     stack: [
       "TypeScript",
@@ -291,7 +292,7 @@ export const PROJECTS: Project[] = [
       "Private. Five-track consolidation in flight (audit · pruning · production-factory finalization · research-ingest migration · consumer rewiring). Eight sub-ASNs (ASN-1004..ASN-1011) under the parent (ASN-1003).",
     role: "Designer, engineer.",
     story:
-      "MetaFactory exists because cross-portfolio infrastructure can't be re-built per consumer and can't sit half-renovated forever. The narrowing decision is made — production over analytics — and what's outstanding is executing the cuts, finalizing what remains, and lifting Vela's research-ingest pipeline back in (because Vela built dual-grade ingestion when MetaFactory's API-based approach lost fidelity, and that pipeline now belongs in the substrate). The interesting bet is whether a focused production-factory substrate compounds across consumers fast enough to justify the consolidation cost.",
+      "MetaFactory exists because cross-portfolio infrastructure can't be re-built per consumer and can't sit half-renovated forever. The narrowing decision is made — production over analytics — and what's outstanding is executing the cuts, finalizing what remains, and lifting Vela's research-ingest pipeline back in (because Vela built dual-grade ingestion when MetaFactory's API-based approach lost fidelity, and that pipeline now belongs in the substrate). The interesting bet is whether a focused production-factory substrate compounds across consumers fast enough to justify the consolidation cost. Underneath the systems argument is a measurement argument: every artifact a factory ships becomes an input to a human decision somewhere — a competency model becomes a development plan, a persona shapes a product call, a survey instrument runs at a client. The substrate has to be narrowed not just for engineering legibility, but because the artifacts go to people who need them defensibly grounded.",
     status: "private",
   },
 
@@ -299,20 +300,20 @@ export const PROJECTS: Project[] = [
     slug: "pa-platform",
     headline: "People Analytics Platform",
     tagline:
-      "A hub-and-spoke ecosystem for AI-native people analytics — production spokes on shared schemas and APIs, composable into packages for both standard data warehouse reporting and custom data science.",
+      "Hub-and-spoke ecosystem for people analytics — twenty production spokes (adaptive measurement, decision-theoretic value-of-information, compensation OS, metadata-grounded codegen, precomputed metric materialization) on shared schemas and APIs. Behavioral science and statistical rigor underneath the architecture, not bolted on. Composable into packages for both off-the-shelf reporting and bespoke analytical work.",
     audience:
-      "Enterprise HR teams that need analytics-grade infrastructure, not dashboards.",
+      "Enterprise HR teams that want analytics-grade infrastructure with behavioral and statistical discipline underneath — not another dashboard.",
     problem:
-      "HR analytics products either trap data in dashboards or silo it across vendors. Cross-cutting concerns — anonymization, metric calculation, segmentation, survey delivery, decision support — get re-implemented per product. The result is brittle, fragmented, expensive, and hostile to combination: each tool is good at its one thing, and useless next to its neighbor.",
+      "HR analytics products treat behavioral data as if it were transactional. Engagement gets reduced to a survey score; performance to a rating average; retention to a churn rate; compensation to a band. The richer questions — what actually drives engagement in this organization, what signal in performance distributions matters for decisions, what statistical posture handles small-N segmentations honestly, what value would more information have before another study runs — get lost. Cross-cutting concerns (anonymization, metric calculation, segmentation, survey delivery, decision support) also get re-implemented per product, brittle and fragmented. The combination — wrong analytical posture and fragmented infrastructure — is the field's default state.",
     built:
       "A central hub (people-analytics-toolbox) plus a roster of production spokes that work standalone and compose. Each spoke produces a discrete artifact; spokes share data schemas and APIs so they pull into packages addressing real analytical needs without integration tax. Public-facing spokes include Calculus (210+ precomputed HR metrics), Conductor (metadata-grounded SQL/Python codegen), Reincarnation (RID/SID adaptive measurement), AnyComp (compensation OS), VOI Calculator (formal decision-theoretic value-of-information), Persona Factory, Survey Factory, and Competency Factory — alongside additional internal production spokes that power packages but stay back-end. Hub layer carries the cross-cutting services — Data Anonymizer (deterministic PII), Survey Engine, Preference Modeler, Segmentation Studio, Decision Support — that every spoke depends on. Standardized reporting and bespoke analytical work both run through the same substrate; a custom engagement is a new package composed from existing spokes, not a new build.",
     novel: [
-      "Compartmentalable packages on shared data schemas and APIs — every spoke speaks the same anonymization, metric, segmentation, and survey vocabulary, so spokes compose without integration tax (the architectural conviction underneath the rest)",
-      "Reincarnation: cross-study item-response accumulation without confounding — adaptive selection over the full evidence pool, not just the current study",
-      "Conductor: metadata-grounded SQL/Python generation (not example-grounded) — the model sees schema, field semantics, and canonical metric definitions",
-      "Calculus: precomputed metric materialization so manager-level segmentations are instant rather than dashboard-render-blocked",
-      "VOI Calculator: formal Expected Value of Perfect/Sample Information as production software — essentially absent in commercial HR tooling",
-      "AnyComp: compensation as one coherent decision surface, not four disconnected screens",
+      "Compartmentalable packages on shared data schemas and APIs — every spoke speaks the same anonymization, metric, segmentation, and survey vocabulary, AND inherits the same construct definitions and measurement-property metadata. Spokes compose without integration tax and without definition drift across products",
+      "Reincarnation: cross-study item-response accumulation without confounding — adaptive selection over the full evidence pool, not just the current study; behavioral measurement that compounds rather than re-starting per engagement",
+      "Conductor: metadata-grounded SQL/Python generation (not example-grounded) — the model sees schema, field semantics, and canonical metric definitions, so the queries it produces are construct-honest by construction",
+      "Calculus: precomputed metric materialization so manager-level segmentations are instant rather than dashboard-render-blocked — the latency floor that lets managers actually use distribution-aware analytics in real conversations",
+      "VOI Calculator: formal Expected Value of Perfect/Sample Information as production software — essentially absent in commercial HR tooling. Decisions get value-of-information treatment rather than dashboard intuition",
+      "AnyComp: compensation as one coherent decision surface — the behavioral economics of compensation (signaling, fairness, retention dynamics) treated as one problem, not four disconnected screens",
     ],
     stack: [
       "Next.js",
@@ -328,7 +329,7 @@ export const PROJECTS: Project[] = [
       "Hub plus 20 production spokes plus the cross-cutting hub services. Solo build since 2022. Several spokes deployed at enterprise clients; the platform composition powers both off-the-shelf reporting and bespoke analytical packages.",
     role: "All roles.",
     story:
-      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the bet. Standardization where it earns its keep; custom analytical assembly where it earns its keep; the same substrate underneath both. The architecture is what makes a single founder productive at this scale.",
+      "The platform exists because every HR analytics product I worked with kept re-implementing the same five things — anonymization, metric definitions, segmentation, surveys, decision support — and getting each one slightly wrong. Building them once, well, and letting verticals consume them is the architectural bet. The deeper bet is that HR analytics works only when behavioral science and statistical rigor are first-class: when constructs are defined defensibly, when measurement properties travel with the instrument, when decisions get value-of-information treatment rather than dashboard intuition, when small-N segmentations are handled honestly rather than averaged into uselessness. Standardization where it earns its keep; custom analytical assembly where it earns its keep; the same behaviorally-honest, statistically-disciplined substrate underneath both. The architecture is what makes a single founder productive at this scale.",
     status: "private",
   },
 ];
