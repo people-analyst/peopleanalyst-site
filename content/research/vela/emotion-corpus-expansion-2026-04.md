@@ -108,6 +108,54 @@ Then use substring hints printed with `scripts/ingest/smithsonian.ts` workflows.
 
 After approval: units follow existing `decompose` + `content_attribution` pipeline like all ingests.
 
+## Sourcing log — 2026-05-04 deep-research arrival
+
+External LLM bring-back returned: 36 runs (30 per-emotion via Prompt 1 on OpenAI Deep Research; 6 cross-cutting via Prompts 2–5 split between OpenAI and Claude). Full archive at `docs/research/emotion-corpus-expansion/external-runs/`; INDEX, plan, and cross-citation digest alongside.
+
+**Counts:**
+
+| Source | Count | Notes |
+|---|---|---|
+| Per-emotion runs (Prompt 1, OpenAI) | 30 | one per primary emotion |
+| Cross-cutting source-discovery runs (Prompt 2) | 2 | OpenAI + Claude (paired for convergence reading) |
+| Cross-cutting historiography runs (Prompt 3) | 2 | OpenAI + Claude |
+| Cross-cultural ethnography runs (Prompt 4) | 1 | Claude only — OpenAI counterpart future bring-back |
+| Therapy-transcript discovery runs (Prompt 5) | 1 | Claude only — OpenAI counterpart future bring-back |
+| **Total** | **36** | |
+
+**Citations extracted:** ~1,200 unique works across the 36 runs (per `EXTRACTED-CITATIONS-2026-05-04.md`). Section A (per-emotion canonical texts) covered Anger through Grief in full; remaining 15 emotions referenced structurally — follow-up Phase 2.5 needed for full extraction.
+
+**Downstream surfaces updated by this arrival:**
+
+- `docs/research/corpus-acquisition/EMOTION-CORPUS.md` — *Bring-back arrival — 2026-05-04* section appended; ~70 new MIKE-ACQUIRE rows; ~17 new PD-AUTO candidates.
+- `docs/research/corpus-acquisition/THERAPY-TRANSCRIPT-CORPUS.md` — same appendage; ~30 new rows.
+- `docs/research/corpus-acquisition/CROSS-CULTURAL-EMOTION-ETHNOGRAPHY.md` — NEW sibling tracker created from Prompt 4 (cross-cultural ethnography) + cross-cultural sections of per-emotion runs.
+- `docs/RESEARCH-PROGRAM.md` §VI-B — new emotion-research thread block; provisional EM.1..EM.5 RQs.
+- `docs/research/papers/emotion-research-program-public-introduction.md` — public-facing essay (draft v1).
+- `docs/research/emotion-research-program-literature-map.md` — scaffold with column structure + cross-cutting rows populated.
+- `docs/research/emotion-research-program-bibliography.bib` — draft v1 with ~95 BibTeX entries spanning historiography (§A), constructionist/appraisal/affect-theory (§B), cross-cultural ethnography (§C), religious + contemplative (§D), per-emotion canonical Anger–Grief (§E), memoir CONVERGENT canon (§F), therapy canon (§G).
+- `docs/research/OVERVIEW.md` — emotion-research thread row added to *parallel threads* + *what is published*.
+- `docs/research/PIPELINE_STATUS.md` — emotion-research entry added to *Running*.
+
+**Convergent-source highlights (cited 3+ times across per-emotion runs OR cross-cutting LLM agreement):**
+
+- Catherine Lutz, *Unnatural Emotions* (1988) — 8+ emotion runs.
+- Anna Wierzbicka, *Emotions Across Languages and Cultures* (1999) — 10+ emotion runs.
+- Aristotle, *Rhetoric* — 4+ emotion runs (anger, fear, contempt, etc.).
+- Søren Kierkegaard, *The Concept of Anxiety* (1844) — 3+ emotion runs.
+- Heidegger, *Being and Time* §40 — 4+ emotion runs.
+- Mary Karr, *The Liars' Club* + *Lit* — both CONVERGENT across OpenAI and Claude on Prompt 2.
+- Joan Didion, *The Year of Magical Thinking* — 4+ emotion runs (grief, bewilderment, disappointment).
+- C. S. Lewis, *A Grief Observed* + *Surprised by Joy* — both CONVERGENT.
+- Yalom, *Love's Executioner* — 4+ runs (desire, grief, source-discovery, therapy-discovery).
+
+**Honest gaps flagged across the bring-back (consolidated from §J of digest):** East/Southeast Asian memoir; Continental European clinical writing; non-Anglophone ethnography beyond the canonical Lutz/Levy/Briggs lineage; emerging indigenous emotion frameworks beyond Kimmerer/Krenak/Akomolafe; disability/trans/sex-work memoir under-cited; mid-20th-c. Eastern European confessional traditions suspected to exist but undercited.
+
+**Next:**
+
+- **Phase 2.5** — extract per-emotion canonical anchors for the remaining 15 emotions (joy, hope, jealousy, longing, loneliness, love, nostalgia, pride, relief, resentment, sadness, shame, tenderness, trust, despair, contentment, contempt, boredom, bewilderment, awe). Filed as a follow-up under ASN-1023.
+- **Phase 4** — `lib/loom/taxonomy/emotion.ts` extension covering 12 candidate primary additions identified in the bring-back INDEX (awe, bewilderment, boredom, contempt, contentment, despair, gratitude, hope, jealousy, loneliness, resentment, trust). Plus longing↔yearning collapse-or-keep decision per the OpenAI longing run §1.
+
 ## Engineering shipped (2026-04-29)
 
 - `lib/artwork/emotion-discovery-packs.ts` — shared packs + Europeana strategy shapes + Smithsonian EDAN term hints.

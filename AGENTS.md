@@ -147,10 +147,14 @@ The PA-site research surface mirrors content from sister repos. When manifest en
 - **Newsletter signups land in Vercel function logs** until env vars are set. Without `RESEND_API_KEY` + `RESEND_AUDIENCE_ID`, the popout's UX still works end-to-end — signups just sit in logs (`vercel logs peopleanalyst-site --since 1h | grep subscribe`).
 - **Resend integration treats duplicates as success** (idempotent UX). Subscribers who try twice see the same "Thanks" message; the second submission is a no-op on Resend's side.
 
-## Pending Mike-actions (as of 2026-05-04)
+## Pending Mike-actions (as of 2026-05-05)
 
-- Set `RESEND_API_KEY` + `RESEND_AUDIENCE_ID` env vars in Vercel (`vercel env add ... production`, then `vercel --prod`)
-- Buy `principalissues.com` (defensive — $15/yr; future option for magazine domain or education-analytics vertical)
-- Bless `people-analyst/devplane-site` repo creation + push (site scaffolded locally, waiting on go)
-- Decide cross-portfolio linking pattern for sister-repo footers
+- Set `RESEND_API_KEY` + `RESEND_AUDIENCE_ID` env vars in **Vercel production** (`vercel env add ... production`, then `vercel --prod`). Local `.env.local` is in place; production still needs them.
 - PA-100 (the magazine voice doc) — Mike-authored task; unblocks Wave 2 of the magazine initiative
+
+## Resolved (2026-05-05)
+
+- **`principalissues.com` purchased** (defensive — future option for magazine domain or education-analytics vertical)
+- **`people-analyst/devplane-site` GitHub repo created** — local repo at `/Users/mikewest/devplane-site/` can now be pushed (`gh repo view people-analyst/devplane-site` → push `main` → connect Vercel + DNS for `devplane.dev`)
+- **Magazine title settled — `principal-issues`** (no longer "working name"; this is the name)
+- **Cross-portfolio linking pattern decided.** Common shape: every site links back to `peopleanalyst.com` in the footer; `peopleanalyst.com` links to all live sister sites in its footer (currently `components/footer.tsx` `MY_WORK_LINKS` — Vela + Namesake; add as more go live, e.g. devplane.dev once it deploys). Other cross-site linking is case-by-case where products work closely together.

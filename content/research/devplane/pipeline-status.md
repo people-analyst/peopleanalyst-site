@@ -14,19 +14,19 @@ Nothing is producing research data yet. The program is in pre-instrumentation se
 
 The operational substrate **is** running: DevPlane in production, single operator, heterogeneous AI agents (Cursor, Claude Code) on a multi-project portfolio. Assignment registry, handoff protocol, two-phase actor handoff, and the shared-index-aware commit protocol are live and have been for several months. Git history, session reports under `docs/handoff/`, and `devplane_log_completion` records exist as a partial pre-instrumentation corpus and are recoverable for `dispatch`, `merge_outcome`, and `rework` event types — but not for `dwell_ms` or `operator_inspect`, which require the coordination-event log itself.
 
-The **coordination-event log** ([`instrumentation-spec.md`](instrumentation-spec.md), DP-50) is specified at v0.1 but not yet implemented. This is the critical-path unblocker.
+The **coordination-event log** ([`instrumentation-spec.md`](instrumentation-spec.md), DP-63) is specified at v0.1 but not yet implemented. This is the critical-path unblocker.
 
 ## Queued
 
 The next three concrete pieces, in order:
 
-1. **DP-50 — coordination-event log implementation.** New SQLite table in the existing DevPlane database, capture points wired in `src/agent-workflow.ts`, the kanban UI, the auto-resolver/reconciler, and the session manager. Acceptance includes one week of live capture against current DevPlane usage with spot-check verification. Estimated ~2 weeks of implementation work; nothing else moves until this lands.
+1. **DP-63 — coordination-event log implementation.** New SQLite table in the existing DevPlane database, capture points wired in `src/agent-workflow.ts`, the kanban UI, the auto-resolver/reconciler, and the session manager. Acceptance includes one week of live capture against current DevPlane usage with spot-check verification. Estimated ~2 weeks of implementation work; nothing else moves until this lands.
 2. **C1 pre-registration formalization.** [`PROPOSAL.md`](PROPOSAL.md) is the working pre-registration in spirit; OSF deposit is queued for filing once the analysis pipeline is built and the run-in period has accumulated enough data to confirm the instrumentation works. The deposit must precede unblinding to post-intervention rate data.
 3. **Reading-queue completion.** The four-paper queue at [`reading-queue.md`](reading-queue.md) — Bainbridge (1983), Lee & See (2004), Parasuraman & Manzey (2010), one CSCW anchor — is the minimum to put the program in conversation with its primary literature. Mike's evening reading.
 
 ## Blocked
 
-- **C1 run-in period.** Cannot start until DP-50 ships. The pre-registered design requires ≥30 days of pre-intervention data captured by the live event log; partial backfill from git history covers some event types but not the dwell-time and inspection events that anchor H2.
+- **C1 run-in period.** Cannot start until DP-63 ships. The pre-registered design requires ≥30 days of pre-intervention data captured by the live event log; partial backfill from git history covers some event types but not the dwell-time and inspection events that anchor H2.
 - **C1 intervention deployment.** Candidate intervention is the auto-resolve heuristic for assignment-status reconciliation (lineage ASN-953/979). Deployment timestamp is the intervention boundary; it cannot be set until the run-in baseline is captured.
 - **External-operator replication.** Single-operator N=1 is the largest threat to external validity. Replication requires recruiting at least one external operator with comparable instrumentation, plus a consent protocol and likely IRB oversight depending on institutional partnership. Not committed in the C1 proposal; a successor assignment.
 - **Faculty outreach.** [`faculty-map.md`](faculty-map.md) is being built up over weeks. Explicit hold: do not email until the four-paper queue is read and PROGRAM.md has been sharpened against that reading.
@@ -39,7 +39,7 @@ The next three concrete pieces, in order:
 
 ## Coming soon — three-month horizon
 
-**Day 0–30 (current).** Build the corpus by shipping DP-50. Read the four-paper queue. Sharpen [`PROGRAM.md`](PROGRAM.md) against that reading. Map 3–5 CMU faculty whose work touches this. Reconcile deep-research outputs back into the literature review.
+**Day 0–30 (current).** Build the corpus by shipping DP-63. Read the four-paper queue. Sharpen [`PROGRAM.md`](PROGRAM.md) against that reading. Map 3–5 CMU faculty whose work touches this. Reconcile deep-research outputs back into the literature review.
 
 **Day 30–60.** Run-in period begins (≥30 days of pre-intervention corpus). First pre-registration filed at OSF before the post-intervention period opens. Outreach to faculty using the sharpened materials. Begin recruiting one external operator for the replication arm.
 

@@ -495,7 +495,8 @@ export const MANIFEST: ManifestEntry[] = [
     title: "Product implications",
     summary: "What the research tells us to build next.",
     audienceTier: "product",
-    status: "forthcoming",
+    source: { repo: VELA_REPO, path: "docs/research/reviews/product-implications.md" },
+    status: "live",
   },
 
   // Vela bibliography — literature maps + .bib source files

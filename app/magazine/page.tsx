@@ -6,7 +6,7 @@ import { getMagazineArticles } from "@/content/magazine/_meta";
 export const metadata = {
   title: "Magazine · peopleanalyst",
   description:
-    "Long-form essays on the principal-issues thesis, AI–human interaction research, and the methodology spine underneath the PeopleAnalyst portfolio. A working magazine — not yet on the masthead.",
+    "Long-form essays on the principal-issues thesis, AI–human interaction research, and the methodology spine underneath the PeopleAnalyst portfolio.",
 };
 
 function formatDate(iso: string): string {

@@ -1,0 +1,11 @@
+{
+  "explorer.excludeGitIgnore": false,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/coverage": true
+  },
+  "search.useIgnoreFiles": false,
+  "search.useGlobalIgnoreFiles": false
+}

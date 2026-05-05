@@ -7,7 +7,7 @@ authors: ["Mike West"]
 featured: true
 ---
 
-> **v0.1** — first methodology surface. Subsequent revisions are expected as the coordination-event log moves from spec (DP-50) to live capture and as the C1 lead study clears its run-in period.
+> **v0.1** — first methodology surface. Subsequent revisions are expected as the coordination-event log moves from spec (DP-63) to live capture and as the C1 lead study clears its run-in period.
 
 ## 1. The instrument frame
 
@@ -25,7 +25,7 @@ The **two-phase actor handoff** is the builder→reviewer pattern. For assignmen
 
 The **shared-index-aware commit protocol** — every commit uses `git commit -- <paths>` with explicit file lists — is in the same family. It exists because parallel agents share `.git/index` and a whole-index commit can sweep up another agent's staged work. The same protocol makes attribution tractable: every commit carries a clean file manifest, and reconciliation against `git log` is mechanical.
 
-The **coordination-event log** ([`instrumentation-spec.md`](instrumentation-spec.md), DP-50) is the apparatus that captures all of the above as immutable, append-only events: dispatch text (hashed and separately scrubbable), agent self-reports stored *separately* from ground-truth merge outcomes, operator interventions with kind and dwell, conflict and auto-resolve signals, session start/end. Self-report and outcome are stored separately because their divergence is the research signal — that is also the operationalization of the false-complete construct.
+The **coordination-event log** ([`instrumentation-spec.md`](instrumentation-spec.md), DP-63) is the apparatus that captures all of the above as immutable, append-only events: dispatch text (hashed and separately scrubbable), agent self-reports stored *separately* from ground-truth merge outcomes, operator interventions with kind and dwell, conflict and auto-resolve signals, session start/end. Self-report and outcome are stored separately because their divergence is the research signal — that is also the operationalization of the false-complete construct.
 
 ## 3. Research discipline
 

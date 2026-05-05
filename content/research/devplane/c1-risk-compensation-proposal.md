@@ -63,7 +63,7 @@ H0 is the no-world for both H1 and H2. It is also the most actionable null resul
 
 **Setting.** DevPlane in production, single-operator (Mike West), running heterogeneous AI agents (Cursor cloud, Claude Code, others as adopted) on a multi-project portfolio of working software repositories.
 
-**Apparatus.** The coordination-event log specified in [`instrumentation-spec.md`](instrumentation-spec.md), implemented as DP-50, captures all dispatches, agent self-reports, merge outcomes, operator interventions, and timing information needed for the dependent variables defined in §3.
+**Apparatus.** The coordination-event log specified in [`instrumentation-spec.md`](instrumentation-spec.md), implemented as DP-63, captures all dispatches, agent self-reports, merge outcomes, operator interventions, and timing information needed for the dependent variables defined in §3.
 
 **Why a field study.** A laboratory study could control more variables but would lose the construct it is trying to measure. Risk compensation is a longitudinal, system-level phenomenon that emerges from sustained operator-system interaction; manufactured task settings of 1–2 hours produce the wrong distribution of operator behavior. The field setting is essential to construct validity here, and the cost is a more complex analysis to handle confounding.
 
@@ -156,7 +156,7 @@ A second-phase study with one or more external operators is planned to address t
 
 | Phase | Duration | Milestone |
 |---|---|---|
-| Instrumentation (DP-50) | ~2 weeks | Coordination-event log live, capturing per spec |
+| Instrumentation (DP-63) | ~2 weeks | Coordination-event log live, capturing per spec |
 | Run-in (baseline) | ≥ 30 days | Pre-intervention corpus accumulated |
 | Intervention deployment | ~1 week | Auto-resolve heuristic released; intervention timestamp recorded |
 | Post-intervention observation | ≥ 90 days | Sufficient corpus for analysis |

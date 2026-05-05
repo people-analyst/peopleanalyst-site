@@ -90,6 +90,11 @@ Each study above is a candidate future assignment, dependent on recruitment read
 
 ## Study 6 — Museum diversity-of-beauty, sub-question (a)
 
+- **Research question:** How does the diversity of figurative (or agreed scope) beauty represented in open museum corpora differ across major institutions on cultural, physical, temporal, and medium dimensions?
+- **Hypothesis:** Cross-museum diversity profiles are not identical; pairwise divergence is largest on dimensions where labeling is stable and corpus depth is comparable.
+- **Data:** Per-museum snapshots from Vela's museum adapters (`scripts/artwork/sources/`), plus a future labeled-diversity overlay; stratified samples preregistered per museum.
+- **Methods:** Per-dimension diversity indices (Simpson / Shannon / Jensen–Shannon), pairwise tests with multiple-comparison correction; sensitivity to labeling noise.
+- **Deliverable:** Preregistered protocol, labeled snapshot summary, analytic write-up, manifest entry linking the report slug.
 - **Framing:** treat each museum's corpus as itself a measurement of cultural taste over time; compare diversity across institutions on cultural representation, physical representation, temporal coverage, and medium. Bootstrap thread doc at `docs/research/papers/museum-diversity-of-beauty-research-questions.md`.
 - **Design:** sample-equalised cross-museum comparison across at minimum five major institutions feeding Vela's discovery layer (Art Institute of Chicago, the Metropolitan Museum, Bibliothèque nationale de France, Smithsonian Open Access, Europeana). Corpora already in place via `scripts/artwork/sources/`.
 - **Sample target:** N depends on the per-museum corpus size; at minimum a stratified sample of 1,000 representational works per museum. Stratification on figurative-vs-non-figurative committed in the protocol.
