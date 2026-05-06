@@ -1409,6 +1409,17 @@ export const MANIFEST: ManifestEntry[] = [
   {
     product: "ai-human-interaction",
     category: "reports",
+    slug: "penwright-paper-03-authorship-packet",
+    title: "Paper 3 — The Authorship Packet Model",
+    summary:
+      "Tier-1 foundational paper. Position-and-mechanism paper for the structural-input alternative to freeform prompting. Five-field model (intent · structure · key ideas · relevant passages · counterpositions), theoretical positioning across transactive memory / translation theory / cognitive load theory, the seven non-negotiable rules carried verbatim, comparison to alternative input shapes (freeform, structured chain-of-thought, RAG, form-based), threats to validity, and the three production-data tests that will adjudicate.",
+    initiative: "penwright-research-program",
+    arcs: ["capability-development"],
+    status: "live",
+  },
+  {
+    product: "ai-human-interaction",
+    category: "reports",
     slug: "penwright-sub-paper-plan",
     title: "Penwright Research Program — sub-paper plan (v1.0)",
     summary:
