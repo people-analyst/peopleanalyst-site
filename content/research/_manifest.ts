@@ -1434,10 +1434,10 @@ export const MANIFEST: ManifestEntry[] = [
     category: "audience-tiers",
     slug: "peer-review",
     title: "Peer-review framing",
-    summary: "Forthcoming — peer-review positioning of headline findings against the existing HAI, educational-psychology, and working-alliance literatures.",
+    summary: "Senior referee's lens on the AHI program if submitted today as a sequenced series. Positioning against named bodies of theory (HCI, CSCW, educational psychology, working-alliance theory, transactive memory, niche construction, distributed cognition, phenomenology of skill) and an explicit threats-to-validity register.",
     audienceTier: "peer-review",
     arcs: ["capability-development"],
-    status: "forthcoming",
+    status: "live",
   },
   {
     product: "ai-human-interaction",
