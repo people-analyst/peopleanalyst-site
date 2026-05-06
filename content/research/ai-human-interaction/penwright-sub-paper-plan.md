@@ -11,7 +11,7 @@ The status notes below sit alongside the verbatim source above. The source plan 
 | Paper | Tier | Status | File |
 |---|---|---|---|
 | Paper 1 — AI-Augmented Authorship and Human Skill Development | 1 | ✅ Drafted (technical + public versions) | `penwright-paper-01-technical.md` (technical, outline) · `penwright-paper-01-public.md` (general-audience) |
-| Paper 2 — Corpus Control and Epistemic Agency | 1 | ⬜ Not yet drafted | — |
+| Paper 2 — Corpus Control and Epistemic Agency | 1 | ✅ Drafted 2026-05-05 | `penwright-paper-02-corpus-control.md` |
 | Paper 3 — The Authorship Packet Model | 1 | ✅ Drafted 2026-05-05 (PA-006) | `penwright-paper-03-authorship-packet.md` |
 | Paper 4 — A Measurement Framework for AI-Augmented Writing Skill Development | 2 | ✅ Drafted 2026-05-05 (PA-005) | `penwright-paper-04-measurement.md` |
 | Paper 5 — Dependency and Independence | 2 | ⬜ Preregistration in queue (PA-007) | — |
@@ -23,7 +23,7 @@ The status notes below sit alongside the verbatim source above. The source plan 
 | Paper 11 — Corpus Composition and Output Diversity | 3 | ⬜ Not yet drafted | — |
 | Paper 12 — Human–AI Working Alliance | 3 | ⬜ Not yet drafted | — |
 
-**Phase 1 (0–3 months) Tier-1 + Paper 4 trio is now drafted:** Paper 1 (technical + public), Paper 3 (Authorship Packet Model), Paper 4 (Measurement Framework). Phase 2 papers (5, 6, 7) remain queued; Phase 3 papers (8–12) remain gated on the external-operator pilot accumulating production data.
+**Phase 1 (0–3 months) Tier-1 set + Paper 4 is now drafted:** Paper 1 (technical + public), Paper 2 (Corpus Control), Paper 3 (Authorship Packet Model), Paper 4 (Measurement Framework). The Tier-1 foundational set is complete. Phase 2 papers (5, 6, 7) remain queued; Phase 3 papers (8–12) remain gated on the external-operator pilot accumulating production data.
 
 ---
 

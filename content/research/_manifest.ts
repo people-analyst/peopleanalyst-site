@@ -1409,6 +1409,17 @@ export const MANIFEST: ManifestEntry[] = [
   {
     product: "ai-human-interaction",
     category: "reports",
+    slug: "penwright-paper-02-corpus-control",
+    title: "Paper 2 — Corpus Control and Epistemic Agency in AI-Augmented Writing",
+    summary:
+      "Tier-1 foundational paper. Position-and-mechanism paper for the epistemic-control alternative to default-LLM-corpus inheritance. Theoretical positioning across standpoint theory (Harding, Haraway), epistemic injustice (Fricker), and the AI bias tradition (Bender et al., Bommasani et al., Birhane et al.). Distinguishes Corpus Control from adjacent technical approaches (RAG, fine-tuning, prompt engineering) at the layer level. Three mechanisms in Penwright (corpus selection · attribution visibility · genre-aware source integration), four threats to validity, and three production-data tests.",
+    initiative: "penwright-research-program",
+    arcs: ["capability-development"],
+    status: "live",
+  },
+  {
+    product: "ai-human-interaction",
+    category: "reports",
     slug: "penwright-paper-03-authorship-packet",
     title: "Paper 3 — The Authorship Packet Model",
     summary:
