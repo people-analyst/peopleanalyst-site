@@ -1442,6 +1442,17 @@ export const MANIFEST: ManifestEntry[] = [
   {
     product: "ai-human-interaction",
     category: "reports",
+    slug: "penwright-paper-06-learning-loops",
+    title: "Paper 6 — Learning Loops in AI-Augmented Writing Systems",
+    summary:
+      "Tier-2 measurement-and-mechanism paper. Companion to Paper 4 — where Paper 4 specifies what gets measured, Paper 6 specifies the loop architecture the measurement is against. Five-step learning loop (write · analyze · reflect · practice · re-measure) and four intervention types (teach moments · constraint challenges · counterposition drills · reconstruction exercises). Theoretical positioning across cognitive apprenticeship (Collins, Brown & Newman), working-alliance theory (Bordin), retrieval practice and desirable difficulties (Roediger & Karpicke; Bjork), and self-regulated learning (Zimmerman). Argues that output-quality optimization is structurally incapable of producing capability development. Four threats to validity, three production-data tests.",
+    initiative: "penwright-research-program",
+    arcs: ["capability-development", "adaptive-measurement"],
+    status: "live",
+  },
+  {
+    product: "ai-human-interaction",
+    category: "reports",
     slug: "penwright-sub-paper-plan",
     title: "Penwright Research Program — sub-paper plan (v1.0)",
     summary:

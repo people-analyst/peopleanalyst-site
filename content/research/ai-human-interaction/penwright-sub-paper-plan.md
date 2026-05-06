@@ -15,7 +15,7 @@ The status notes below sit alongside the verbatim source above. The source plan 
 | Paper 3 — The Authorship Packet Model | 1 | ✅ Drafted 2026-05-05 (PA-006) | `penwright-paper-03-authorship-packet.md` |
 | Paper 4 — A Measurement Framework for AI-Augmented Writing Skill Development | 2 | ✅ Drafted 2026-05-05 (PA-005) | `penwright-paper-04-measurement.md` |
 | Paper 5 — Dependency and Independence | 2 | ⬜ Preregistration in queue (PA-007) | — |
-| Paper 6 — Learning Loops | 2 | ⬜ Not yet drafted | — |
+| Paper 6 — Learning Loops | 2 | ✅ Drafted 2026-05-05 | `penwright-paper-06-learning-loops.md` |
 | Paper 7 — Genre-Specific Effects | 2 | ⬜ Preregistration in queue (PA-008) | — |
 | Paper 8 — Longitudinal Effects | 3 | ⬜ Gated on external-operator pilot (PA-009) | — |
 | Paper 9 — Transfer of Skill Outside AI Systems | 3 | ⬜ Gated on Paper 8 pilot data | — |
