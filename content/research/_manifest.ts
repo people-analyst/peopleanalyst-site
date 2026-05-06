@@ -1420,6 +1420,17 @@ export const MANIFEST: ManifestEntry[] = [
   {
     product: "ai-human-interaction",
     category: "reports",
+    slug: "penwright-paper-04-measurement",
+    title: "Paper 4 — A Measurement Framework for AI-Augmented Writing Skill Development",
+    summary:
+      "Tier-2 foundational paper. Operationalizes the Penwright Measurement Framework that underwrites every subsequent empirical paper. Three measurement layers (output · process · development), six skill dimensions, six derived indices (WQI · II · INTI · OI · MI · DV), five-step learning loop, and four non-negotiable failure modes acting as veto conditions. Measurement-theory positioning (reflective-vs-formative · latent-vs-observed · why standard psychometric scaffolding only partly applies under continuous measurement and model drift). Compares to HCI usability scales, educational skill assessments, and standardized writing rubrics — none fit for purpose for capability-development measurement. Names what's measurable in v1, what awaits Wave-2-through-6 features, what requires longitudinal data, and what requires external validation.",
+    initiative: "penwright-research-program",
+    arcs: ["capability-development", "adaptive-measurement"],
+    status: "live",
+  },
+  {
+    product: "ai-human-interaction",
+    category: "reports",
     slug: "penwright-sub-paper-plan",
     title: "Penwright Research Program — sub-paper plan (v1.0)",
     summary:
