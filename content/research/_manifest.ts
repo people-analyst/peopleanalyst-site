@@ -1524,10 +1524,32 @@ export const MANIFEST: ManifestEntry[] = [
   {
     product: "ai-human-interaction",
     category: "preregistrations",
+    slug: "penwright-paper-05-dependency",
+    title: "Paper 5 — Dependency and Independence (preregistration)",
+    summary:
+      "OSF-style preregistration for Paper 5 of the Penwright Research Program. Pre-registers a non-monotonic threshold model for the AI-utilization-vs-capability-transfer relationship, with H1 (primary), H2 (genre-specific thresholds), and H3 (loop-completion moderation). Two-stage analysis: v1.0 descriptive at small-N pilot enrollment; v2.0 confirmatory deferred to N≥20 writers. Genre-stratified across memoir / nonfiction / fiction. Threats-to-validity register includes auto-ethnography, self-selection, LLM-scoring drift, reflection-prompt social desirability, Constraint-Mode artifact, small-N detection-floor.",
+    initiative: "penwright-research-program",
+    arcs: ["capability-development"],
+    status: "live",
+  },
+  {
+    product: "ai-human-interaction",
+    category: "preregistrations",
+    slug: "penwright-paper-07-genre-effects",
+    title: "Paper 7 — Genre-Specific Effects (preregistration)",
+    summary:
+      "OSF-style preregistration for Paper 7 of the Penwright Research Program. Pre-registers the test that adjudicates the program's most architecturally consequential commitment — the genre-fork. Three genre-specific predictions with pre-specified effect-size thresholds (memoir → emotional flattening; nonfiction → shallow argument; fiction → generic narrative). The no-world outcome (genre effects do not differ) is explicit and explicitly consequential — pre-commits the program to abandoning the load-bearing genre-fork claim if the data does not support it. Two-stage analysis (v1.0 descriptive, v2.0 confirmatory at N≥18). Paired with Paper 5 preregistration; shares analytical infrastructure.",
+    initiative: "penwright-research-program",
+    arcs: ["capability-development"],
+    status: "live",
+  },
+  {
+    product: "ai-human-interaction",
+    category: "preregistrations",
     slug: "preregistration",
     title: "Preregistration(s)",
     summary:
-      "Forthcoming — Paper 5 (dependency) and Paper 7 (genre) are the first OSF candidates. Protocols in draft; formal filing follows once the analysis pipeline is built and a run-in period of Penwright production data is collected.",
+      "Index entry for the Penwright Research Program preregistration set. Paper 5 (dependency) and Paper 7 (genre) preregistrations both drafted at v1.0 (filed 2026-05-05). Formal OSF filing follows once the external-operator pilot enrolls its first cohort and the analysis pipeline is built.",
     arcs: ["capability-development"],
     status: "forthcoming",
   },
