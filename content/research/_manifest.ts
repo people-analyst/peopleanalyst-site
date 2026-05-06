@@ -1453,9 +1453,9 @@ export const MANIFEST: ManifestEntry[] = [
     category: "audience-tiers",
     slug: "product",
     title: "Product implications",
-    summary: "Forthcoming — what the program tells us to build next, in Penwright and in adjacent authoring environments.",
+    summary: "What the program tells us to build next — in Penwright and in adjacent authoring environments. Anchored in the measurement framework, the seven non-negotiable rules of authorship, and the genre-aware behavior pattern.",
     audienceTier: "product",
-    status: "forthcoming",
+    status: "live",
   },
   {
     product: "ai-human-interaction",
