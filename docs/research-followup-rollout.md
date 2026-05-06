@@ -26,9 +26,9 @@ Every assignment has three artefacts:
 | vela | ASN-1186 | Product implications | OPEN | `vela:product-implications` |
 | vela | ASN-1187 | Museum diversity-of-beauty write-up | OPEN | `vela:museum-diversity-of-beauty` |
 | vela | ASN-1188 | Museum-diversity literature map | OPEN | `vela:museum-diversity-literature-map` |
-| peopleanalyst-site | PA-010 | AHI peer-review framing | OPEN | `ai-human-interaction:peer-review` |
+| peopleanalyst-site | PA-010 | AHI peer-review framing | DONE (`62b2b93`) | `ai-human-interaction:peer-review` |
 | peopleanalyst-site | PA-011 | AHI engineering critique | DONE (`4fe14c3`) | `ai-human-interaction:engineering` |
-| peopleanalyst-site | PA-012 | AHI product implications | OPEN | `ai-human-interaction:product` |
+| peopleanalyst-site | PA-012 | AHI product implications | DONE (`e6c871b`) | `ai-human-interaction:product` |
 | devplane | DP-100 | General-audience explainer | OPEN | `devplane:general-audience` |
 | devplane | DP-101 | Peer-review framing | OPEN | `devplane:peer-review` |
 | devplane | DP-102 | Engineering critique | OPEN | `devplane:engineering` |
